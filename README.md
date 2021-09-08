@@ -29,7 +29,7 @@ Para que el proyecto de crear una página virtual se cumpla, cuatro alumnos de D
 
 - Nicolas Livingston, 24 años
 
-    > *"Soy Licenciado en Gestión Ambiental, llegué a la programación por amigos que me motivaron a ir por este camino""*
+    > *"Soy Licenciado en Gestión Ambiental, llegué a la programación por amigos que me motivaron a ir por este camino"*
 
 - Ignacio Llamas, 24 años
 
@@ -50,3 +50,7 @@ Para que el proyecto de crear una página virtual se cumpla, cuatro alumnos de D
 5. [MIK - Indumentaria Femenina](https://mikindumentariafemenina.com/)
 
 ---
+
+## Tablero de Trabajo
+
+- Trello: https://trello.com/b/N2TqYaRQ/grupo-3-proyecto-integrador
