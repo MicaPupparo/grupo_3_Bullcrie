@@ -1,0 +1,29 @@
+nav {
+    background: gray;
+    padding: 30px;
+}
+
+.productos{
+    width: 100%;
+    margin-bottom: 10px;
+}
+main section article{
+    background-color: white  
+    text-align: center;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.fa-truck{
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+}
+article div.main-article{
+    width: 100%;
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+}
