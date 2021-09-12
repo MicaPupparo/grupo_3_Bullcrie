@@ -1,0 +1,83 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0f0f0;
+}
+
+form.registro {
+  display: block;
+  width: 60vw;
+  border: solid 1px #000000;
+  margin: auto;
+  box-shadow: 0px 0px 2px rgb(100, 100, 100);
+}
+
+body h3 {
+  margin: 10px 0px 15px 15px;
+}
+
+form .casilla {
+  margin: 0px 0px 10px 20px;
+  width: 100%;
+}
+
+.nombre-apellido,
+.email,
+.user,
+.contraseña,
+.rep-contraseña {
+  width: 50%;
+}
+
+form .buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 0px 10px;
+}
+
+form .buttons .crear,
+.iniciar-sesion {
+  background-color: #184e77;
+  color: #f0f0f0;
+  width: 20vw;
+  margin: auto;
+  max-width: 115px;
+  padding: 3px;
+}
+
+/*NEWSLETTER (DESPUES HAY QUE SEPARARLO A OTRO CSS)*/
+
+body .newsletter {
+  display: flex;
+  margin: 15px 0px 30px;
+  background-color: #76c893;
+  border: solid 1px #a0a0a0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body .newsletter .newsletter-nombre,
+.newsletter-email,
+.enviar {
+  width: 18%;
+}
+
+body .newsletter .texto p {
+  font-size: 0.8em;
+}
+
+.newsletter-nombre,
+.newsletter-email {
+  margin: 5px 0px;
+  max-height: 20px;
+}
+
+.enviar {
+  padding: 5px 8px;
+  background-color: #000000;
+  color: #f0f0f0;
+}

@@ -4,9 +4,107 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Registro</title>
+
+    <link rel="stylesheet" href="/css/styles-register.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
   </head>
-  <header></header>
-  <body></body>
-  <footer></footer>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="" />
+      </div>
+
+      <ul class="ul-header">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#tienda">Tienda</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+
+      <ul class="ul-header_icons">
+        <li>
+          <a href="#search"><i class="fas fa-search"></i></a>
+        </li>
+        <li>
+          <a href="#user"><i class="far fa-user"></i></a>
+        </li>
+        <li>
+          <a href="#cart"><i class="fas fa-shopping-cart"></i></a>
+        </li>
+      </ul>
+    </header>
+
+    <form class="registro">
+      <h3>Crea tu cuenta</h3>
+
+      <div class="casilla">
+        <input
+          type="text"
+          name="nombre y apellido"
+          placeholder="Nombre y apellido"
+          class="nombre-apellido"
+        />
+      </div>
+
+      <div class="casilla">
+        <input type="email" name="email" placeholder="E-mail*" class="email" />
+      </div>
+
+      <div class="casilla">
+        <input
+          type="text"
+          name="nombre de usuario"
+          placeholder="Nombre de usuario"
+          class="user"
+        />
+      </div>
+
+      <div class="casilla">
+        <input
+          type="password"
+          name="contraseña"
+          placeholder="Contraseña"
+          class="contraseña"
+        />
+      </div>
+
+      <div class="casilla">
+        <input
+          type="password"
+          name="repetir contraseña"
+          placeholder="Repetir contraseña"
+          class="rep-contraseña"
+        />
+      </div>
+
+      <div class="buttons">
+        <button type="submit" class="crear">Crear</button>
+
+        <button class="iniciar-sesion">Iniciar Sesion</button>
+      </div>
+    </form>
+
+    <div class="newsletter">
+      <div class="texto">
+        <h4>SUSCRIBITE AL NEWSLETTER</h4>
+
+        <p>Recibí nuestras novedades y promociones</p>
+      </div>
+
+      <input type="text" placeholder="NOMBRE" class="newsletter-nombre" />
+
+      <input type="email" placeholder="E-MAIL" class="newsletter-email" />
+
+      <button type="submit" class="enviar">ENVIAR</button>
+    </div>
+
+    <footer>
+      <h1>FOOTER</h1>
+    </footer>
+  </body>
 </html>
