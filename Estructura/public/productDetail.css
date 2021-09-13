@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.mesagge-header {
+    border:0.7px solid #A0A0A0;
+    font-size: 9px;
+    color: white;
+    background-color: #76c893;
+    text-align: center;
+}
+.ul-header li a, .ul-header_icons li a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.2s ease-out;
+}
+.ul-header_icons li i{
+    transition: all 0.2s ease-out;
+}
+.ul-header a:hover, .ul-header_icons i:hover{
+    transform: scale(0.8);
+	color: #76c893;
+    transition: all 0.1s ease-out;
+    font-size: 10px;
+}
+.ul-header {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.ul-header_icons {
+    list-style: none;
+    display: flex;
+    align-items: center;        
+}
+.ul-header li {
+    padding: 10px;
+}
+.ul-header_icons li {
+    padding: 5px;
+}
+header {
+    display: flex;
+    border: 0.7px solid #A0A0A0;
+    justify-content: space-between;
+    box-shadow: 0px 0px 3px 0px #A0A0A0;
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 13px;
+}
+.logo{
+    box-sizing: border-box;
+}
+.logo img {
+    width: 50px;
+    padding: 5px;
+}
