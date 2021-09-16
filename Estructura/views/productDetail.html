@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="productDetail.css">
+    <link rel="stylesheet" href="css/productDetail.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <title>BullCrie</title>
 </head>
-<body>
+<body class="wrapper">
     <div class="mesagge-header"><p>Winter SALE 50% OFF con cualquier método de pago</p></div>
     <header>
-        <div class="logo"><a href="#home"><img src="logo.png"></a></div> 
+        <div class="logo"><a href="#home"><img src="images\bullcrie logo.png"></a></div> 
         <ul class="ul-header">
             <li><a href="#inicio">INICIO</a></li>
             <li><a href="#tienda">TIENDA</a></li>
@@ -23,5 +23,37 @@
             <li><a href="#cart"><i class="fas fa-shopping-cart"></i></a></li>
         </ul>
     </header>
+
+    <main id="gallery">
+        
+        <div class="images">
+        <img src="images\mallafloreada.jpeg" class="img">
+        <img src="images\mallalineas.jpeg" class="img">
+        <img src="images\mallarombos.jpeg" class="img">
+            </div>
+
+            <div class="main-img">
+                <img src="images\mallafloreada.jpeg" id="current">    
+                </div>
+
+        <div class="product-details">
+            <h3>MALLA BULLCRIE DE HOMBRE</h3>
+            <h2>$2.590</h2>
+            <p class="cuotas">6x Cuotas de $431 sin interés</p>
+            <p class="mediosPago">Ver los medios de pago</p>
+            <p class="enviosGratis"><i class="fas fa-truck"></i></i>Envios gratis a todo el país</p>
+            <p class="formasEnvio">Conocé los tiempos y formas de envio</p>
+            <label  class="talles" for="talles">Talles:</label>
+            <input type="checkbox" name="talles" value="S">S
+            <input type="checkbox" name="talles" value="M">M
+            <input type="checkbox" name="talles" value="L">L
+            <input type="checkbox" name="talles" value="XL">XL
+            <p>Color: Floreado</p>
+            <p>Stock Disponible</p>
+            <button class="comprar" type="button">Comprar Ahora</button>
+            <button class="carrito" type="button">Agregar al carrito</button>
+        </div>
+     </main>
+     <script type="text/javascript" src="css\productDetail.js"></script>
 </body>
 </html>
