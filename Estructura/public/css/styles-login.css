@@ -8,7 +8,7 @@ body {
   background-color: #f0f0f0;
 }
 
-form.registro {
+form.log {
   display: block;
   width: 60%;
   border: solid 1px #000000;
@@ -24,11 +24,8 @@ form .casilla {
   margin: 0px 0px 10px 20px;
 }
 
-.nombre-apellido,
-.email,
-.user,
-.contraseña,
-.rep-contraseña {
+.nombre-email,
+.contraseña {
   color: #a0a0a0;
   background-color: #f0f0f0;
   width: 65%;
@@ -39,19 +36,20 @@ form .casilla {
 
 form .buttons {
   display: flex;
-  justify-content: space-between;
+  margin: 20px 0px 10px
 }
 
-form button {
+form .buttons .iniciar-sesion {
   background-color: #184e77;
   color: #f0f0f0;
-  width: 25%;
-  margin: 0px auto 10px;
+  width: 50%;
+  margin: auto;
   max-width: 115px;
   padding: 3px;
   border: 0px;
   border-radius: 4px;
 }
+
 
 /*NEWSLETTER (DESPUES HAY QUE SEPARARLO A OTRO CSS)*/
 
