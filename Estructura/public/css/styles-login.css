@@ -34,12 +34,19 @@ form .casilla {
   border-bottom: 1px solid #184e77;
 }
 
-form .buttons {
-  display: flex;
-  margin: 20px 0px 10px
+form .texto {
+  text-align: center;
+  font-size: 0.9em;
+  margin: 20px auto;
 }
 
-form .buttons .iniciar-sesion {
+form .buttons {
+  display: flex;
+  margin: 20px 0px 10px;
+}
+
+form .buttons .boton {
+  font-size: 14px;
   background-color: #184e77;
   color: #f0f0f0;
   width: 50%;
@@ -48,77 +55,9 @@ form .buttons .iniciar-sesion {
   padding: 3px;
   border: 0px;
   border-radius: 4px;
+  transition: background-color 250ms;
 }
 
-
-/*NEWSLETTER (DESPUES HAY QUE SEPARARLO A OTRO CSS)*/
-
-body .newsletter {
-  display: flex;
-  margin: 15px 0px 30px;
-  background-color: #76c893;
-  border: solid 1px #a0a0a0;
-  justify-content: space-between;
-  align-items: center;
-}
-
-
-body .newsletter .texto{
-  display: flex;
-  flex-direction: column;
-  margin: 8px 0px 8px 8px;
-}
-
-body .texto h4, p {
-  font-size: 0.8em;
-}
-
-body .newsletter .datos {
-  display: flex;
-  flex-direction: column;
-  width: 40%;
-}
-
-.newsletter-nombre, .newsletter-email {
-  margin: 8px 10%;
-  padding: 3px;
-}
-
-.enviar {
-  padding: 5px 8px;
-  background-color: #000000;
-  color: #f0f0f0;
-  border: 0px;
-}
-
-@media (min-width: 769px) {
-  
-  body .newsletter .texto{
-    display: flex;
-    flex-direction: column;
-    margin: 8px 0px 8px 8px;
-  }
-  
-  body .texto h4, p {
-    font-size: 1em;
-  }
-  
-  body .newsletter .datos {
-    display: flex;
-    flex-direction: row;
-    width: 50%;
-    justify-content: space-between;
-  }
-  
-  .newsletter-nombre, .newsletter-email {
-    margin: 0px;
-    width: 45%;
-  }
-  
-  .enviar {
-    padding: 5px 8px;
-    background-color: #000000;
-    color: #f0f0f0;
-    border: 0px;
-  }
+form .boton:hover {
+  background-color: #276da3;
 }
