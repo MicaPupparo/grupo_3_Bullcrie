@@ -1,0 +1,137 @@
+
+/*   HEADER ----------------------------------------------------------------------------*/
+body {
+    height: fit-content;
+}
+
+#ul-responsive {
+    display: none;
+}
+.icon {
+    display: none;
+}
+
+.mesagge-header {
+    border:0.7px solid #A0A0A0;
+    font-size: 14px;
+    color: white;
+    background-color: #76c893;
+    text-align: center;
+    width: 100%;
+    z-index: 4;
+    top: 0;
+    position: fixed;
+}
+.mesagge-header p {
+    padding-bottom: 5px;
+}
+
+.ul-header li a, .ul-header_icons li a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.2s ease-out;
+}
+.ul-header_icons li i{
+    transition: all 0.2s ease-out;
+}
+.ul-header a:hover, .ul-header_icons i:hover{
+    transform: scale(0.8);
+	color: #76c893;
+    transition: all 0.1s ease-out;
+    font-size: 19px;
+}
+.ul-header {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.ul-header_icons {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;        
+}
+.ul-header li {
+    padding: 10px;
+}
+.ul-header_icons li {
+    padding: 5px;
+}
+
+header > * {
+    width: 300px;
+}
+
+header {
+    display: flex;
+    border: 0.7px solid #A0A0A0;
+    border-top: none;
+    justify-content: space-between;
+    box-shadow: 0px 0px 3px 0px #A0A0A0;
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: white;
+    top: 18px;
+    z-index: 4;
+    align-items: center;
+    padding: 0 20px;
+    text-decoration: none;
+    
+}
+header a {
+    color: black;
+}
+
+.logo{
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+}
+.logo img {
+    width: 50px;
+    padding: 5px;
+    
+}
+@media (max-width: 480px){
+.ul-header {
+        display: none;
+    }
+.logo {
+    justify-content: center;
+}
+    
+.icon {
+        display: block;
+    }
+  #ul-responsive a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+   
+  #ul-responsive a:hover {
+    background-color: #dadada;
+    color: black;
+  }
+  
+  #ul-responsive{
+    display: none;
+    position: absolute;
+    height: 300px;
+    width: 280px;
+    top: 0;
+    margin: auto;
+    left: 0;
+    font-size: 20px;
+    right: 0;
+    background: #76c893;
+    color: white!important;
+    text-decoration: none;
+      text-align: center;
+  } 
+}

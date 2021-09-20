@@ -1,12 +1,17 @@
 *{
     margin: 0%;
     padding: 0%;
-}
+    }
+
+  body {
+    min-height: 100vh;
+    background-color: #DADADA;
+  }
 
 
 
 /*   HEADER ----------------------------------------------------------------------------*/
-
+/*
 .mesagge-header {
     border:0.7px solid #A0A0A0;
     font-size: 10px;
@@ -15,6 +20,7 @@
     text-align: center;
     position: fixed;
     width: 100%;
+    z-index: 4;
 }
 .mesagge-header p {
     padding-bottom: 2px;
@@ -62,6 +68,7 @@ header {
     font-size: 13px;
     background-color: white;
     top: 13px;
+    z-index: 4;
 }
 .logo{
     box-sizing: border-box;
@@ -70,27 +77,23 @@ header {
     width: 50px;
     padding: 5px;
 }
-
+*/
 /* EMPIEZA EL BODY  -------------------------------------------------------------------------*/
-body {
-    background-color: #DADADA;
-    position: relative;
-}
 
 #gallery {
     display: flex;
     justify-content: space-between;
-    position: absolute;
     border:1px solid #A0A0A0;
     box-shadow: 0px 0px 3px 0px black;
     padding: 15px;
     background-color: white;
     margin: 100px 25px 25px;
+    height: 50%;
    
 }
 
 .main-img {
-    width: 45%;
+    width: 40%;
     border: 1px solid black;
     display: flex;
     margin: 10px;
@@ -107,29 +110,121 @@ body {
     width: 25%;
     border-radius: 10px;
     padding: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
-.product-details h3, .product-details h2 {
+.product-details h3{
     padding: 3px;
+    font-size: 26px;
+}
+.product-details h2 {
+    padding: 3px;
+    font-size: 32px;
+
 }
 
 .cuotas, .enviosGratis {
     color: #76c893;
     padding: 3px;
-    font-size: 12px;
+    font-size: 18px;
 }
 .mediosPago {
     color: #184E77;
     padding: 3px;
-    font-size: 12px;
+    font-size: 18px;
 }
+
+.enviosGratis{
+    margin-top: 20px;
+}
+.enviosGratis i{
+    padding-right: 8px;
+}
+
 .formasEnvio {
     font-weight: bold;
     padding: 3px;
-    font-size: 12px;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+.comprar {
+    width: 95%;
+    height: 30px;
+    background-color: #184e77;
+    color: white;
+    border-radius: 7px;
+    margin: 5px;
+    font-size: 18px;
+}
+
+.carrito {
+    width: 95%;
+    height: 30px;
+    background-color: rgba(24, 78, 119, 0.2);
+    color: #184e77;
+    border-radius: 7px;
+    margin: 5px;
+    font-size: 18px;
+}
+.color {
+ color: #A0A0A0;
+ margin-top: 5px;
+ font-size: 18px;
+}
+
+.stock {
+    margin-bottom: 15px;
 }
 
 
+.talles {
+    display: block;
+    color: #A0A0A0;
+    font-size: 18px;
+}
+.ul_checkbox-talles {
+    padding: 0;
+    margin: 0;
+    clear: both;
+    display: flex;
+    margin-bottom: 15px;
+}
+
+
+.li_checkbox-talles {
+    list-style-type: none;
+    list-style-position: outside;
+    margin: 3px;
+    
+}
+input[type="checkbox"]:not(:checked), 
+input[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999%;
+}
+
+input[type="checkbox"] + label {
+  display: flex;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid #A0A0A0;
+  color: #A0A0A0;
+  background-color: white;
+  justify-content: center;
+  font-size: 10px;
+  border-radius: 5px;
+  width: 15px;
+  
+}
+
+input[type="checkbox"]:checked + label {
+  border: 1px solid #A0A0A0;
+  color: #A0A0A0;
+  background-color: #DADADA;
+}
 
 img {
     Width:100%;
@@ -137,7 +232,10 @@ img {
   .images {
     display: flex;
     flex-direction: column;
-    width: 15%;
+    width: 10%;
+    margin-top: auto;
+    margin-bottom: auto;
+    
   }
   .images img {
     margin: 10px;
@@ -154,3 +252,109 @@ img {
   .fade-in {
     animation:fadeIn 0.5s ease-in 1 forwards;
   }
+
+ /* NEWSLETTER -----------------------------------------------------------------------*/
+.newsletter {
+    width: 100%;
+    bottom: 15%;
+}
+  /* FOOTER -----------------------------------------------------------------------*/
+
+  footer{
+    background-color: #A0A0A0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;      
+}
+.logoConNombre img{
+    width: 85px;
+}
+
+.footerSociales a{
+    color: #000000;
+    margin: 25px;
+    transition: 0.3s;
+}
+.footerSociales a:hover{
+    text-decoration: none;
+    color:#184e77;
+}
+
+.categoriasFooter ul {
+    list-style: none;
+}
+.categoriasFooter a{
+   text-decoration: none;
+   color: #000000;
+   
+
+}
+
+.categoriasFooter ul a {
+ color: #000000;
+ transition: 0.3s;
+ 
+}
+.categoriasFooter ul a:hover {
+  text-decoration: none;
+  color: #184e77;
+}
+
+.mensajeFooter{
+    font-size: 10px;
+    text-align: center;
+    background-color: #000000;
+    opacity: 0.7;
+}
+
+.mensajeFooter p{
+    color: white;
+}
+
+
+@media (max-width: 769px){
+    #gallery {
+        flex-wrap: wrap;
+    }
+    .main-img {
+        width: 100%;
+    }
+    
+    .product-details {
+        width: 100%;
+    }
+    
+    .images {
+        flex-direction: row;
+        justify-content: space-between;
+        width: auto;
+    }
+    .images img {
+        width: 25%;
+    }
+    }
+
+
+@media (max-width: 480px){
+
+#gallery {
+    flex-wrap: wrap;
+}
+.main-img {
+    width: 100%;
+}
+
+.product-details {
+    width: 100%;
+}
+
+.images {
+    flex-direction: row;
+    justify-content: space-between;
+    width: auto;
+}
+.images img {
+    width: 25%;
+}
+}
