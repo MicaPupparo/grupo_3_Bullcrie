@@ -1,0 +1,93 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* colores
+#184e77 AZUL
+#A0A0A0 GRIS
+#76C893 VERDE*/
+
+/*  Cart  */
+
+.cart-container{
+    margin: 20px auto;
+    width: 90vw;
+    max-width: 1200px;
+    border: solid 1px #A0A0A0;
+}
+
+.cart-container > h2{
+    padding: 20px;
+}
+
+.cart{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cart-products{
+    display: flex;
+    width: 100vw;
+    height: 150px;
+    overflow: hidden;
+    margin: 10px 30px;
+    border-top: solid 1px #184e77;
+}
+
+.image-cart{
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    text-align: center;
+}
+
+.image-cart img{
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border: solid 1px #A0A0A0;
+}
+
+.product-info-cart{
+    padding: 10px;
+    width: 100vw;
+}
+
+.product-name-cart, .product-price-cart{
+    margin-bottom: 10px;
+}
+
+.product-price-cart{
+    font: 15px;
+    font-weight: bold;
+}
+
+.product-quantity-cart{
+    text-align: right;
+    font-size: 12px;
+}
+
+.product-quantity-cart input{
+    font-size: 12px;
+    width: 20px;
+    padding: 2px;
+    text-align: center;
+}
+.remove-buy{
+    position: relative;
+    right: 75px;
+    top: 20px;
+}
+
+.remove-buy a{
+    font-size: 12px;
+    text-decoration: none;
+    padding: 0px 5px;
+    color: #000000
+}
+
+.remove-buy a:hover{
+    color: #76C893
+}

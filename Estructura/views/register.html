@@ -8,12 +8,14 @@
     <title>Registro</title>
 
     <link rel="stylesheet" href="/css/styles-register.css" />
+    <link rel="stylesheet" href="/css/styles-newsletter.css" />
 
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
   </head>
+  
   <body>
     <header>
       <div class="logo">
@@ -48,11 +50,12 @@
           name="nombre y apellido"
           placeholder="Nombre y apellido"
           class="nombre-apellido"
+          required
         />
       </div>
 
       <div class="casilla">
-        <input type="email" name="email" placeholder="E-mail*" class="email" />
+        <input type="email" name="email" placeholder="E-mail*" class="email" required/>
       </div>
 
       <div class="casilla">
@@ -61,6 +64,7 @@
           name="nombre de usuario"
           placeholder="Nombre de usuario"
           class="user"
+          required
         />
       </div>
 
@@ -70,6 +74,7 @@
           name="contraseña"
           placeholder="Contraseña"
           class="contraseña"
+          required
         />
       </div>
 
@@ -79,29 +84,37 @@
           name="repetir contraseña"
           placeholder="Repetir contraseña"
           class="rep-contraseña"
+          required
         />
       </div>
 
-      <div class="buttons">
-        <button type="submit" class="crear">Crear</button>
+      <div class="texto">
+        <span>¿Ya tenés cuenta? Hacé click en "Iniciar Sesión"</span>
+      </div>
 
-        <button class="iniciar-sesion">Iniciar Sesion</button>
+      <div class="buttons">
+        
+        <button class="crear boton" >Crear</button>
+
+        <a href="./login" class="boton"><span>Iniciar Sesión</span></a>
+
       </div>
     </form>
 
-    <div class="newsletter">
+    <section class="newsletter">
       <div class="texto">
         <h4>SUSCRIBITE AL NEWSLETTER</h4>
 
         <p>Recibí nuestras novedades y promociones</p>
       </div>
 
-      <input type="text" placeholder="NOMBRE" class="newsletter-nombre" />
-
-      <input type="email" placeholder="E-MAIL" class="newsletter-email" />
-
+      <div class="datos">
+        <input type="text" placeholder="NOMBRE" class="newsletter-nombre" />
+        <input type="email" placeholder="E-MAIL" class="newsletter-email" />
+      </div>
+        
       <button type="submit" class="enviar">ENVIAR</button>
-    </div>
+    </section>
 
     <footer>
       <h1>FOOTER</h1>

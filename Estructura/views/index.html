@@ -5,73 +5,83 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BULLCRIE</title>
-    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/index.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
      rel="stylesheet" />
 
 </head>
+<body class="wrapper">
+  <div class="mesagge-header"><p>Winter SALE 50% OFF con cualquier método de pago</p></div>
+  <header>
+      <div class="logo"><a href="#home"><img src="images\bullcrie logo.png"></a></div> 
+      <ul class="ul-header">
+          <li><a href="#inicio">INICIO</a></li>
+          <li><a href="#tienda">TIENDA</a></li>
+          <li><a href="#contacto">CONTACTO</a></li>
+      </ul>
+      <ul class="ul-header_icons">
+          <li><a href="#search"><i class="fas fa-search"></i></a></li>
+          <li><a href="#user"><i class="far fa-user"></i></a></li>
+          <li><a href="#cart"><i class="fas fa-shopping-cart"></i></a></li>
+      </ul>
+  </header>
+  
+      
 
-<body>
- <header>
-    <header>
-        <div class="logo"><img src=""></div> 
-        <ul class="ul-header">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#tienda">Tienda</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-        <ul class="ul-header_icons">
-            <li><a href="#search"><i class="fas fa-search"></i></a></li>
-            <li><a href="#user"><i class="far fa-user"></i></a></li>
-            <li><a href="#cart"><i class="fas fa-shopping-cart"></i></a></li>
-        </ul>
-    </header>
-<!--Banner, aca tiene que ir una galeria-->
-  <section class="banner">
-    <img src="/images/banner-bc.png" alt="" width="100%">
-  </section>
+ 
 
 <main>
-
+<!--Banner, aca tiene que ir una galeria-->
+  <section class="banner">
+    <img src="/images/bannernordo.jpeg" alt="" width="100%">
+  </section>
     <!-- Aca van las 4 categorias del inicio-->
 
- <section class="categorias">
-    <article>
-        <img src="/images/buzonegrosnow.jpeg" alt="" height="20%" width="20%" >
+ <div class="categorias">
+    <div class="cat1">
+        <img src="/images/buzonegrosnow.jpeg" >
         <p>Buzos</p>
-    </article>
+    </div>
 
-    <article>
-        <ages src="/images/remerablanca.jpeg" alt="" height="20%" width="20%" >
+    <div class="cat2">
+        <img src="/images/remerablanca.jpeg">
         <p>Remeras</p>
-    </article> 
+    </div> 
     
-    <article>
-    <img src="/images/mallalineas.jpeg" alt="" height="20%" width="20%">
+    <div class="cat3">
+    <img src="/images/mallalineas.jpeg">
     <p>Mallas</p>
-    </article>
+    </div>
     
-    <article>
-    <img src="/images/gorra.jpg" alt="" height="20%" width="20%">
+    <div class="cat4">
+    <img src="/images/gorra.jpg">
     <p>Gorras</p>
-    </article>
-</section>
+    </div>
+</div>
 
 <!-- Aca va la barra de envios, contacto y cuotas-->
 <section class="barraEnvios">
+  <div class="camion">
     <i class="fas fa-truck"></i>
     <p>Envios a todo el pais</p>
+  </div>
 
+  <div class="tarjeta">
     <i class="fas fa-credit-card"></i>
     <p>3 y 6 cuotas</p>
+  </div>
 
+  <div class="telefono">
     <i class="fas fa-phone"></i>
     <p>Comunicate con nosotros</p>
+  </div>
+
 </section>
 
 <!--Aca van los productos recomendados-->
+<h3>Productos Recomendados</h3>
  <section class="productosRecomendados">
-     <h3>Productos Recomendados</h3>
+     
      <article>
         <img src="/images/mallafloreada.jpeg"    alt="" height="15%" width="15%">
         <div class="prductos">
@@ -83,7 +93,7 @@
       </article>
 
       <article>
-        <img src="/images/buzonegro.jpeg"    alt="" height="15%" width="15%">
+        <img src="/images/buzonegrococo.jpeg"    alt="" height="15%" width="15%">
         <div class="prductos">
           <i class="fas fa-truck"></i>
         <p class="precio">$5.500</p>
@@ -115,27 +125,33 @@
 
  </main>
 <footer>
-    <article class="logoConNombre">
-    <img src="/images/bullcrie logo_adobespark.png" alt="">
+    <div class="logoConNombre">
+    <img src="/images/bullcrie logo_adobespark.png" alt="" width="10%" height="5%">
     <p>BULLCRIE.</p>
-    </article>
+    </div>
 
-<article class="iconosRedes"> 
-    <i class="fas fa-phone"></i>
-    <i class="fab fa-whatsapp"></i>
-    <i class="fab fa-instagram"></i>
-</article>
+<div class="footerSociales"> 
+   
+    <a href="#"><i class="fas fa-phone"></i></a>
+    <a href="#"><i class="fab fa-whatsapp"> </i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+  
+</div>
 
-<article class="categoriasFooter">
-    <ul class="ul-footer">
+<div class="categoriasFooter">
+    <ul>
         <li><a href="#">Remeras</a></li>
         <li><a href="#">Mallas</a></li>
         <li><a href="#">Buzos</a></li>
         <li><a href="#">Remeras</a></li>
     </ul>
-</article>
+</div>
+
 
 </footer>
+<div class="mensajeFooter">
+  <p>© Copyright BULLCRIE. All Rights Reserved</p>
+  </div>
     
  </body>
 </html>
