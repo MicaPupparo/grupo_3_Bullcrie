@@ -2,6 +2,9 @@
     margin: 0%;
     padding: 0%;
 }
+body{
+    background-color: rgb(233, 227, 227);
+}
 
 /*   HEADER ----------------------------------------------------------------------------*/
 
@@ -69,57 +72,132 @@ header {
     padding: 5px;
 }
 
-body {
-    background-color: #DADADA;
-    position: relative;
+/*   CATEGORIAS ----------------------------------------------------------------------------*/
+.categorias{
+    display: flex;  
+    font-size: 25px; 
+    margin: 30px;
+}
+.cat1 img{
+width: 150px;
+height: 150px;
+margin-right: 125px;
 }
 
+.cat1 p{
+    margin-left: 35px;
+}
+
+.cat2 img{
+    width: 150px;
+    height: 150px;
+    margin-right: 125px;
+}
+.cat2 p{
+    margin-left: 25px;
+}
+.cat3 img{
+    width: 150px;
+    height: 150px;
+    margin-right: 125px;
+}
+.cat3 p{
+    margin-left: 35px;
+}
+.cat4 img{
+    width: 150px;
+    height: 150px;
+    
+}
+
+.cat4 p{
+    margin-left: 35px;
+}
+/*   BARRA ENVIOS ----------------------------------------------------------------------------*/
+
+.barraEnvios{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: #A0A0A0;
+}
+
+.camion i{
+    margin-left: 60px;
+    margin-top: 25px;  
+}
+.camion p{
+    margin-bottom: 25px;
+}
+.tarjeta i{
+    margin-left: 30px;
+    margin-top: 25px;  
+}
+.tarjeta p{
+    margin-bottom: 25px;
+}
+
+.telefono i{
+    margin-left: 70px;
+    margin-top: 25px;  
+}
+.telefono p{
+    margin-bottom: 25px;
+}
+/*   PRODUCTOS RECOMENDADOS ----------------------------------------------------------------------------*/
+
+.productosRecomendados{
+    display: flex;
+}
 /*   FOOTER ----------------------------------------------------------------------------*/
 footer{
     background-color: #A0A0A0;
     display: flex;
-     justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    bottom: 0;
 }
 
-.logoConNombre {
-    align-self: flex-start;
-    margin-top: 25px;
-    margin-bottom: 25px;
-}
-.logoConNombre p{
-    margin-left: 15px;
-}
 .logoConNombre img{
-    margin-left: 20px;
+    width: 85px;
 }
 
-.footerSociales{  
-   font-size: 18px; 
-   margin: 50px;
-   display: flex; 
-   justify-content: right;
-}
+
 
 .footerSociales a{
-    color: black;
-       
-  
+    color: #000000;
+    margin: 25px;
+    transition: 0.3s;
 }
-
-
-
-.categoriasFooter{
-    text-align: right;
-    margin-right: 5px;
-    margin-top: 35px;
-    margin-bottom: 15px;
-    margin-left: 50px;
-      
+.footerSociales a:hover{
+    text-decoration: none;
+    color:#184e77;
 }
 
 .categoriasFooter a{
-    text-decoration: none;
-    color: black;
-   
-    
+   text-decoration: none;
+   color: #000000;
+
+}
+
+.categoriasFooter ul a {
+ color: #000000;
+ transition: 0.3s;
+}
+.categoriasFooter ul a:hover {
+  text-decoration: none;
+  color: #184e77;
+}
+
+.mensajeFooter{
+    font-size: 10px;
+    text-align: center;
+    background-color: #000000;
+}
+
+.mensajeFooter p{
+    color: white;
 }
