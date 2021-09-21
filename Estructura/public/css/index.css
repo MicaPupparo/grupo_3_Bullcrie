@@ -1,10 +1,16 @@
+
 *{
     margin: 0%;
     padding: 0%;
+    font-family: 'Poppins';
+    box-sizing: border-box;
 }
 body{
     background-color: rgb(233, 227, 227);
+    margin-top: 70px;
+
 }
+
 
 /*   HEADER ----------------------------------------------------------------------------*/
 
@@ -71,6 +77,10 @@ header {
     width: 50px;
     padding: 5px;
 }
+
+.banner{
+    width: 100%;
+}
 /*   CARRUSEL ----------------------------------------------------------------------------*/
 
 
@@ -78,44 +88,29 @@ header {
 .categorias{
     display: flex;  
     font-size: 25px; 
-    margin: 30px;
     justify-content: space-between;
-}
-.cat1 img{
-width: 150px;
-height: 150px;
-box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    flex-wrap: wrap;
 }
 
-.cat1 p{
-    margin-left: 35px;
+.p1{
+    width: 100%;
+    text-align: center;
 }
 
-.cat2 img{
-    width: 150px;
-    height: 150px;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-}
-.cat2 p{
-    margin-left: 25px;
-}
-.cat3 img{
-    width: 150px;
-    height: 150px;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-}
-.cat3 p{
-    margin-left: 35px;
-}
-.cat4 img{
-    width: 150px;
-    height: 150px;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+.cat1, .cat2, .cat3, .cat4{
+    width: 20%;
+    flex-direction: row;
+    display: flex;
+    margin: 10px; 
+    flex-wrap: wrap;
+    
 }
 
-.cat4 p{
-    margin-left: 35px;
+.img1, .img2, .img3, .img4{
+   width: 100%; 
+   box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
+
 /*   BARRA ENVIOS ----------------------------------------------------------------------------*/
 
 .barraEnvios{
@@ -125,6 +120,7 @@ box-shadow: 0px 0px 10px rgb(100, 100, 100);
     margin-top: 40px;
     margin-bottom: 40px;
     background-color: #A0A0A0;
+    width: 100%;
 }
 
 .camion i{
@@ -215,39 +211,7 @@ article div.main-article{
     position: relative;
     padding: 15px;
 }
-@media (min-width: 361px){
-    .productosRecomendados{
-        justify-content: space-between;
-    }
-    
 
-    main section article{
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    }
-
-    main section div.productos{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: flex-start;
-    }
-    
-    main section div.productos article{
-        width: 45%;
-    }
-
-    .precio,
-    .dcuotas{
-        width: 50%;
-    }
-}
-
-@media (min-width: 769px){
-    main section div.productos article{
-        width: 22%;
-    }
-}
 /*   FOOTER ----------------------------------------------------------------------------*/
 footer{
     background-color: #A0A0A0;
@@ -299,3 +263,67 @@ footer{
 .mensajeFooter p{
     color: white;
 }
+
+@media (min-width: 361px){
+    .productosRecomendados{
+        justify-content: space-between;
+    }
+    
+
+    main section article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    main section div.productos{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    
+    main section div.productos article{
+        width: 45%;
+    }
+
+    .precio,
+    .dcuotas{
+        width: 50%;
+    }
+}
+
+@media (min-width: 769px){
+    main section div.productos article{
+        width: 22%;
+    }
+}
+
+@media (max-width: 480px) {
+    .categorias{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+ .cat1, .cat2, .cat3, .cat4 {
+width: 80%;
+text-align: center;
+}
+
+.barraEnvios{
+    font-size: 12px;
+    justify-content: space-around;
+
+}
+
+.barraEnvios i{
+    text-align: center;
+}
+
+.barraEnvios p{
+    text-align: center;
+}
+
+
+}
+
+
