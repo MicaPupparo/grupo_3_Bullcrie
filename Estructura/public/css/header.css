@@ -2,6 +2,7 @@
 /*   HEADER ----------------------------------------------------------------------------*/
 body {
     height: fit-content;
+    font-family: 'Poppins';
 }
 
 #ul-responsive {
