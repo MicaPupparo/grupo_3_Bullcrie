@@ -71,17 +71,20 @@ header {
     width: 50px;
     padding: 5px;
 }
+/*   CARRUSEL ----------------------------------------------------------------------------*/
+
 
 /*   CATEGORIAS ----------------------------------------------------------------------------*/
 .categorias{
     display: flex;  
     font-size: 25px; 
     margin: 30px;
+    justify-content: space-between;
 }
 .cat1 img{
 width: 150px;
 height: 150px;
-margin-right: 125px;
+box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
 .cat1 p{
@@ -91,7 +94,7 @@ margin-right: 125px;
 .cat2 img{
     width: 150px;
     height: 150px;
-    margin-right: 125px;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 .cat2 p{
     margin-left: 25px;
@@ -99,7 +102,7 @@ margin-right: 125px;
 .cat3 img{
     width: 150px;
     height: 150px;
-    margin-right: 125px;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 .cat3 p{
     margin-left: 35px;
@@ -107,7 +110,7 @@ margin-right: 125px;
 .cat4 img{
     width: 150px;
     height: 150px;
-    
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
 .cat4 p{
@@ -148,8 +151,102 @@ margin-right: 125px;
 }
 /*   PRODUCTOS RECOMENDADOS ----------------------------------------------------------------------------*/
 
-.productosRecomendados{
+
+div.productosRecomendados{
     display: flex;
+    flex-wrap: wrap;
+}
+
+.precio{
+    font-size: 18px;
+    width: 30%;
+}
+
+.cuotas{
+    width: 70%;
+}
+
+.cuotas,
+.descripcion{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+h3,
+.descripcion{
+    color: #666;
+}
+
+.descripcion{
+    display: none;
+    margin-top: 20px;
+}
+
+section.banner img{
+    width: 100%;
+}
+
+
+
+main section article{
+    background-color: #fff;    
+    margin: 10px 0px;
+}
+
+main section article img{
+    width: 100%;
+}
+
+
+.cuotas{
+    color: #39b54a;
+}
+
+main section h3{
+    margin: 20px 0px;
+}
+
+article div.main-article{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    border-top: 1px solid #ebebeb;
+    position: relative;
+    padding: 15px;
+}
+@media (min-width: 361px){
+    .productosRecomendados{
+        justify-content: space-between;
+    }
+    
+
+    main section article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    main section div.productos{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    
+    main section div.productos article{
+        width: 45%;
+    }
+
+    .precio,
+    .dcuotas{
+        width: 50%;
+    }
+}
+
+@media (min-width: 769px){
+    main section div.productos article{
+        width: 22%;
+    }
 }
 /*   FOOTER ----------------------------------------------------------------------------*/
 footer{
@@ -159,6 +256,7 @@ footer{
     align-items: center;
     width: 100%;
     bottom: 0;
+    margin-top: 50px;
 }
 
 .logoConNombre img{
