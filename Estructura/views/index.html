@@ -8,17 +8,32 @@
     <link href="/css/index.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
      rel="stylesheet" />
+     <link rel="stylesheet" href="/css/styles-newsletter.css" />
+     <link rel="stylesheet" href="/css/header.css">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap%22%3E" />
 
 </head>
 <body class="wrapper">
+  <!-- -------------------------------------HEADER-------------------------------------------------------- -->
+
   <div class="mesagge-header"><p>Winter SALE 50% OFF con cualquier método de pago</p></div>
   <header>
+      <div id="ul-responsive">
+        <a href="#inicio">INICIO</a>
+        <a href="#tienda">TIENDA</a>
+        <a href="#contacto">CONTACTO</a>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="toggleBurger()">
+          <i class="fas fa-bars"></i>
+      </a>
+
       <div class="logo"><a href="#home"><img src="images\bullcrie logo.png"></a></div> 
       <ul class="ul-header">
           <li><a href="#inicio">INICIO</a></li>
           <li><a href="#tienda">TIENDA</a></li>
           <li><a href="#contacto">CONTACTO</a></li>
       </ul>
+
       <ul class="ul-header_icons">
           <li><a href="#search"><i class="fas fa-search"></i></a></li>
           <li><a href="#user"><i class="far fa-user"></i></a></li>
@@ -32,32 +47,32 @@
 
 <main>
 <!--Banner, aca tiene que ir una galeria-->
-  <section class="banner">
-    <img src="/images/bannernordo.jpeg" alt="" width="100%">
-  </section>
+ <section class="banner">
+    <img src="/images/banner1.jpeg" alt="" >
+  </section> 
     <!-- Aca van las 4 categorias del inicio-->
 
- <div class="categorias">
+ <section class="categorias">
     <div class="cat1">
-        <img src="/images/buzonegrosnow.jpeg" >
-        <p>Buzos</p>
+        <img class="img1" src="/images/buzonegrosnow.jpeg" >
+        <div class="p1"><p>Buzos</p></div>
     </div>
 
     <div class="cat2">
-        <img src="/images/remerablanca.jpeg">
-        <p>Remeras</p>
+        <img class="img2" src="/images/remerablanca.jpeg">
+        <div class="p1"><p>Remeras</p></div>
     </div> 
     
     <div class="cat3">
-    <img src="/images/mallalineas.jpeg">
-    <p>Mallas</p>
+    <img class="img3" src="/images/mallalineas.jpeg">
+    <div class="p1"><p>Mallas</p></div>
     </div>
     
     <div class="cat4">
-    <img src="/images/gorra.jpg">
-    <p>Gorras</p>
+    <img class="img4" src="/images/gorra.jpg">
+    <div class="p1"><p>Gorras</p></div>
     </div>
-</div>
+  </section>
 
 <!-- Aca va la barra de envios, contacto y cuotas-->
 <section class="barraEnvios">
@@ -78,51 +93,57 @@
 
 </section>
 
-<!--Aca van los productos recomendados-->
-<h3>Productos Recomendados</h3>
- <section class="productosRecomendados">
-     
-     <article>
-        <img src="/images/mallafloreada.jpeg"    alt="" height="15%" width="15%">
-        <div class="prductos">
-          <i class="fas fa-truck"></i>
-        <p class="precio">$3.500</p>
-        <p class="infodeproducto">Paga en 3 y 6 cuotas sin interes</p>
-        <h4 class="producto">Malla Floreada</h4>
-      </div>
-      </article>
-
+<section class="productosRecomendados">
+  <h3>Basado en tu última visita</h3>
+  <div class="productos">
       <article>
-        <img src="/images/buzonegrococo.jpeg"    alt="" height="15%" width="15%">
-        <div class="prductos">
-          <i class="fas fa-truck"></i>
-        <p class="precio">$5.500</p>
-        <p class="infodeproducto">Paga en 3 y 6 cuotas sin interes</p>
-        <h4 class="producto">Buzo negro</h4>
-      </div>
+          <img src="/images/buzonegrosnow.jpeg" alt="Cafetera" class="product_img">
+          <div class="main-article">
+              <p class="precio">$5.700</p>
+              <p class="cuotas">Paga en 3 y 6 cuotas</p>
+              <h4 class="descrpcion">Buzo Negro Snow</h4>
+          </div>
       </article>
-
       <article>
-        <img src="/images/remerablanca.jpeg"    alt="" height="15%" width="15%">
-        <div class="prductos">
-          <i class="fas fa-truck"></i>
-        <p class="precio">$2.900</p>
-        <p class="infodeproducto">Paga en 3 y 6 cuotas sin interes</p>
-        <h4 class="producto">Remera Blanca</h4>
+        <img src="/images/buzorojo.jpeg" alt="Cafetera" class="product_img">
+        <div class="main-article">
+            <p class="precio">$5.700</p>
+            <p class="cuotas">Paga en 3 y 6 cuotas</p>
+            <h4 class="descrpcion">Buzo Rojo Snow</h4>
+        </div>
+    </article>
+    <article>
+      <img src="/images/mallafloreada.jpeg" alt="Cafetera" class="product_img">
+      <div class="main-article">
+          <p class="precio">$2.800</p>
+          <p class="cuotas">Paga en 3 y 6 cuotas</p>
+          <h4 class="descrpcion">Malla Floreada</h4>
       </div>
-      </article>
-
-  <article>
-   <img src="/images/buzorojo.jpeg"    alt="" height="15%" width="15%">
-     <div class="prductos">
-          <i class="fas fa-truck"></i>
-          <p class="precio">$5.500</p>
-          <p class="infodeproducto">Paga en 3 y 6 cuotas sin interes</p>
-          <h4 class="producto">Buzo Bordo</h4>
-    </div>
   </article>
- </section>
+  <article>
+    <img src="/images/remerablanca.jpeg" alt="Cafetera" class="product_img">
+    <div class="main-article">
+        <p class="precio">$2.000</p>
+        <p class="cuotas">Paga 3 y 6 cuotas</p>
+        <h4 class="descrpcion">Remera Blanca</h4>
+    </div>
+</article>
+  </div>
+</section>
+<section class="newsletter">
+  <div class="texto">
+    <h4>SUSCRIBITE AL NEWSLETTER</h4>
 
+    <p>Recibí nuestras novedades y promociones</p>
+  </div>
+
+  <div class="datos">
+    <input type="text" placeholder="NOMBRE" class="newsletter-nombre" />
+    <input type="email" placeholder="E-MAIL" class="newsletter-email" />
+  </div>
+    
+  <button type="submit" class="enviar">ENVIAR</button>
+</section>
  </main>
 <footer>
     <div class="logoConNombre">
@@ -152,6 +173,8 @@
 <div class="mensajeFooter">
   <p>© Copyright BULLCRIE. All Rights Reserved</p>
   </div>
+  <script type="text/javascript" src="css\productDetail.js"></script>
     
+  <script type="text/javascript" src="css\header.js"></script>
  </body>
 </html>

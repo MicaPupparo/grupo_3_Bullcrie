@@ -1,7 +1,16 @@
+
 *{
     margin: 0%;
     padding: 0%;
+    font-family: 'Poppins';
+    box-sizing: border-box;
 }
+body{
+    background-color: rgb(233, 227, 227);
+    margin-top: 70px;
+
+}
+
 
 /*   HEADER ----------------------------------------------------------------------------*/
 
@@ -69,57 +78,252 @@ header {
     padding: 5px;
 }
 
-body {
-    background-color: #DADADA;
+.banner{
+    width: 100%;
+}
+/*   CARRUSEL ----------------------------------------------------------------------------*/
+
+
+/*   CATEGORIAS ----------------------------------------------------------------------------*/
+.categorias{
+    display: flex;  
+    font-size: 25px; 
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.p1{
+    width: 100%;
+    text-align: center;
+}
+
+.cat1, .cat2, .cat3, .cat4{
+    width: 20%;
+    flex-direction: row;
+    display: flex;
+    margin: 10px; 
+    flex-wrap: wrap;
+    
+}
+
+.img1, .img2, .img3, .img4{
+   width: 100%; 
+   box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+/*   BARRA ENVIOS ----------------------------------------------------------------------------*/
+
+.barraEnvios{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: #A0A0A0;
+    width: 100%;
+}
+
+.camion i{
+    margin-left: 60px;
+    margin-top: 25px;  
+}
+.camion p{
+    margin-bottom: 25px;
+}
+.tarjeta i{
+    margin-left: 30px;
+    margin-top: 25px;  
+}
+.tarjeta p{
+    margin-bottom: 25px;
+}
+
+.telefono i{
+    margin-left: 70px;
+    margin-top: 25px;  
+}
+.telefono p{
+    margin-bottom: 25px;
+}
+/*   PRODUCTOS RECOMENDADOS ----------------------------------------------------------------------------*/
+
+
+div.productosRecomendados{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.precio{
+    font-size: 18px;
+    width: 30%;
+}
+
+.cuotas{
+    width: 70%;
+}
+
+.cuotas,
+.descripcion{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+h3,
+.descripcion{
+    color: #666;
+}
+
+.descripcion{
+    display: none;
+    margin-top: 20px;
+}
+
+section.banner img{
+    width: 100%;
+}
+
+
+
+main section article{
+    background-color: #fff;    
+    margin: 10px 0px;
+}
+
+main section article img{
+    width: 100%;
+}
+
+
+.cuotas{
+    color: #39b54a;
+}
+
+main section h3{
+    margin: 20px 0px;
+}
+
+article div.main-article{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    border-top: 1px solid #ebebeb;
     position: relative;
+    padding: 15px;
 }
 
 /*   FOOTER ----------------------------------------------------------------------------*/
 footer{
     background-color: #A0A0A0;
     display: flex;
-     justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    bottom: 0;
+    margin-top: 50px;
 }
 
-.logoConNombre {
-    align-self: flex-start;
-    margin-top: 25px;
-    margin-bottom: 25px;
-}
-.logoConNombre p{
-    margin-left: 15px;
-}
 .logoConNombre img{
-    margin-left: 20px;
+    width: 85px;
 }
 
-.footerSociales{  
-   font-size: 18px; 
-   margin: 50px;
-   display: flex; 
-   justify-content: right;
-}
+
 
 .footerSociales a{
-    color: black;
-       
-  
+    color: #000000;
+    margin: 25px;
+    transition: 0.3s;
 }
-
-
-
-.categoriasFooter{
-    text-align: right;
-    margin-right: 5px;
-    margin-top: 35px;
-    margin-bottom: 15px;
-    margin-left: 50px;
-      
+.footerSociales a:hover{
+    text-decoration: none;
+    color:#184e77;
 }
 
 .categoriasFooter a{
-    text-decoration: none;
-    color: black;
-   
-    
+   text-decoration: none;
+   color: #000000;
+
 }
+
+.categoriasFooter ul a {
+ color: #000000;
+ transition: 0.3s;
+}
+.categoriasFooter ul a:hover {
+  text-decoration: none;
+  color: #184e77;
+}
+
+.mensajeFooter{
+    font-size: 10px;
+    text-align: center;
+    background-color: #000000;
+}
+
+.mensajeFooter p{
+    color: white;
+}
+
+@media (min-width: 361px){
+    .productosRecomendados{
+        justify-content: space-between;
+    }
+    
+
+    main section article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    main section div.productos{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    
+    main section div.productos article{
+        width: 45%;
+    }
+
+    .precio,
+    .dcuotas{
+        width: 50%;
+    }
+}
+
+@media (min-width: 769px){
+    main section div.productos article{
+        width: 22%;
+    }
+}
+
+@media (max-width: 480px) {
+    .categorias{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+ .cat1, .cat2, .cat3, .cat4 {
+width: 80%;
+text-align: center;
+}
+
+.barraEnvios{
+    font-size: 12px;
+    justify-content: space-around;
+
+}
+
+.barraEnvios i{
+    text-align: center;
+}
+
+.barraEnvios p{
+    text-align: center;
+}
+
+
+}
+
+
