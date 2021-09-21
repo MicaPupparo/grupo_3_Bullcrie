@@ -123,28 +123,30 @@ header {
     width: 100%;
 }
 
-.camion i{
-    margin-left: 60px;
-    margin-top: 25px;  
-}
-.camion p{
-    margin-bottom: 25px;
-}
-.tarjeta i{
-    margin-left: 30px;
-    margin-top: 25px;  
-}
-.tarjeta p{
-    margin-bottom: 25px;
+
+
+.barraEnvios i{
+    text-align: center;
+    width: 100%;
+    margin: auto;
 }
 
-.telefono i{
-    margin-left: 70px;
-    margin-top: 25px;  
+.barraEnvios p{
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    
 }
-.telefono p{
-    margin-bottom: 25px;
+
+.tarjeta, .telefono, .camion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    padding: 15px;
+    
 }
+
 /*   PRODUCTOS RECOMENDADOS ----------------------------------------------------------------------------*/
 
 
