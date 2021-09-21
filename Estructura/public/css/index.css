@@ -317,12 +317,25 @@ text-align: center;
 
 .barraEnvios i{
     text-align: center;
+    width: 100%;
+    margin: auto;
 }
 
 .barraEnvios p{
     text-align: center;
+    width: 100%;
+    margin: auto;
+    
 }
 
+.tarjeta, .telefono, .camion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    padding: 15px;
+    
+}
 
 }
 
