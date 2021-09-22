@@ -123,28 +123,30 @@ header {
     width: 100%;
 }
 
-.camion i{
-    margin-left: 60px;
-    margin-top: 25px;  
-}
-.camion p{
-    margin-bottom: 25px;
-}
-.tarjeta i{
-    margin-left: 30px;
-    margin-top: 25px;  
-}
-.tarjeta p{
-    margin-bottom: 25px;
+
+
+.barraEnvios i{
+    text-align: center;
+    width: 100%;
+    margin: auto;
 }
 
-.telefono i{
-    margin-left: 70px;
-    margin-top: 25px;  
+.barraEnvios p{
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    
 }
-.telefono p{
-    margin-bottom: 25px;
+
+.tarjeta, .telefono, .camion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    padding: 15px;
+    
 }
+
 /*   PRODUCTOS RECOMENDADOS ----------------------------------------------------------------------------*/
 
 
@@ -211,6 +213,24 @@ article div.main-article{
     position: relative;
     padding: 15px;
 }
+main section div.productos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+main section div.productos article{
+    width: 22%;
+}
+main section article{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+.precio,
+.cuotas{
+    width: 100%;
+}
+
 
 /*   FOOTER ----------------------------------------------------------------------------*/
 footer{
@@ -264,12 +284,39 @@ footer{
     color: white;
 }
 
-@media (min-width: 361px){
+
+@media (max-width: 769px){
+    main section div.productos article{
+        width: 45%;
+    }
+    main section div.productos{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    main section article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+    }
+
+@media (max-width: 480px){
+
+    .productos {
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
     .productosRecomendados{
         justify-content: space-between;
-    }
+    }  
     
-
+   .productos article {
+            background-color: #fff;
+            margin: 10px 0px;
+        }
+    
     main section article{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
@@ -278,27 +325,20 @@ footer{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: flex-start;
+        justify-content: center;
+        
     }
     
     main section div.productos article{
-        width: 45%;
+        width: 90%
     }
 
     .precio,
     .dcuotas{
         width: 50%;
     }
-}
 
-@media (min-width: 769px){
-    main section div.productos article{
-        width: 22%;
-    }
-}
 
-@media (max-width: 480px) {
     .categorias{
         flex-wrap: wrap;
         justify-content: center;
