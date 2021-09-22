@@ -10,18 +10,11 @@
 #A0A0A0 GRIS
 #76C893 VERDE*/
 
-header{
-    width: 100%;
-    height: 100px;
-    background-color: pink;
-    margin-bottom: 30px;
-}
-
 /*  Cart  */
 
 /* ~contenedor principal~ */
 .cart-container{
-    margin: 20px auto;
+    margin: 150px auto;
     width: 90vw;
     max-width: 1200px;
 }
@@ -325,8 +318,23 @@ header{
 
 @media (min-width: 769px){
     /* - CONTAINER - */
+
     .cart-container{
         max-width: 1200px;
+    }
+
+    #price{
+        text-align: right;
+    }
+
+    .image-cart{
+        width: 30vw;
+    }
+
+    .image-cart img{
+        width: 100%;
+        max-width: 150px;
+        max-height: 200px;
     }
 
     /* BOTONES */
