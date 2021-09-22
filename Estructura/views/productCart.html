@@ -4,42 +4,136 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/styles-newsletter.css">
     <link rel="stylesheet" href="css/styles-cart.css">
     <title>Bullcrie</title>
 </head>
 <body>
-    <div class="cart-container">
-        <h2>Tu carrito (1)</h2>
-        <div class="cart">
-          <article class="cart-products">
-            <div class="image-cart">
-              <img src="images/buzogris.jpeg" alt="Buzo Gris">
-            </div>
-            <div class="product-info-cart">
-              <h3 class="product-name-cart">Buzo Gris</h3>
-              <p class="product-price-cart">$7830</p>
-              <p class="product-quantity-cart">Cant: <input type="number" name="product-quantity" value="1"></p>
-              <div class="remove-buy">
-                <a href="#">Eliminar</a>
-                <a href="#">Comprar ahora</a>
-              </div>
-            </div>
-          </article>
-          <article class="cart-products">
-            <div class="image-cart">
-              <img src="images/gorra.jpg" alt="Gorra">
-            </div>
-            <div class="product-info-cart">
-              <h3 class="product-name-cart">Gorra</h3>
-              <p class="product-price-cart">$2000</p>
-              <p class="product-quantity-cart">Cant: <input type="number" name="product-quantity" value="1"></p>
-              <div class="remove-buy">
-                <a href="#">Eliminar</a>
-                <a href="#">Comprar ahora</a>
-              </div>
-            </div>
-          </article>
-        </div>
+  <div class="mesagge-header"><p>Winter SALE 50% OFF con cualquier método de pago</p></div>
+  <header>
+      <div id="ul-responsive">
+        <a href="#inicio">INICIO</a>
+        <a href="#tienda">TIENDA</a>
+        <a href="#contacto">CONTACTO</a>
       </div>
+      <a href="javascript:void(0);" class="icon" onclick="toggleBurger()">
+          <i class="fas fa-bars"></i>
+      </a>
+
+      <div class="logo"><a href="#home"><img src="images\bullcrie logo.png"></a></div> 
+      <ul class="ul-header">
+          <li><a href="#inicio">INICIO</a></li>
+          <li><a href="#tienda">TIENDA</a></li>
+          <li><a href="#contacto">CONTACTO</a></li>
+      </ul>
+
+      <ul class="ul-header_icons">
+          <li><a href="#search"><i class="fas fa-search"></i></a></li>
+          <li><a href="#user"><i class="far fa-user"></i></a></li>
+          <li><a href="#cart"><i class="fas fa-shopping-cart"></i></a></li>
+      </ul>
+  </header>
+
+  <div class="cart-container">
+    <h2>Tu carrito (1)</h2>
+    <div class="categories">
+      <p id="product">Producto</p>
+      <p id="quantity">Cantidad</p>
+      <p id="price">Precio</p>
+    </div>
+    <div class="cart">
+      <article class="cart-products">
+        <div class="image-cart">
+          <img src="images/buzogris.jpeg" alt="Buzo Gris">
+        </div>
+        <div class="product-info-cart">
+          <h3 class="product-name-cart">Buzo Gris</h3>
+          <div class="product-quantity-cart">
+            <input type="number" name="product-quantity" value="1">
+            <p>Quedan 5 disponibles.</p>
+          </div>
+          <p class="product-price-cart">$7830</p>            
+          <div class="remove-buy">
+            <i class="fas fa-ellipsis-h"></i>
+            <a href="#">Eliminar</a>
+            <a href="#">Comprar ahora</a>
+          </div>
+        </div>
+      </article>
+      <article class="cart-products">
+        <div class="image-cart">
+          <img src="images/gorra.jpg" alt="Gorra">
+        </div>
+        <div class="product-info-cart">
+          <h3 class="product-name-cart">Gorra</h3>
+          <div class="product-quantity-cart">
+            <input type="number" name="product-quantity" value="1">
+            <p>Quedan 5 disponibles.</p>
+          </div>
+          <p class="product-price-cart">$2000</p>           
+          <div class="remove-buy">
+            <i class="fas fa-ellipsis-h"></i>
+            <a href="#">Eliminar</a>
+            <a href="#">Comprar ahora</a>
+          </div>
+        </div>
+      </article>
+    </div>
+    <section class="total-price">
+      <p class="total">Total</p>
+      <p>$9830</p>
+    </section>
+    <div class="buttons-cart">
+      <button type="menu">Elegir más productos</button>
+      <button type="submit">Comprar</button>
+    </div>
+  </div>
+
+  <section class="newsletter">
+    <div class="texto">
+      <h4>SUSCRIBITE AL NEWSLETTER</h4>
+
+      <p>Recibí nuestras novedades y promociones</p>
+    </div>
+
+    <div class="datos">
+      <input type="text" placeholder="NOMBRE" class="newsletter-nombre" />
+      <input type="email" placeholder="E-MAIL" class="newsletter-email" />
+    </div>
+      
+    <button type="submit" class="enviar">ENVIAR</button>
+  </section>
+
+  <footer>
+    <div class="logoConNombre">
+    <img src="/images/bullcrie logo_adobespark.png" alt="" width="10%" height="5%">
+    <p>BULLCRIE.</p>
+    </div>
+
+    <div class="footerSociales"> 
+   
+      <a href="#"><i class="fas fa-phone"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"> </i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a> 
+    </div>
+
+    <div class="categoriasFooter">
+      <ul>
+          <li><a href="#">Remeras</a></li>
+          <li><a href="#">Mallas</a></li>
+          <li><a href="#">Buzos</a></li>
+          <li><a href="#">Remeras</a></li>
+      </ul>
+    </div>
+  </footer>
+  <div class="mensajeFooter">
+    <p>© Copyright BULLCRIE. All Rights Reserved</p>
+  </div>
+
+<script type="text/javascript" src="css\productDetail.js"></script>
+<script type="text/javascript" src="css\header.js"></script>
 </body>
 </html>
