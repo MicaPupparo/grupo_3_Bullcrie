@@ -1,10 +1,12 @@
 * {
   margin: 0px;
   padding: 0px;
+  font-family: 'Poppins';
   box-sizing: border-box;
 }
 
 body {
+  margin-top: 90px;
   background-color: #f0f0f0;
 }
 
@@ -12,16 +14,16 @@ form.registro {
   display: block;
   width: 60%;
   border: solid 1px #000000;
-  margin: 10px auto;
+  margin: 50px auto;
   box-shadow: 0px 0px 3px rgb(100, 100, 100);
 }
 
 body h3 {
-  margin: 10px 0px 15px 15px;
+  margin: 10px 0px 25px 15px;
 }
 
 form .casilla {
-  margin: 0px 0px 10px 20px;
+  margin: 0px 0px 25px 20px;
 }
 
 .nombre-apellido,
@@ -35,11 +37,12 @@ form .casilla {
   padding: 4px;
   border: 0px;
   border-bottom: 1px solid #184e77;
+  font-size: 0.7em;
 }
 
-form .texto {
+form .redirigir {
   text-align: center;
-  font-size: 0.9em;
+  font-size: 0.75em;
   margin: 20px auto;
 }
 
@@ -51,7 +54,7 @@ form .buttons {
 form .buttons .boton {
   text-align: center;
   text-decoration: none;
-  font-family: sans-serif;
+  font-family: 'Poppins';
   font-size: 14px;
   background-color: #184e77;
   color: #f0f0f0;
@@ -66,4 +69,82 @@ form .buttons .boton {
 
 form .boton:hover {
   background-color: #276da3;
+}
+
+/*   FOOTER ----------------------------------------------------------------------------*/
+footer{
+  background-color: #A0A0A0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  bottom: 0;
+  margin-top: 50px;
+}
+
+.logoConNombre img{
+  width: 85px;
+}
+
+.footerSociales a{
+  color: #000000;
+  margin: 25px;
+  transition: 0.3s;
+}
+.footerSociales a:hover{
+  text-decoration: none;
+  color:#184e77;
+}
+
+.categoriasFooter a{
+ text-decoration: none;
+ color: #000000;
+
+}
+
+.categoriasFooter ul a {
+color: #000000;
+transition: 0.3s;
+}
+.categoriasFooter ul a:hover {
+text-decoration: none;
+color: #184e77;
+}
+
+.mensajeFooter{
+  font-size: 10px;
+  text-align: center;
+  background-color: #000000;
+}
+
+.mensajeFooter p{
+  color: white;
+}
+
+
+@media (min-width: 769px) {
+  form .redirigir {
+    font-size: 0.9em;
+  }
+
+  body h3 {
+    font-size: 1.6em;
+    margin: 10px 0px 35px 15px;
+  }
+  
+  form .casilla {
+    margin: 0px 0px 40px 20px;
+  }
+  
+  .nombre-apellido,
+  .email,
+  .user,
+  .contraseña,
+  .rep-contraseña {
+    font-size: 1em;
+  }
+
+  form .buttons .boton {
+    font-size: 17px;
+  }
 }
