@@ -1,49 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BULLCRIE</title>
-    <link href="/css/index.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-     rel="stylesheet" />
-     <link rel="stylesheet" href="/css/styles-newsletter.css" />
-     <link rel="stylesheet" href="/css/header.css">
-     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap%22%3E" />
+<!-- -------------------------------------HEAD & TAGS-------------------------------------------------------- -->
+<%- include('./partials/head') %>
 
-</head>
 <body class="wrapper">
   <!-- -------------------------------------HEADER-------------------------------------------------------- -->
 
-  <div class="mesagge-header"><p>Winter SALE 50% OFF con cualquier método de pago</p></div>
-  <header>
-      <div id="ul-responsive">
-        <a href="/index">INICIO</a>
-        <a href="#tienda">TIENDA</a>
-        <a href="#contacto">CONTACTO</a>
-      </div>
-      <a href="javascript:void(0);" class="icon" onclick="toggleBurger()">
-          <i class="fas fa-bars"></i>
-      </a>
+<%- include('./partials/header') %>
+  <!-- -------------------------------------MAIN-------------------------------------------------------- -->
 
-      <div class="logo"><a href="/index"><img src="images\bullcrie logo.png"></a></div> 
-      <ul class="ul-header">
-          <li><a href="#inicio">INICIO</a></li>
-          <li><a href="#tienda">TIENDA</a></li>
-          <li><a href="#contacto">CONTACTO</a></li>
-      </ul>
-
-      <ul class="ul-header_icons">
-          <li><a href="#search"><i class="fas fa-search"></i></a></li>
-          <li><a href="/register"><i class="far fa-user"></i></a></li>
-          <li><a href="/productCart"><i class="fas fa-shopping-cart"></i></a></li>
-      </ul>
-  </header>
-  
-      
-
- 
 
 <main>
 <!--Banner, aca tiene que ir una galeria-->
@@ -145,36 +108,13 @@
   <button type="submit" class="enviar">ENVIAR</button>
 </section>
  </main>
-<footer>
-    <div class="logoConNombre">
-    <img src="/images/bullcrie logo_adobespark.png" alt="" width="10%" height="5%">
-    <p>BULLCRIE.</p>
-    </div>
 
-<div class="footerSociales"> 
-   
-    <a href="#"><i class="fas fa-phone"></i></a>
-    <a href="#"><i class="fab fa-whatsapp"> </i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-  
-</div>
-
-<div class="categoriasFooter">
-    <ul>
-        <li><a href="#">Remeras</a></li>
-        <li><a href="#">Mallas</a></li>
-        <li><a href="#">Buzos</a></li>
-        <li><a href="#">Remeras</a></li>
-    </ul>
-</div>
+<!-- -------------------------------------FOOTER-------------------------------------------------------- -->
+<%- include('./partials/footer') %>
 
 
-</footer>
-<div class="mensajeFooter">
-  <p>© Copyright BULLCRIE. All Rights Reserved</p>
-  </div>
-  <script type="text/javascript" src="css\productDetail.js"></script>
+  <script type="text/javascript" src="/css\productDetail.js"></script>
     
-  <script type="text/javascript" src="css\header.js"></script>
- </body>
+  <script type="text/javascript" src="/css/header.js"></script>
+</body>
 </html>

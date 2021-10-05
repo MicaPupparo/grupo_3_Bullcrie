@@ -1,0 +1,91 @@
+<!-- -------------------------------------HEAD & TAGS-------------------------------------------------------- -->
+<%- include('./partials/head') %>
+
+<body class="wrapper">
+  <!-- -------------------------------------HEADER-------------------------------------------------------- -->
+
+<%- include('./partials/header') %>
+  <!-- -------------------------------------MAIN-------------------------------------------------------- -->
+
+    <form class="registro">
+      <h3>Crea tu cuenta</h3>
+
+      <div class="casilla">
+        <input
+          type="text"
+          name="nombre y apellido"
+          placeholder="Nombre y apellido"
+          class="nombre-apellido"
+          required
+        />
+      </div>
+
+      <div class="casilla">
+        <input type="email" name="email" placeholder="E-mail*" class="email" required/>
+      </div>
+
+      <div class="casilla">
+        <input
+          type="text"
+          name="nombre de usuario"
+          placeholder="Nombre de usuario"
+          class="user"
+          required
+        />
+      </div>
+
+      <div class="casilla">
+        <input
+          type="password"
+          name="contraseña"
+          placeholder="Contraseña"
+          class="contraseña"
+          required
+        />
+      </div>
+
+      <div class="casilla">
+        <input
+          type="password"
+          name="repetir contraseña"
+          placeholder="Repetir contraseña"
+          class="rep-contraseña"
+          required
+        />
+      </div>
+
+      <div class="redirigir">
+        <span>¿Ya tenés cuenta? Hacé click en "Iniciar Sesión"</span>
+      </div>
+
+      <div class="buttons">
+        
+        <button class="crear boton" >Crear</button>
+
+        <a href="./login" class="boton"><span>Iniciar Sesión</span></a>
+
+      </div>
+    </form>
+
+    <section class="newsletter">
+      <div class="texto">
+        <h4>SUSCRIBITE AL NEWSLETTER</h4>
+
+        <p>Recibí nuestras novedades y promociones</p>
+      </div>
+
+      <div class="datos">
+        <input type="text" placeholder="NOMBRE" class="newsletter-nombre" />
+        <input type="email" placeholder="E-MAIL" class="newsletter-email" />
+      </div>
+        
+      <button type="submit" class="enviar">ENVIAR</button>
+    </section>
+
+<!-- -------------------------------------FOOTER-------------------------------------------------------- -->
+<%- include('./partials/footer') %>
+
+
+    <script type="text/javascript" src="/css\header.js"></script>
+</body>
+</html>

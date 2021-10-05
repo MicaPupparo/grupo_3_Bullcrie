@@ -1,0 +1,80 @@
+<!-- -------------------------------------HEAD & TAGS-------------------------------------------------------- -->
+<%- include('./partials/head') %>
+
+<body class="wrapper">
+  <!-- -------------------------------------HEADER-------------------------------------------------------- -->
+
+<%- include('./partials/header') %>
+  <!-- -------------------------------------MAIN-------------------------------------------------------- -->
+
+    <main id="gallery">
+        
+        <div class="images">
+        <img src="/images\mallafloreada.jpeg" class="img">
+        <img src="/images\mallalineas.jpeg" class="img">
+        <img src="/images\mallarombos.jpeg" class="img">
+            </div>
+
+            <div class="main-img">
+                <img src="/images\mallafloreada.jpeg" id="current">    
+                </div>
+
+        <div class="product-details">
+            <h3>MALLA BULLCRIE DE HOMBRE</h3>
+            <h2>$2.590</h2>
+            <p class="cuotas">6x Cuotas de $431 sin interés</p>
+            <p class="mediosPago">Ver los medios de pago</p>
+            <p class="enviosGratis"><i class="fas fa-truck"></i></i>Envios gratis a todo el país</p>
+            <p class="formasEnvio">Conocé los tiempos y formas de envio</p>
+            
+            <p class="talles">Talles:</p>
+            <ul class="ul_checkbox-talles">
+                    <li class="li_checkbox-talles">
+                    <input type="checkbox" id="check_1" name="check_1" value="check_1">
+                    <label for="check_1">S</label>
+                  </li>
+                  <li class="li_checkbox-talles">
+                    <input type="checkbox" id="check_2" name="check_2" value="check_2">
+                    <label for="check_2">M</label>
+                  </li>
+                  <li class="li_checkbox-talles">
+                    <input type="checkbox" id="check_3" name="check_3" value="check_3">
+                    <label for="check_3">L</label>
+                  </li>
+                  <li class="li_checkbox-talles">
+                    <input type="checkbox" id="check_4" name="check_4" value="check_4">
+                    <label for="check_4">XL</label>
+                  </li>
+            </ul>
+            <p class="color">Color: Floreado</p>
+            <p class="stock">Stock Disponible</p>
+            <button class="comprar" type="button">Comprar Ahora</button>
+            <button class="carrito" type="button">Agregar al carrito</button>
+        </div>
+     </main>
+     <section class="newsletter">
+        <div class="texto">
+          <h4>SUSCRIBITE AL NEWSLETTER</h4>
+  
+          <p>Recibí nuestras novedades y promociones</p>
+        </div>
+  
+        <div class="datos">
+          <input type="text" placeholder="NOMBRE" class="newsletter-nombre" />
+          <input type="email" placeholder="E-MAIL" class="newsletter-email" />
+        </div>
+          
+        <button type="submit" class="enviar">ENVIAR</button>
+      </section>
+
+<!-- -------------------------------------FOOTER-------------------------------------------------------- -->
+<%- include('./partials/footer') %>
+
+
+
+    <script type="text/javascript" src="/css\productDetail.js"></script>
+    
+    <script type="text/javascript" src="/css\header.js"></script>
+
+</body>
+</html>

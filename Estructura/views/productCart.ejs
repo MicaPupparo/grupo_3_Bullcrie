@@ -1,0 +1,87 @@
+<!-- -------------------------------------HEAD & TAGS-------------------------------------------------------- -->
+<%- include('./partials/head') %>
+
+<body class="wrapper">
+  <!-- -------------------------------------HEADER-------------------------------------------------------- -->
+
+<%- include('./partials/header') %>
+  <!-- -------------------------------------MAIN-------------------------------------------------------- -->
+
+  <div class="cart-container">
+    <h2>Tu carrito (1)</h2>
+    <div class="categories">
+      <p id="product">Producto</p>
+      <p id="quantity">Cantidad</p>
+      <p id="price">Precio</p>
+    </div>
+    <div class="cart">
+      <article class="cart-products">
+        <div class="image-cart">
+          <img src="/images/buzogris.jpeg" alt="Buzo Gris">
+        </div>
+        <div class="product-info-cart">
+          <h3 class="product-name-cart">Buzo Gris</h3>
+          <div class="product-quantity-cart">
+            <input type="number" name="product-quantity" value="1">
+            <p>Quedan 5 disponibles.</p>
+          </div>
+          <p class="product-price-cart">$7830</p>            
+          <div class="remove-buy">
+            <i class="fas fa-ellipsis-h"></i>
+            <a href="#">Eliminar</a>
+            <a href="#">Comprar ahora</a>
+          </div>
+        </div>
+      </article>
+      <article class="cart-products">
+        <div class="image-cart">
+          <img src="/images/gorra.jpg" alt="Gorra">
+        </div>
+        <div class="product-info-cart">
+          <h3 class="product-name-cart">Gorra</h3>
+          <div class="product-quantity-cart">
+            <input type="number" name="product-quantity" value="1">
+            <p>Quedan 5 disponibles.</p>
+          </div>
+          <p class="product-price-cart">$2000</p>           
+          <div class="remove-buy">
+            <i class="fas fa-ellipsis-h"></i>
+            <a href="#">Eliminar</a>
+            <a href="#">Comprar ahora</a>
+          </div>
+        </div>
+      </article>
+    </div>
+    <section class="total-price">
+      <p class="total">Total</p>
+      <p>$9830</p>
+    </section>
+    <div class="buttons-cart">
+      <button type="menu">Elegir más productos</button>
+      <button type="submit">Comprar</button>
+    </div>
+  </div>
+
+  <section class="newsletter">
+    <div class="texto">
+      <h4>SUSCRIBITE AL NEWSLETTER</h4>
+
+      <p>Recibí nuestras novedades y promociones</p>
+    </div>
+
+    <div class="datos">
+      <input type="text" placeholder="NOMBRE" class="newsletter-nombre" />
+      <input type="email" placeholder="E-MAIL" class="newsletter-email" />
+    </div>
+      
+    <button type="submit" class="enviar">ENVIAR</button>
+  </section>
+
+<!-- -------------------------------------FOOTER-------------------------------------------------------- -->
+<%- include('./partials/footer') %>
+
+
+  <script type="text/javascript" src="/css\productDetail.js"></script>
+  <script type="text/javascript" src="/css\header.js"></script>
+</body>
+</html>
