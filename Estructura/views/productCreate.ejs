@@ -1,0 +1,121 @@
+<!-- -------------------------------------HEAD & TAGS-------------------------------------------------------- -->
+<%- include('./partials/head') %>
+
+<body class="wrapper">
+  <!-- -------------------------------------HEADER-------------------------------------------------------- -->
+
+<%- include('./partials/header') %>
+  <!-- -------------------------------------MAIN-------------------------------------------------------- -->
+
+  <form class="creacion">
+
+    <h3 class="tituloPc">Crear producto</h3>
+
+    <div class="casillaPc">
+      <input
+        type="text"
+        name="nombre de producto"
+        placeholder="Nombre de producto"
+        class="nombre-productoPc"
+        required
+      />
+    </div>
+
+    <div class="casillaPc">
+      <input
+        type="text"
+        name="categoria"
+        placeholder="Categoría del producto"
+        class="categoria-productoPc"
+        required
+      />
+    </div>
+    
+    <div class="casillaPc">
+      <input
+        type="text"
+        name="color"
+        placeholder="Color"
+        class="colorPc"
+        required
+      />
+    </div>
+
+    <div class="casillaPc">
+      <input
+        type="number"
+        name="precio"
+        placeholder="Precio"
+        class="precioPc"
+        required
+      />
+    </div>
+ 
+    <div class="casillaPc">
+      <input
+        type="file"
+        name="imagen"
+        placeholder="Imagen"
+        class="imagenPc"
+        accept=".jpg"
+        required
+      />
+    </div>
+
+    <div class="casillaPc">
+      <label class="envioLabel">¿Envío gratis?</label>
+      <label>
+        <input
+        type="radio"
+        name="envio"
+        class="envio-siPc"
+        value="Si"
+        required
+        />
+        <label class="opcionEnvio">Si</label>
+      </label>
+      
+      <label>
+        <input
+       type="radio"
+        name="envio"
+        class="envio-noPc"
+        value="No"
+        required
+        />
+        <label class="opcionEnvio">No</label>
+      </label>
+    </div>
+
+
+    <div class="buttonsPc">
+        
+      <button type="submit" class="boton" >Crear</button>
+
+      <button type="reset" class="boton" >Resetear</button>
+
+    </div>
+
+  </form>
+
+  <section class="newsletter">
+    <div class="texto">
+      <h4>SUSCRIBITE AL NEWSLETTER</h4>
+
+      <p>Recibí nuestras novedades y promociones</p>
+    </div>
+
+    <div class="datos">
+      <input type="text" placeholder="NOMBRE" class="newsletter-nombre" />
+      <input type="email" placeholder="E-MAIL" class="newsletter-email" />
+    </div>
+      
+    <button type="submit" class="enviar">ENVIAR</button>
+  </section>
+
+<!-- -------------------------------------FOOTER-------------------------------------------------------- -->
+  <%- include('./partials/footer') %>
+
+  <script type="text/javascript" src="/css\header.js"></script>
+
+</body>

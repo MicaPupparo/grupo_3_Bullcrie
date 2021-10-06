@@ -6,7 +6,10 @@ const controller = {
   },
   productDetail: (req, res) => {
     res.render("productDetail.ejs")
+  },
+  productCreate: (req, res) => {
+    res.render("productCreate.ejs")
   }
-}
+};
 
 module.exports = controller;
