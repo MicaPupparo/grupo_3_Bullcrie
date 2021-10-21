@@ -7,6 +7,7 @@
   "color": "Gris",
   "stock": "disponible",
   "description": "",
+  "categoria": "Buzos",
   "image": ""
  },
  {
@@ -17,6 +18,7 @@
     "color": "Negro",
     "stock": "disponible",
     "description": "",
+    "categoria": "Buzos",
     "image": ""
    },
    {
@@ -27,6 +29,7 @@
     "color": "Rojo",
     "stock": "disponible",
     "description": "",
+    "categoria": "Buzos",
     "image": ""
    },
    {
@@ -37,6 +40,7 @@
     "color": "Blanco",
     "stock": "disponible",
     "description": "",
+    "categoria": "Gorras",
     "image": ""
    },
    {
@@ -47,6 +51,7 @@
     "color": "Estampada",
     "stock": "disponible",
     "description": "",
+    "categoria": "Mallas",
     "image": ""
    },
    {
@@ -57,6 +62,7 @@
     "color": "Estampada",
     "stock": "disponible",
     "description": "",
+    "categoria": "Mallas",
     "image": ""
    },
    {
@@ -67,6 +73,7 @@
     "color": "Estampada",
     "stock": "disponible",
     "description": "",
+    "categoria": "Mallas",
     "image": ""
    },
    {
@@ -77,6 +84,7 @@
     "color": "Estampada",
     "stock": "disponible",
     "description": "",
+    "categoria": "Mallas",
     "image": ""
    },
    {
@@ -87,6 +95,7 @@
     "color": "Estampada",
     "stock": "disponible",
     "description": "",
+    "categoria": "Mallas",
     "image": ""
    },
    {
@@ -97,6 +106,7 @@
     "color": "Blanco",
     "stock": "disponible",
     "description": "",
+    "categoria": "Remeras",
     "image": ""
    }
 ]
