@@ -16,13 +16,13 @@
             </div>
 
             <div class="main-img">
-                <img src="/images\mallafloreada.jpeg" id="current">    
-                </div>
+                <img src="/images\<%= product.image %>" id="current">    
+            </div>
 
         <div class="product-details">
-            <h3>MALLA BULLCRIE DE HOMBRE</h3>
-            <h2>$2.590</h2>
-            <p class="cuotas">6x Cuotas de $431 sin interés</p>
+            <h3><%= product.name %></h3>
+            <h2>$<%= product.price %></h2>
+            <p class="cuotas">x<%= product.cuotas %> Cuotas de $<%= (product.price / product.cuotas).toFixed(0) %> sin interés</p>
             <p class="mediosPago">Ver los medios de pago</p>
             <p class="enviosGratis"><i class="fas fa-truck"></i></i>Envios gratis a todo el país</p>
             <p class="formasEnvio">Conocé los tiempos y formas de envio</p>
@@ -46,8 +46,8 @@
                     <label for="check_4">XL</label>
                   </li>
             </ul>
-            <p class="color">Color: Floreado</p>
-            <p class="stock">Stock Disponible</p>
+            <p class="color">Color: <%= product.color %></p>
+            <p class="stock">Stock <%= product.stock %></p>
             <button class="comprar" type="button">Comprar Ahora</button>
             <button class="carrito" type="button">Agregar al carrito</button>
         </div>

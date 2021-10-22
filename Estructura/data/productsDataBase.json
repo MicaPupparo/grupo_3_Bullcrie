@@ -1,5 +1,5 @@
 [
-{
+ {
   "id": 1,
   "name": "Buzo Gris Bullcrie",
   "price": 3840,
@@ -8,105 +8,114 @@
   "stock": "disponible",
   "description": "",
   "categoria": "Buzos",
-  "image": ""
+  "image": "buzogris.jpeg"
  },
  {
-    "id": 2,
-    "name": "Buzo Negro Winter Rules",
-    "price": 3840,
-    "cuotas": 6,
-    "color": "Negro",
-    "stock": "disponible",
-    "description": "",
-    "categoria": "Buzos",
-    "image": ""
-   },
-   {
-    "id": 3,
-    "name": "Buzo Rojo",
-    "price": 3840,
-    "cuotas": 6,
-    "color": "Rojo",
-    "stock": "disponible",
-    "description": "",
-    "categoria": "Buzos",
-    "image": ""
-   },
-   {
-    "id": 4,
-    "name": "Gorra",
-    "price": 1100,
-    "cuotas": 6,
-    "color": "Blanco",
-    "stock": "disponible",
-    "description": "",
-    "categoria": "Gorras",
-    "image": ""
-   },
-   {
-    "id": 5,
-    "name": "Malla Floreada",
-    "price": 2590,
-    "cuotas": 6,
-    "color": "Estampada",
-    "stock": "disponible",
-    "description": "",
-    "categoria": "Mallas",
-    "image": ""
-   },
-   {
-    "id": 6,
-    "name": "Malla con lineas",
-    "price": 2590,
-    "cuotas": 6,
-    "color": "Estampada",
-    "stock": "disponible",
-    "description": "",
-    "categoria": "Mallas",
-    "image": ""
-   },
-   {
-    "id": 7,
-    "name": "Malla pelicanos",
-    "price": 2590,
-    "cuotas": 6,
-    "color": "Estampada",
-    "stock": "disponible",
-    "description": "",
-    "categoria": "Mallas",
-    "image": ""
-   },
-   {
-    "id": 8,
-    "name": "Malla ramas",
-    "price": 2590,
-    "cuotas": 6,
-    "color": "Estampada",
-    "stock": "disponible",
-    "description": "",
-    "categoria": "Mallas",
-    "image": ""
-   },
-   {
-    "id": 9,
-    "name": "Malla rombos",
-    "price": 2590,
-    "cuotas": 6,
-    "color": "Estampada",
-    "stock": "disponible",
-    "description": "",
-    "categoria": "Mallas",
-    "image": ""
-   },
-   {
-    "id": 10,
-    "name": "Remera Bullcrie",
-    "price": 1860,
-    "cuotas": 6,
-    "color": "Blanco",
-    "stock": "disponible",
-    "description": "",
-    "categoria": "Remeras",
-    "image": ""
-   }
+  "id": 2,
+  "name": "Buzo Negro Winter Rules",
+  "price": 3840,
+  "cuotas": 6,
+  "color": "Negro",
+  "stock": "disponible",
+  "description": "",
+  "categoria": "Buzos",
+  "image": "buzonegrococo.jpeg"
+ },
+ {
+  "id": 3,
+  "name": "Buzo Rojo",
+  "price": 3840,
+  "cuotas": 6,
+  "color": "Rojo",
+  "stock": "disponible",
+  "description": "",
+  "categoria": "Buzos",
+  "image": "buzorojo.jpeg"
+ },
+ {
+  "id": 4,
+  "name": "Gorra",
+  "price": 1100,
+  "cuotas": 6,
+  "color": "Blanco",
+  "stock": "disponible",
+  "description": "",
+  "categoria": "Gorras",
+  "image": "gorra.jpg"
+ },
+ {
+  "id": 5,
+  "name": "Malla Floreada",
+  "price": 2590,
+  "cuotas": 6,
+  "color": "Estampada",
+  "stock": "disponible",
+  "description": "",
+  "categoria": "Mallas",
+  "image": "mallafloreada.jpeg"
+ },
+ {
+  "id": 6,
+  "name": "Malla con lineas",
+  "price": 2590,
+  "cuotas": 6,
+  "color": "Estampada",
+  "stock": "disponible",
+  "description": "",
+  "categoria": "Mallas",
+  "image": "mallalineas.jpeg"
+ },
+ {
+  "id": 7,
+  "name": "Malla pelicanos",
+  "price": 2590,
+  "cuotas": 6,
+  "color": "Estampada",
+  "stock": "disponible",
+  "description": "",
+  "categoria": "Mallas",
+  "image": "mallapelicanos.jpeg"
+ },
+ {
+  "id": 8,
+  "name": "Malla ramas",
+  "price": 2590,
+  "cuotas": 6,
+  "color": "Estampada",
+  "stock": "disponible",
+  "description": "",
+  "categoria": "Mallas",
+  "image": "mallaramas.jpeg"
+ },
+ {
+  "id": 9,
+  "name": "Malla rombos",
+  "price": "7",
+  "cuotas": 6,
+  "color": "Estampada",
+  "stock": "disponible",
+  "description": "",
+  "categoria": "Mallas",
+  "image": "mallarombos.jpeg"
+ },
+ {
+  "id": 10,
+  "name": "Remera Bullcrie",
+  "price": 1860,
+  "cuotas": 6,
+  "color": "Blanco",
+  "stock": "disponible",
+  "description": "",
+  "categoria": "Remeras",
+  "image": "remerablanca.jpeg"
+ },
+ {
+  "id": 11,
+  "name": "da",
+  "categoria": "ada",
+  "color": "da",
+  "price": "255",
+  "envio": "Disponible",
+  "image": "1634860300546.jpg"
+ }
 ]
