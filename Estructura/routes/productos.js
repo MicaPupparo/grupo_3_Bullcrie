@@ -14,6 +14,7 @@ router.get("/detalle/:id", productosController.productDetail);
 
 // GET CART //
 router.get("/carrito", productosController.productCart);
+router.post("/carrito", productosController.addToCart);
 
 // CREATE ONE PRODUCT //
 router.get("/create", productosController.productCreate);
