@@ -108,14 +108,5 @@
   "description": "",
   "categoria": "Remeras",
   "image": "remerablanca.jpeg"
- },
- {
-  "id": 11,
-  "name": "da",
-  "categoria": "ada",
-  "color": "da",
-  "price": "255",
-  "envio": "Disponible",
-  "image": "1634860300546.jpg"
  }
 ]

@@ -10,7 +10,7 @@ const controller = {
   //crear ejs index
   tienda: (req, res) => {
     const productos = products
-    res.render('productShop.ejs', {productos})
+    res.render('productShop', {productos})
   },
   productCart: (req, res) => {
     res.render("productCart.ejs")

@@ -1,37 +1,39 @@
 <!-- -------------------------------------HEAD & TAGS-------------------------------------------------------- -->
 <%- include('./partials/head') %>
 
-<body>
-<!-- -------------------------------------HEADER-------------------------------------------------------- -->
+<body class="wrapper">
+  <!-- -------------------------------------HEADER-------------------------------------------------------- -->
 
-<%- include('./partials/header')%>
-
+<%- include('./partials/header') %>
+  <!-- -------------------------------------MAIN-------------------------------------------------------- -->
 
 
 <main class="container">
     <h2>Hola proiabda</h2>
     <div>
-        <% for (let i= 0; i < productos.lenght; i++) {%>
-            <section class="product-container">
-                <a href="/productos/detalle/<%= productos[i].id %>">
-                    <div class="img-product">
-                        <img src="/images/<%= productos[i].image %>" alt="Imagen del producto">
-                    </div>
-                    <article class="product-info">
-                        <h2 class="price">
-                            $<%= productos[i].price.toLocaleString() %>
-                        </h2>
-                        <h3 class="product-cuotas">
-                            Con <%= productos[i].cuotas %> sin interés de $<%= (productos[i].price / productos[i].cuotas).toFixed(0) %>
-                        </h3>
-                        <p>
-                            <%= productos[i].name %>
-                        </p>
-                    </article>
-                </a>
-            </section>
-        <%}%>
-    </div>
+        
+    <% for(var i = 0; i < productos.length; i++) { %>
+    
+        <section class="product-container">
+            <a href="/productos/detalle/<%= productos[i].id %>">
+                <div class="img-product">
+                    <img src="/images/<%= productos[i].image %>" alt="Imagen del producto">
+                </div>
+                <article class="product-info">
+                    <h2 class="price">
+                        $<%= productos[i].price.toLocaleString() %>
+                    </h2>
+                    <h3 class="product-cuotas">
+                        Con <%= productos[i].cuotas %> sin interés de $<%= (productos[i].price / productos[i].cuotas).toFixed(0) %>
+                    </h3>
+                    <p>
+                        <%= productos[i].name %>
+                    </p>
+                </article>
+            </a>
+        </section>
+    <% } %>
+</div>
 </main>
 
 <!-- -------------------------------------FOOTER-------------------------------------------------------- -->
