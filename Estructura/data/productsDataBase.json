@@ -8,7 +8,7 @@
   "stock": "disponible",
   "description": "",
   "categoria": "Buzos",
-  "image": "buzogris.jpeg"
+  "image": ["buzogris.jpeg", "buzogris1.jpeg"]
  },
  {
   "id": 2,
@@ -19,7 +19,7 @@
   "stock": "disponible",
   "description": "",
   "categoria": "Buzos",
-  "image": "buzonegrococo.jpeg"
+  "image": ["buzonegrococo.jpeg", "buzonegrosnow.jpeg"]
  },
  {
   "id": 3,
@@ -30,7 +30,7 @@
   "stock": "disponible",
   "description": "",
   "categoria": "Buzos",
-  "image": "buzorojo.jpeg"
+  "image": ["buzorojo.jpeg", "buzoryb.jpeg"]
  },
  {
   "id": 4,
@@ -41,7 +41,7 @@
   "stock": "disponible",
   "description": "",
   "categoria": "Gorras",
-  "image": "gorra.jpg"
+  "image": ["gorra.jpg"]
  },
  {
   "id": 5,
@@ -52,7 +52,7 @@
   "stock": "disponible",
   "description": "",
   "categoria": "Mallas",
-  "image": "mallafloreada.jpeg"
+  "image": ["mallafloreada.jpeg"]
  },
  {
   "id": 6,
@@ -63,7 +63,7 @@
   "stock": "disponible",
   "description": "",
   "categoria": "Mallas",
-  "image": "mallalineas.jpeg"
+  "image": ["mallalineas.jpeg"]
  },
  {
   "id": 7,
@@ -74,7 +74,7 @@
   "stock": "disponible",
   "description": "",
   "categoria": "Mallas",
-  "image": "mallapelicanos.jpeg"
+  "image": ["mallapelicanos.jpeg"]
  },
  {
   "id": 8,
@@ -85,7 +85,7 @@
   "stock": "disponible",
   "description": "",
   "categoria": "Mallas",
-  "image": "mallaramas.jpeg"
+  "image": ["mallaramas.jpeg"]
  },
  {
   "id": 9,
@@ -96,7 +96,7 @@
   "stock": "disponible",
   "description": "",
   "categoria": "Mallas",
-  "image": "mallarombos.jpeg"
+  "image": ["mallarombos.jpeg"]
  },
  {
   "id": 10,
@@ -107,6 +107,6 @@
   "stock": "disponible",
   "description": "",
   "categoria": "Remeras",
-  "image": "remerablanca.jpeg"
+  "image": ["remerablanca.jpeg"]
  }
 ]

@@ -8,32 +8,31 @@
   <!-- -------------------------------------MAIN-------------------------------------------------------- -->
 
 
-<main class="container">
-    <h2>Hola proiabda</h2>
-    <div>
-        
-    <% for(var i = 0; i < productos.length; i++) { %>
+<main class="container-shop">
+    <h2 class="tienda-shop">Tienda | Todos los productos</h2>
+    <div class="div-shop">
+        <% for(var i = 0; i < productos.length; i++) { %>
     
-        <section class="product-container">
-            <a href="/productos/detalle/<%= productos[i].id %>">
-                <div class="img-product">
-                    <img src="/images/<%= productos[i].image %>" alt="Imagen del producto">
-                </div>
-                <article class="product-info">
-                    <h2 class="price">
-                        $<%= productos[i].price.toLocaleString() %>
-                    </h2>
-                    <h3 class="product-cuotas">
-                        Con <%= productos[i].cuotas %> sin interés de $<%= (productos[i].price / productos[i].cuotas).toFixed(0) %>
-                    </h3>
-                    <p>
-                        <%= productos[i].name %>
-                    </p>
-                </article>
-            </a>
-        </section>
-    <% } %>
-</div>
+            <div class="product-container-shop">
+                <a href="/productos/detalle/<%= productos[i].id %>">
+                    <div class="img-product">
+                        <img src="/images/<%= productos[i].image %>" alt="Imagen del producto">
+                    </div>
+                    <article class="product-info">
+                        <h2 class="price-shop">
+                            $<%= productos[i].price.toLocaleString() %>
+                        </h2>
+                        <h3 class="product-cuotas">
+                            Con <%= productos[i].cuotas %> cuotas sin interés de $<%= (productos[i].price / productos[i].cuotas).toFixed(0) %>
+                        </h3>
+                        <p class="name-shop">
+                            <%= productos[i].name %>
+                        </p>
+                    </article>
+                </a>
+            </div>
+        <% } %>
+    </div>
 </main>
 
 <!-- -------------------------------------FOOTER-------------------------------------------------------- -->

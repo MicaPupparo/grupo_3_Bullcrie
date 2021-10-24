@@ -12,6 +12,13 @@ const controller = {
     const productos = products
     res.render('productShop', {productos})
   },
+  categorias: (req, res) => {
+    const categoria = req.params.categoria
+    const product = products.filter(elemento => elemento.categoria == categoria)
+    console.log(product)
+    res.render('categorias', {product})
+  },
+
   productCart: (req, res) => {
     res.render("productCart.ejs")
   },

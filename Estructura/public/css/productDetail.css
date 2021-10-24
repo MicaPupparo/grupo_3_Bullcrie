@@ -24,7 +24,7 @@
 }
 
 .main-img {
-    width: 40%;
+    width: 45%;
     border: 1px solid black;
     display: flex;
     margin: 10px;
@@ -163,9 +163,9 @@ img {
   .images {
     display: flex;
     flex-direction: column;
-    width: 10%;
-    margin-top: auto;
-    margin-bottom: auto;
+    width: 15%;
+    justify-content: space-evenly;
+
     
   }
   .images img {
@@ -258,7 +258,7 @@ img {
     
     .images {
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-evenly;
         width: auto;
     }
     .images img {

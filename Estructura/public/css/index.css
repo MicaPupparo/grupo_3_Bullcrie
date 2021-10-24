@@ -31,8 +31,30 @@ body{
     display: flex;
     margin: 10px; 
     flex-wrap: wrap;
+    text-align: center;
+    transition: ease-in-out 0.2s;
+}
+
+.cat1:hover, .cat2:hover, .cat3:hover, .cat4:hover{
+    width: 21%;
+    transition: ease-in-out 0.2s;
+    box-shadow: 0px 0px 5px rgba(10, 10, 10, 0.4);
+}
+
+.cat1 a, .cat2 a, .cat3 a, .cat4 a{
+    width: 100%;
+    display: flex;
     
 }
+
+.cat1 p, .cat2 p, .cat3 p, .cat4 p{
+    text-decoration: none;
+    color: #666;
+    text-align: center;
+    
+}
+
+
 
 .img1, .img2, .img3, .img4{
    width: 100%; 
