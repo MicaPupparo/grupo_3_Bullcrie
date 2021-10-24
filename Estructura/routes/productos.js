@@ -7,7 +7,10 @@ const path = require("path")
 const productosController = require("../controller/productosController");
 
 // GET ALL PRODUCTS // 
-router.get('/', productosController.tienda); //crear ejs de todos los productos
+router.get('/', productosController.tienda); 
+
+router.get('/categorias/:categoria', productosController.categorias)
+
 
 // GET ONE PRODUCT //
 router.get("/detalle/:id", productosController.productDetail);

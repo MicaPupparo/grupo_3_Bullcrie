@@ -8,15 +8,16 @@
   <!-- -------------------------------------MAIN-------------------------------------------------------- -->
 
     <main id="gallery">
-        
+     
         <div class="images">
-        <img src="/images\mallafloreada.jpeg" class="img">
-        <img src="/images\mallalineas.jpeg" class="img">
-        <img src="/images\mallarombos.jpeg" class="img">
+          <% for(i in product.image) { %>
+        <img src="/images\<%= product.image[i] %>" class="img">
+        <% } %>
             </div>
-
+         
             <div class="main-img">
-                <img src="/images\<%= product.image %>" id="current">    
+
+                <img src="/images\<%= product.image[i] %>" id="current">    
             </div>
 
         <div class="product-details">

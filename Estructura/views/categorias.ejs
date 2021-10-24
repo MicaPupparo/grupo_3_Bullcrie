@@ -1,0 +1,33 @@
+<!-- -------------------------------------HEAD & TAGS-------------------------------------------------------- -->
+<%- include('./partials/head') %>
+
+<body class="wrapper">
+  <!-- -------------------------------------HEADER-------------------------------------------------------- -->
+
+<%- include('./partials/header') %>
+  <!-- -------------------------------------MAIN-------------------------------------------------------- -->
+  <% for(z in product) { %>
+    <% } %>
+  <h2 class="titulo-pag"><%= product[z].categoria %></h2>
+
+  <div class="flex-containter">
+<% for(i in product) { %>
+    <div class="boxs">
+        <a href="/productos/detalle/<%= product[i].id %>">
+        <h3 class="titulo-producto"><%= product[i].name %></h3>
+        <img class="product-img" src="/images/<%= product[i].image[0] %>">
+        </a>
+        <p class="precio">$<%= product[i].price %></p>
+        <p class="cuotas">x<%= product[i].cuotas %> Cuotas de $<%= (product[i].price / product[i].cuotas).toFixed(0) %> sin interés</p>
+    </div>
+<% } %>
+</div>   
+
+
+<!-- -------------------------------------FOOTER-------------------------------------------------------- -->
+<%- include('./partials/footer') %>
+
+
+    <script type="text/javascript" src="/css\header.js"></script>
+</body>
+</html>
