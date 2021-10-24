@@ -21,8 +21,8 @@
 
         <div class="product-details">
             <h3><%= product.name %></h3>
-            <h2>$<%= product.price %></h2>
-            <p class="cuotas">x<%= product.cuotas %> Cuotas de $<%= (product.price / product.cuotas).toFixed(0) %> sin interés</p>
+            <h2>$<%= parseInt(product.price) %></h2>
+            <p class="cuotas">x<%= parseInt(product.cuotas) %> Cuotas de $<%= (parseInt(product.price) / parseInt(product.cuotas)).toFixed(0) %> sin interés</p>
             <p class="mediosPago">Ver los medios de pago</p>
             <p class="enviosGratis"><i class="fas fa-truck"></i></i>Envios gratis a todo el país</p>
             <p class="formasEnvio">Conocé los tiempos y formas de envio</p>

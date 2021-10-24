@@ -24,7 +24,7 @@ let storage = multer.diskStorage({
         cb(null, path.join(__dirname, "../public/images"))
     },
     filename: function(req, file, cb){
-        let newName = Date.now() + path.extname(file.originalname)
+        let newName = file.fieldname + "-" + Date.now() + path.extname(file.originalname)
         cb(null, newName)
     }
 })

@@ -30,7 +30,8 @@ form .casillaPc {
 .imagenPc,
 .categoria-productoPc,
 .colorPc,
-.precioPc{
+.precioPc,
+.cuotasPc{
   color: #a0a0a0;
   background-color: #f0f0f0;
   width: 65%;
@@ -144,6 +145,7 @@ color: #184e77;
   .colorPc,
   .envioLabel,
   .precioPc,
+  .cuotasPc,
   .opcionEnvio{
     font-size: 1em;
   }

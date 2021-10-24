@@ -27,7 +27,7 @@ const controller = {
     res.render("productCreate")
   },
   store: (req, res) => {
-    let image;
+    let image
     if(req.files[0] != undefined){
         image = req.files[0].filename
     } else {
@@ -36,11 +36,11 @@ const controller = {
     let newProduct = {
         id: products[products.length - 1].id + 1,
         ...req.body,
-        image: image //mirar video de multer
+        image: image
     };
     products.push(newProduct)
     fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-    res.redirect('/');
+    res.redirect('detalle/' + newProduct.id);
   },
   productEdit: (req, res) => {
     const id = req.params.id -1
