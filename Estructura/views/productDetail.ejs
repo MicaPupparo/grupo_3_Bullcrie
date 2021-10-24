@@ -49,6 +49,7 @@
             </ul>
             <p class="color">Color: <%= product.color %></p>
             <p class="stock">Stock <%= product.stock %></p>
+            <a href="/productos/editar/<%= product.id %>"><button class="comprar" type="button">Editar</button></a>
             <button class="comprar" type="button">Comprar Ahora</button>
             <button class="carrito" type="button">Agregar al carrito</button>
         </div>
