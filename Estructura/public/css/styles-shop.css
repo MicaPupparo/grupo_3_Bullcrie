@@ -66,11 +66,28 @@
 }
 
 @media (max-width: 769px){
+    .product-container-shop{
+        width: 40vw;
+    }
 
     }
 
 
 @media (max-width: 480px){
+    .tienda-shop{
+        font-size: 18px;
+        padding: 0px;
+    }
 
+    .product-container-shop{
+        width: 60vw;
+    }
 
+    .img-product{
+        margin: auto;
+    }
+
+    .product-info{
+        margin: auto;    
+    }
 }
