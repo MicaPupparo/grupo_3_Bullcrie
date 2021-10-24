@@ -1,1 +1,1 @@
-web: node estructura/app.js
+web: node ./Estructura/app.js
