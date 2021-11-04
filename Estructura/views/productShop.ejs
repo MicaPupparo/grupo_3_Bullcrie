@@ -16,17 +16,17 @@
             <div class="product-container-shop">
                 <a href="/productos/detalle/<%= productos[i].id %>">
                     <div class="img-product">
-                        <img src="/images/<%= productos[i].image[0] %>" alt="Imagen del producto">
+                        <img src="/images/<%= productos[i].imagen[0] %>" alt="Imagen del producto">
                     </div>
                     <article class="product-info">
                         <h2 class="price-shop">
-                            $<%= productos[i].price.toLocaleString() %>
+                            $<%= productos[i].precio.toLocaleString() %>
                         </h2>
                         <h3 class="product-cuotas">
-                            Con <%= productos[i].cuotas %> cuotas sin interés de $<%= (productos[i].price / productos[i].cuotas).toFixed(0) %>
+                            Con <%= productos[i].cuotas %> cuotas sin interés de $<%= (productos[i].precio / productos[i].cuotas).toFixed(0) %>
                         </h3>
                         <p class="name-shop">
-                            <%= productos[i].name %>
+                            <%= productos[i].nombre %>
                         </p>
                     </article>
                 </a>

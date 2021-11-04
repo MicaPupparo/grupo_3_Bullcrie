@@ -1,112 +1,112 @@
 [
  {
   "id": 1,
-  "name": "Buzo Gris Bullcrie",
-  "price": 3840,
+  "nombre": "Buzo Gris Bullcrie",
+  "precio": 3840,
   "cuotas": 6,
   "color": "Gris",
   "stock": "disponible",
-  "description": "",
+  "descripcion": "",
   "categoria": "Buzos",
-  "image": ["buzogris.jpeg", "buzogris1.jpeg"]
+  "imagen": ["buzogris.jpeg", "buzogris1.jpeg"]
  },
  {
   "id": 2,
-  "name": "Buzo Negro Winter Rules",
-  "price": 3840,
+  "nombre": "Buzo Negro Winter Rules",
+  "precio": 3840,
   "cuotas": 6,
   "color": "Negro",
   "stock": "disponible",
-  "description": "",
+  "descripcion": "",
   "categoria": "Buzos",
-  "image": ["buzonegrococo.jpeg", "buzonegrosnow.jpeg"]
+  "imagen": ["buzonegrococo.jpeg", "buzonegrosnow.jpeg"]
  },
  {
   "id": 3,
-  "name": "Buzo Rojo",
-  "price": 3840,
+  "nombre": "Buzo Rojo",
+  "precio": 3840,
   "cuotas": 6,
   "color": "Rojo",
   "stock": "disponible",
-  "description": "",
+  "descripcion": "",
   "categoria": "Buzos",
-  "image": ["buzorojo.jpeg", "buzoryb.jpeg"]
+  "imagen": ["buzorojo.jpeg", "buzoryb.jpeg"]
  },
  {
   "id": 4,
-  "name": "Gorra",
-  "price": 1100,
+  "nombre": "Gorra",
+  "precio": 1100,
   "cuotas": 6,
   "color": "Blanco",
   "stock": "disponible",
-  "description": "",
+  "descripcion": "",
   "categoria": "Gorras",
-  "image": ["gorra.jpg"]
+  "imagen": ["gorra.jpg"]
  },
  {
   "id": 5,
-  "name": "Malla Floreada",
-  "price": 2590,
+  "nombre": "Malla Floreada",
+  "precio": 2590,
   "cuotas": 6,
   "color": "Estampada",
   "stock": "disponible",
-  "description": "",
+  "descripcion": "",
   "categoria": "Mallas",
-  "image": ["mallafloreada.jpeg"]
+  "imagen": ["mallafloreada.jpeg"]
  },
  {
   "id": 6,
-  "name": "Malla con lineas",
-  "price": 2590,
+  "nombre": "Malla con lineas",
+  "precio": 2590,
   "cuotas": 6,
   "color": "Estampada",
   "stock": "disponible",
-  "description": "",
+  "descripcion": "",
   "categoria": "Mallas",
-  "image": ["mallalineas.jpeg"]
+  "imagen": ["mallalineas.jpeg"]
  },
  {
   "id": 7,
-  "name": "Malla pelicanos",
-  "price": 2590,
+  "nombre": "Malla pelicanos",
+  "precio": 2590,
   "cuotas": 6,
   "color": "Estampada",
   "stock": "disponible",
-  "description": "",
+  "descripcion": "",
   "categoria": "Mallas",
-  "image": ["mallapelicanos.jpeg"]
+  "imagen": ["mallapelicanos.jpeg"]
  },
  {
   "id": 8,
-  "name": "Malla ramas",
-  "price": 2590,
+  "nombre": "Malla ramas",
+  "precio": 2590,
   "cuotas": 6,
   "color": "Estampada",
   "stock": "disponible",
-  "description": "",
+  "descripcion": "",
   "categoria": "Mallas",
-  "image": ["mallaramas.jpeg"]
+  "imagen": ["mallaramas.jpeg"]
  },
  {
   "id": 9,
-  "name": "Malla rombos",
-  "price": "7",
+  "nombre": "Malla rombos",
+  "precio": "7",
   "cuotas": 6,
   "color": "Estampada",
   "stock": "disponible",
-  "description": "",
+  "descripcion": "",
   "categoria": "Mallas",
-  "image": ["mallarombos.jpeg"]
+  "imagen": ["mallarombos.jpeg"]
  },
  {
   "id": 10,
-  "name": "Remera Bullcrie",
-  "price": 1860,
+  "nombre": "Remera Bullcrie",
+  "precio": 1860,
   "cuotas": 6,
   "color": "Blanco",
   "stock": "disponible",
-  "description": "",
+  "descripcion": "",
   "categoria": "Remeras",
-  "image": ["remerablanca.jpeg"]
+  "imagen": ["remerablanca.jpeg"]
  }
 ]

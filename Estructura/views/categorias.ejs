@@ -14,11 +14,11 @@
 <% for(i in product) { %>
     <div class="boxs">
         <a href="/productos/detalle/<%= product[i].id %>">
-        <h3 class="titulo-producto"><%= product[i].name %></h3>
-        <img class="product-img" src="/images/<%= product[i].image[0] %>">
+        <h3 class="titulo-producto"><%= product[i].nombre %></h3>
+        <img class="product-img" src="/images/<%= product[i].imagen[0] %>">
         </a>
-        <p class="precio">$<%= product[i].price %></p>
-        <p class="cuotas">x<%= product[i].cuotas %> Cuotas de $<%= (product[i].price / product[i].cuotas).toFixed(0) %> sin interés</p>
+        <p class="precio">$<%= product[i].precio></p>
+        <p class="cuotas">x<%= product[i].cuotas %> Cuotas de $<%= (product[i].precio / product[i].cuotas).toFixed(0) %> sin interés</p>
     </div>
 <% } %>
 </div>   

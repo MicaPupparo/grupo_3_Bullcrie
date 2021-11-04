@@ -9,12 +9,12 @@
 
   <form class="creacion" action="/productos/editar/<%= productEdit.id %>?_method=PUT" method="POST">
 
-    <h3 class="tituloPc">Editar producto: <%= productEdit.name %></h3>
+    <h3 class="tituloPc">Editar producto: <%= productEdit.nombre %></h3>
 
     <div class="casillaPc">
       <input
         type="text"
-        name="name"
+        nombre="nombre"
         placeholder="Nombre de producto"
         class="nombre-productoPc"
       />
@@ -23,7 +23,7 @@
     <div class="casillaPc">
       <input
         type="text"
-        name="categoria"
+        nombre="categoria"
         placeholder="Categoría del producto"
         class="categoria-productoPc"
       />
@@ -32,7 +32,7 @@
     <div class="casillaPc">
       <input
         type="text"
-        name="color"
+        nombre="color"
         placeholder="Color"
         class="colorPc"
       />
@@ -41,7 +41,7 @@
     <div class="casillaPc">
       <input
         type="number"
-        name="price"
+        nombre="precio"
         placeholder="Precio"
         class="precioPc"
       />
@@ -50,7 +50,7 @@
     <div class="casillaPc">
       <input
         type="number"
-        name="cuotas"
+        nombre="cuotas"
         placeholder="Cuotas"
         class="cuotasPc"
         min="1"
@@ -62,7 +62,7 @@
     <div class="casillaPc">
       <input
         type="file"
-        name="image"
+        nombre="image"
         placeholder="Imagen"
         class="imagenPc"
         accept=".jpg"
@@ -74,7 +74,7 @@
       <label>
         <input
         type="radio"
-        name="envio"
+        nombre="envio"
         class="envio-siPc"
         value="Disponible"
         />
@@ -84,7 +84,7 @@
       <label>
         <input
        type="radio"
-        name="envio"
+        nombre="envio"
         class="envio-noPc"
         value="No Disponible"
         />
