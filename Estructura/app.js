@@ -9,8 +9,8 @@ const rutasUsers = require("./routes/users");
 
 const app = express();
 
-app.use(express.static('./public'));
 app.use(express.urlencoded({ extended: false }));
+app.use(express.static('./public'));
 app.use(express.json());
 app.use(methodOverride('_method'));
 
@@ -22,7 +22,7 @@ app.use("/", rutasMain);
 
 app.use("/productos", rutasProductos);
 
-app.use("/user", rutasUsers);
+app.use("/usuarios", rutasUsers);
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "./views"));
