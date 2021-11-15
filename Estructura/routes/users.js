@@ -3,7 +3,7 @@ const router = express.Router();
 const multer = require("multer");
 const path = require("path");
 
-const { body } = require('express-validator')
+const { body, validationResult } = require('express-validator')
 
 
 
@@ -42,11 +42,17 @@ return true;
 
 ]
 
+const validacionesLogin = [
+    body("email").notEmpty().withMessage("Tienes que escribir tu email").bail()
+    .isEmail().withMessage("Tiene que ser un email valido"),
+    body("contraseña").notEmpty().withMessage("Tienes que escribir tu contraseña")
+]
 const uploadFile = multer({ storage })
 
 const usersController = require("../controller/usersController");
 
 router.get("/login", usersController.login);
+router.post("/login", validacionesLogin,usersController.procesarLogin);
 
 router.get("/registro", usersController.register);
 router.post("/registro", uploadFile.single("avatar"), validaciones, usersController.procesarRegister)

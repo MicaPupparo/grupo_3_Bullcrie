@@ -7,25 +7,40 @@
 <%- include('./partials/header') %>
   <!-- -------------------------------------MAIN-------------------------------------------------------- -->
 
-    <form class="log">
+    <form class="log" method="POST" action="/usuarios/login">
       <h3>Iniciar sesión</h3>
 
       <div class="casilla">
         <input
           type="text"
-          nombre="nombre o email"
-          placeholder="Nombre o email"
+          name="email"
+          placeholder="Email"
           class="nombre-email"
+          value="<% locals.old && old.email ? old.email : '' %>"
         />
+
+        <% if (locals.errors && errors.email){%>
+          <div class="text-danger">
+            <%= errors.email.msg %>
+          </div>
+        <%}%>
+
       </div>
 
       <div class="casilla">
         <input
           type="password"
-          nombre="contraseña"
+          name="contraseña"
           placeholder="Contraseña"
           class="contraseña"
         />
+
+        <% if (locals.errors && errors.contraseña){%>
+          <div class="text-danger">
+            <%= errors.contraseña.msg %>
+          </div>
+        <%}%>
+
       </div>
 
       <div class="redirigir">
