@@ -15,7 +15,15 @@ const controller = {
 
   procesarRegister: (req, res) => {
     const resultValidation = validationResult(req)
-    return res.send(resultValidation)
+    
+   
+    if(resultValidation.errors.length > 0){
+      return res.render('register', {
+        errors: resultValidation.mapped(),
+        oldData: req.body
+      });
+    }
+  
   }
 }
 

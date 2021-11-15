@@ -20,10 +20,28 @@ const storage = multer.diskStorage({
 
 const validaciones = [
     body('nombre').notEmpty().withMessage('Tienes que escribir tu nombre y apellido'),
-    body('nombre-usuario').notEmpty().withMessage('Tienes que escribir un nombre de usuario'),
+    body('nombreUsuario').notEmpty().withMessage('Tienes que escribir un nombre de usuario'),
+    body('email')
+    
+    .notEmpty().withMessage('Tienes que escribir una email'),
+    
     body('contraseña').notEmpty().withMessage('Tienes que escribir una contraseña'),
     body('repetir').notEmpty().withMessage('Tienes que repetir la contraseña'),
-    body('imagen-perfil').notEmpty().withMessage('Debes seleccionar una imagen')
+    body('avatar').custom((value, { req }) => {
+        let file = req.file;
+        let acceptedExtensions = ['.jpg', '.png'];
+        
+         
+        if (!file) {
+            throw new Error('Tienes que subir una imagen');
+        } else {
+            let fileExtension = path.extname(file.originalname);
+            if(!acceptedExtensions.includes(fileExtension)) {
+                throw new Error(`Las exteniones de archivo permitidas son ${acceptedExtensions.join(', ')}`)
+         }
+        }
+return true;
+    })
 
 ]
 

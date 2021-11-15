@@ -9,6 +9,11 @@
 
     <form method="POST" action="/usuarios/registro" enctype='multipart/form-data' class="registro">
       <h3>Crea tu cuenta</h3>
+<% if (locals.errors) { %>  
+<% for( let oneError in errors) { %>
+
+<% } %>
+<% } %> 
 
       <div class="casilla">
         <input
@@ -16,31 +21,58 @@
           name="nombre"
           placeholder="Nombre y apellido"
           class="nombre-apellido"
+          value=" <%=  locals.oldData ? oldData.nombre :null %>"
           
         />
+        <% if (locals.errors && errors.nombre) { %> 
+       <div class="text-danger">
+         <%= errors.nombre.msg  %> 
+      </div>
+      <% } %>
       </div>
 
       <div class="casilla">
-        <input type="email" nombre="email" placeholder="E-mail*" class="email" />
-      </div>
+        <input type="email"
+         nombre="email"
+          placeholder="E-mail*"
+           class="email"
+            value=" <%=  locals.oldData ? oldData.email :null %>" />
+
+      <% if (locals.errors && errors.email) { %> 
+        <div class="text-danger">
+          <%= errors.email.msg  %> 
+       </div>
+       <% } %>
+       </div>
 
       <div class="casilla">
         <input
           type="text"
-          name="nombre-usuario"
+          name="nombreUsuario"
           placeholder="Nombre de usuario"
           class="user"
+          value=" <%=  locals.oldData ? oldData.nombreUsuario :null %>"
           />
-      </div>
-
+          <% if (locals.errors && errors.nombreUsuario) { %> 
+            <div class="text-danger">
+              <%= errors.nombreUsuario.msg  %> 
+           </div>
+           <% } %>
+           </div>
       <div class="casilla">
         <input
           type="password"
           name="contraseña"
           placeholder="Contraseña"
           class="contraseña"
+          value=" <%=  locals.oldData ? oldData.contraseña :null %>"
          
         />
+         <% if (locals.errors && errors.contraseña) { %> 
+       <div class="text-danger">
+         <%= errors.contraseña.msg  %> 
+      </div>
+      <% } %>
       </div>
 
       <div class="casilla">
@@ -49,15 +81,28 @@
           name="repetir"
           placeholder="Repetir contraseña"
           class="rep-contraseña"
+          value=" <%=  locals.oldData ? oldData.repetir :null %>"
          />
+         <% if (locals.errors && errors.repetir) { %> 
+          <div class="text-danger">
+            <%= errors.repetir.msg  %> 
+         </div>
+         <% } %>
       </div>
 
       <div class="casilla">
         <input
           type= "file"
-          name="imagen-perfil"
+          name="avatar"
          />
+         
+         <% if (locals.errors && errors.avatar) { %> 
+          <div class="text-danger">
+            <%= errors.avatar.msg  %> 
+         </div>
+         <% } %>
       </div>
+     
 
       <div class="redirigir">
         <span>¿Ya tenés cuenta? Hacé click en "Iniciar Sesión"</span>

@@ -36,7 +36,7 @@ form .casilla {
   width: 65%;
   padding: 4px;
   border: 0px;
-  border-bottom: 1px solid #184e77;
+  border-bottom: 1px solid #184e77; 
   font-size: 0.7em;
 }
 
@@ -70,6 +70,8 @@ form .buttons .boton {
 form .boton:hover {
   background-color: #276da3;
 }
+
+
 
 /*   FOOTER ----------------------------------------------------------------------------*/
 footer{
@@ -119,6 +121,10 @@ color: #184e77;
 
 .mensajeFooter p{
   color: white;
+}
+
+.text-danger{
+  color: red;
 }
 
 
