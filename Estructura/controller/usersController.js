@@ -23,8 +23,18 @@ const controller = {
         oldData: req.body
       });
     }
-  
-  }
+    
+    let image = req.file.filename
+    let newUser = {
+        id: users[users.length - 1].id + 1,
+        ...req.body,
+        image
+     
+    };
+    users.push(newUser)
+    fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
+    res.redirect('/usuarios/login');
+  },
 }
 
 module.exports = controller;
