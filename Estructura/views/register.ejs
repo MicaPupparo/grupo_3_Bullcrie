@@ -19,9 +19,9 @@
         <input
           type="text"
           name="nombre"
-          placeholder="Nombre y apellido"
+          placeholder= "Nombre y apellido"
           class="nombre-apellido"
-          value=" <%=  locals.oldData ? oldData.nombre :null %>"
+          value="<%=locals.oldData ? oldData.nombre : null %>"
           
         />
         <% if (locals.errors && errors.nombre) { %> 
@@ -32,11 +32,12 @@
       </div>
 
       <div class="casilla">
-        <input type="email"
-         nombre="email"
-          placeholder="E-mail*"
-           class="email"
-            value=" <%=  locals.oldData ? oldData.email :null %>" />
+        <input 
+          type="text"
+          name="email"
+          placeholder= "E-mail"
+          class="email"
+          value= "<%=locals.oldData ? oldData.email : null %>" />
 
       <% if (locals.errors && errors.email) { %> 
         <div class="text-danger">
@@ -49,9 +50,9 @@
         <input
           type="text"
           name="nombreUsuario"
-          placeholder="Nombre de usuario"
+          placeholder= "Nombre de usuario"
           class="user"
-          value=" <%=  locals.oldData ? oldData.nombreUsuario :null %>"
+          value= "<%=  locals.oldData ? oldData.nombreUsuario :null %>"
           />
           <% if (locals.errors && errors.nombreUsuario) { %> 
             <div class="text-danger">
@@ -62,10 +63,11 @@
       <div class="casilla">
         <input
           type="password"
+          placeholder= "Contraseña"
           name="contraseña"
-          placeholder="Contraseña"
           class="contraseña"
-          value=" <%=  locals.oldData ? oldData.contraseña :null %>"
+          value="<%=  locals.oldData ? oldData.contraseña :null %>"
+          
          
         />
          <% if (locals.errors && errors.contraseña) { %> 
@@ -79,9 +81,9 @@
         <input
           type="password"
           name="repetir"
-          placeholder="Repetir contraseña"
+          placeholder= "Repetir contraseña"
           class="rep-contraseña"
-          value=" <%=  locals.oldData ? oldData.repetir :null %>"
+          value="<%=  locals.oldData ? oldData.repetir :null %>"
          />
          <% if (locals.errors && errors.repetir) { %> 
           <div class="text-danger">

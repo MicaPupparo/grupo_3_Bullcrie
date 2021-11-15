@@ -1,9 +1,28 @@
 [
-    {
-        "id": "",
-        "name": "",
-        "email": "",
-        "username": "",
-        "password": ""
-    }
+ {
+  "id": 1,
+  "name": "asd",
+  "email": "asd@asd.asd",
+  "username": "asdasd",
+  "password": "asd123asd",
+  "avatar": ""
+ },
+ {
+  "id": 2,
+  "nombre": "asd",
+  "email": "asd@hotmail.com",
+  "nombreUsuario": "asd",
+  "contraseña": "asd",
+  "repetir": "asd",
+  "image": "1637014535354_img.png"
+ },
+ {
+  "id": 3,
+  "nombre": "User Test",
+  "email": "test@test.com",
+  "nombreUsuario": "testest",
+  "contraseña": "asd123",
+  "repetir": "asd123",
+  "image": "1637014767140_img.png"
+ }
 ]

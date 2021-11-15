@@ -21,10 +21,7 @@ const storage = multer.diskStorage({
 const validaciones = [
     body('nombre').notEmpty().withMessage('Tienes que escribir tu nombre y apellido'),
     body('nombreUsuario').notEmpty().withMessage('Tienes que escribir un nombre de usuario'),
-    body('email')
-    
-    .notEmpty().withMessage('Tienes que escribir una email'),
-    
+    body('email').isEmail().withMessage('Debes ingresar un email válido'),
     body('contraseña').notEmpty().withMessage('Tienes que escribir una contraseña'),
     body('repetir').notEmpty().withMessage('Tienes que repetir la contraseña'),
     body('avatar').custom((value, { req }) => {
@@ -52,6 +49,6 @@ const usersController = require("../controller/usersController");
 router.get("/login", usersController.login);
 
 router.get("/registro", usersController.register);
-router.post("/registro", uploadFile.single("imagen-perfil"), validaciones, usersController.procesarRegister)
+router.post("/registro", uploadFile.single("avatar"), validaciones, usersController.procesarRegister)
 
 module.exports = router;
