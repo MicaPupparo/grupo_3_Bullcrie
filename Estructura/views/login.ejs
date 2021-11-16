@@ -24,7 +24,11 @@
             <%= errors.email.msg %>
           </div>
         <%}%>
-
+        <% if (locals.errors && errors.msg){%>
+          <div class="text-danger">
+            <%= errors.msg %>
+          </div>
+        <%}%>
       </div>
 
       <div class="casilla">

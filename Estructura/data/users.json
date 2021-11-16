@@ -60,5 +60,14 @@
   "contraseña": "$2a$10$45oK.ZAQKAomGr2pLvKZ9.k08IKaXI827y9ytjmcg8kRgnkRk8pG2",
   "repetir": "$2a$10$TFCeFdwKUl.6RNSJMCpyT.l71lWAHEP1bO00qACkkQq3Fnw26OFni",
   "image": "1637097863273_img.png"
+ },
+ {
+  "id": 8,
+  "nombre": "mica",
+  "email": "micap@gmail.com",
+  "nombreUsuario": "mica",
+  "contraseña": "$2a$10$6/U0fkXwYhpxBeecJYyi9OHFj8jvsq.Odh0XeleNWVhSN6jeRt3r2",
+  "repetir": "$2a$10$ag.bAOHrSsM4NbbjJX3huOZ66kJORjlZ.cZBBkj0aw/m3JMi6Lw7a",
+  "image": "1637102025719_img.png"
  }
 ]
