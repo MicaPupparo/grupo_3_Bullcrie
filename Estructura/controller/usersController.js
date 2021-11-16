@@ -22,8 +22,7 @@ const controller = {
       let usuarioALoguearse;
       for (let i = 0; i < users.length; i++){
         if(users[i].email == req.body.email){
-          if(bcrypt.compareSync(req.body.contraseña, users[i].contraseña))
-          if(req.body.contraseña == users[i].contraseña){
+          if(bcrypt.compareSync(req.body.contraseña, users[i].contraseña)){
             usuarioALoguearse = users[i];
             break;
           }

@@ -51,5 +51,14 @@
   "contraseña": "$2a$10$/R9vcZfgwvyOKd1NbPbVC.pvSVb4L4B1AbVZf6yCqHWvt7uHD0Fvy",
   "repetir": "$2a$10$zgcHi6Q1IZur0CB1BtWio.MES5aEI0sHYug1ltEogjz2S74W9isR2",
   "image": "1637073239067_img.png"
+ },
+ {
+  "id": 7,
+  "nombre": "nico",
+  "email": "nicolaslivingston.it@gmail.com",
+  "nombreUsuario": "nico123",
+  "contraseña": "$2a$10$45oK.ZAQKAomGr2pLvKZ9.k08IKaXI827y9ytjmcg8kRgnkRk8pG2",
+  "repetir": "$2a$10$TFCeFdwKUl.6RNSJMCpyT.l71lWAHEP1bO00qACkkQq3Fnw26OFni",
+  "image": "1637097863273_img.png"
  }
 ]
