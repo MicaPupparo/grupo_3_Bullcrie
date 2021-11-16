@@ -16,9 +16,10 @@
          <li><a href="#contacto">CONTACTO</a></li>
      </ul>
 
-     <ul class="ul-header_icons">
-         <li><a href="#search"><i class="fas fa-search"></i></a></li>
-         <li><a href="/usuarios/login"><i class="far fa-user"></i></a></li>
-         <li><a href="/productos/carrito"><i class="fas fa-shopping-cart"></i></a></li>
+     <ul class="ul-header_icons"> 
+            <li><a href="#search"><i class="fas fa-search"></i></a></li>        
+            <li>
+                <a href="<%= locals.estaLogueado ? '' : '/usuarios/login' %>"><i class="far fa-user"></i><%= locals.estaLogueado ? ' ' + locals.usuarioLogin.nombre : ' Hola usuario' %></a></li>
+            <li><a href="/productos/carrito"><i class="fas fa-shopping-cart"></i></a></li>        
      </ul>
  </header>
