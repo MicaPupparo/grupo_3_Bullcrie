@@ -22,7 +22,7 @@ const controller = {
       
       for (let i = 0; i < users.length; i++){
         if(users[i].email == req.body.email){
-          //if(bcrypt.compareSync(req.body.contraseña, users[i].contraseña))
+          if(bcrypt.compareSync(req.body.contraseña, users[i].contraseña))
           if(req.body.contraseña == users[i].contraseña){
             let usuarioALoguearse = users[i];
             break;
@@ -61,6 +61,8 @@ const controller = {
     let newUser = {
         id: users[users.length - 1].id + 1,
         ...req.body,
+        contraseña: bcrypt.hashSync(req.body.contraseña, 10),
+        repetir: bcrypt.hashSync(req.body.repetir, 10),
         image
      
     };

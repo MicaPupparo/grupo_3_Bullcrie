@@ -17,13 +17,19 @@ const storage = multer.diskStorage({
         cb(null, fileName)
     }
 })
-
-const validaciones = [
+const contraseña = {
+    password: (req, res) => {
+    let pass = req.body.contraseña
+    }
+    }
+const validaciones  = [
     body('nombre').notEmpty().withMessage('Tienes que escribir tu nombre y apellido'),
     body('nombreUsuario').notEmpty().withMessage('Tienes que escribir un nombre de usuario'),
-    body('email').isEmail().withMessage('Debes ingresar un email válido'),
+    body('email').notEmpty().withMessage('Debes ingresar un email').bail()
+    .isEmail().withMessage('Debes ingresar un email válido'),
     body('contraseña').notEmpty().withMessage('Tienes que escribir una contraseña'),
-    body('repetir').notEmpty().withMessage('Tienes que repetir la contraseña'),
+    body('repetir').notEmpty().withMessage('Tienes que repetir la contraseña').bail().equals(contraseña.password).withMessage('Las contraseñas deben ser iguales'),
+    
     body('avatar').custom((value, { req }) => {
         let file = req.file;
         let acceptedExtensions = ['.jpg', '.png'];
@@ -40,7 +46,8 @@ const validaciones = [
 return true;
     })
 
-]
+ ]
+
 
 const validacionesLogin = [
     body("email").notEmpty().withMessage("Tienes que escribir tu email").bail()
@@ -55,6 +62,6 @@ router.get("/login", usersController.login);
 router.post("/login", validacionesLogin,usersController.procesarLogin);
 
 router.get("/registro", usersController.register);
-router.post("/registro", uploadFile.single("avatar"), validaciones, usersController.procesarRegister)
+router.post("/registro",  uploadFile.single("avatar"), validaciones, usersController.procesarRegister)
 
 module.exports = router;

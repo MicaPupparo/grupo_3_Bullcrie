@@ -24,5 +24,32 @@
   "contraseña": "asd123",
   "repetir": "asd123",
   "image": "1637014767140_img.png"
+ },
+ {
+  "id": 4,
+  "nombre": "ignacio",
+  "email": "ignaciollamas51@hotmail.com",
+  "nombreUsuario": "nacholl51",
+  "contraseña": "HOLA1234",
+  "repetir": "HOLA1234",
+  "image": "1637069412868_img.png"
+ },
+ {
+  "id": 5,
+  "nombre": "ignacio",
+  "email": "pedro@gmail.com",
+  "nombreUsuario": "igna132",
+  "contraseña": "$2a$10$HSGTeC7conWKIvar0.lGy.S3AXVpWptN3uNA1EWWrel.WSwa3y1CW",
+  "repetir": "hola123",
+  "image": "1637073116411_img.png"
+ },
+ {
+  "id": 6,
+  "nombre": "hola ",
+  "email": "hola@gmail.com",
+  "nombreUsuario": "hola123",
+  "contraseña": "$2a$10$/R9vcZfgwvyOKd1NbPbVC.pvSVb4L4B1AbVZf6yCqHWvt7uHD0Fvy",
+  "repetir": "$2a$10$zgcHi6Q1IZur0CB1BtWio.MES5aEI0sHYug1ltEogjz2S74W9isR2",
+  "image": "1637073239067_img.png"
  }
 ]
