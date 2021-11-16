@@ -37,6 +37,11 @@ form .casilla {
   font-size: 0.7em;
 }
 
+#recordame_check{
+  position: relative;
+  left: 0%;
+}
+
 form .redirigir {
   text-align: center;
   font-size: 0.75em;

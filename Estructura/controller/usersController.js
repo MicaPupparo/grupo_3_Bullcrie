@@ -19,26 +19,29 @@ const controller = {
         old: req.body
       });
     }else{
-      
+      let usuarioALoguearse;
       for (let i = 0; i < users.length; i++){
         if(users[i].email == req.body.email){
           //if(bcrypt.compareSync(req.body.contraseña, users[i].contraseña))
           if(req.body.contraseña == users[i].contraseña){
-            let usuarioALoguearse = users[i];
+            usuarioALoguearse = users[i];
             break;
           }
         }
       };
 
       if(usuarioALoguearse == undefined){
-        return res.render("login", {errors: [
+        return res.render("login", { errors: 
           {msg: "Credenciales invalidas"}
-        ]});
+        });
       };
 
+      delete usuarioALoguearse.contraseña
       req.session.usuarioLogueado = usuarioALoguearse;
-      
-      res.render("index");
+      if(req.body.recordame_check) {
+        res.cookie("usuarioEmail", req.body.email, {maxAge: 1000 * 23})
+      }
+      res.redirect("/");
 
     }
   },
