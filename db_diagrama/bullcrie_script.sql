@@ -18,6 +18,8 @@
 --
 -- Table structure for table `categorias`
 --
+CREATE Database bullcrie;
+USE bullcrie;
 
 DROP TABLE IF EXISTS `categorias`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
