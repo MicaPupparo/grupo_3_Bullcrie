@@ -111,14 +111,12 @@ CREATE TABLE `productos` (
   `cuotas` tinyint NOT NULL DEFAULT '0',
   `stock` int NOT NULL,
   `descripcion` text NOT NULL,
-  `imagen` varchar(45) NOT NULL,
   `categoria_id` int NOT NULL,
   `talle_id` int NOT NULL,
   `color_id` int NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`),
   UNIQUE KEY `nombre_UNIQUE` (`nombre`),
-  UNIQUE KEY `imagen_UNIQUE` (`imagen`),
   KEY `categoria_id_idx` (`categoria_id`),
   KEY `talle_id_idx` (`talle_id`),
   KEY `color_id_idx` (`color_id`),
@@ -186,6 +184,19 @@ CREATE TABLE `usuarios` (
 --
 -- Dumping data for table `usuarios`
 --
+
+CREATE TABLE `bullcrie`.`imagenes` (
+  `nombre` VARCHAR(100) NOT NULL,
+  `producto_id` INT NOT NULL,
+  PRIMARY KEY (`nombre`),
+  UNIQUE INDEX `nombre_UNIQUE` (`nombre` ASC) VISIBLE,
+  INDEX `producto_id_idx` (`producto_id` ASC) VISIBLE,
+  CONSTRAINT `producto_id`
+    FOREIGN KEY (`producto_id`)
+    REFERENCES `bullcrie`.`productos` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;

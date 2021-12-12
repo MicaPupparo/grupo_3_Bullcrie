@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.27, for Win64 (x86_64)
 --
--- Host: localhost    Database: bullcrie
+-- Host: 127.0.0.1    Database: bullcrie
 -- ------------------------------------------------------
 -- Server version	8.0.27
 
@@ -18,6 +18,7 @@
 --
 -- Table structure for table `categorias`
 --
+USE bullcrie;
 
 DROP TABLE IF EXISTS `categorias`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -68,6 +69,33 @@ INSERT INTO `colores` VALUES (1,'Blanco'),(2,'Estampada'),(5,'Gris'),(4,'Negro')
 UNLOCK TABLES;
 
 --
+-- Table structure for table `imagenes`
+--
+
+DROP TABLE IF EXISTS `imagenes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `imagenes` (
+  `nombre` varchar(100) NOT NULL,
+  `producto_id` int NOT NULL,
+  PRIMARY KEY (`nombre`),
+  UNIQUE KEY `nombre_UNIQUE` (`nombre`),
+  KEY `producto_id_idx` (`producto_id`),
+  CONSTRAINT `producto_id` FOREIGN KEY (`producto_id`) REFERENCES `productos` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `imagenes`
+--
+
+LOCK TABLES `imagenes` WRITE;
+/*!40000 ALTER TABLE `imagenes` DISABLE KEYS */;
+INSERT INTO `imagenes` VALUES ('buzogris.jpeg',1),('buzogris1.jpeg',1),('buzonegrococo.jpeg',2),('buzonegrosnow.jpeg',2),('buzorojo.jpeg',3),('buzoryb.jpeg',3),('gorra.jpg',4),('mallafloreada.jpeg',5),('mallalineas.jpeg',6),('mallapelicanos.jpeg',7),('mallaramas.jpeg',8),('mallarombos.jpeg',9),('remerablanca.jpeg',10);
+/*!40000 ALTER TABLE `imagenes` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `pedidos`
 --
 
@@ -111,21 +139,19 @@ CREATE TABLE `productos` (
   `cuotas` tinyint NOT NULL DEFAULT '0',
   `stock` int NOT NULL,
   `descripcion` text NOT NULL,
-  `imagen` varchar(45) NOT NULL,
   `categoria_id` int NOT NULL,
   `talle_id` int NOT NULL,
   `color_id` int NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`),
   UNIQUE KEY `nombre_UNIQUE` (`nombre`),
-  UNIQUE KEY `imagen_UNIQUE` (`imagen`),
   KEY `categoria_id_idx` (`categoria_id`),
   KEY `talle_id_idx` (`talle_id`),
   KEY `color_id_idx` (`color_id`),
   CONSTRAINT `categoria_id` FOREIGN KEY (`categoria_id`) REFERENCES `categorias` (`id`),
   CONSTRAINT `color_id` FOREIGN KEY (`color_id`) REFERENCES `colores` (`id`),
   CONSTRAINT `talle_id` FOREIGN KEY (`talle_id`) REFERENCES `talles` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -134,6 +160,7 @@ CREATE TABLE `productos` (
 
 LOCK TABLES `productos` WRITE;
 /*!40000 ALTER TABLE `productos` DISABLE KEYS */;
+INSERT INTO `productos` VALUES (1,'Buzo Gris Bullcrie',3840,6,50,' ',1,4,5),(2,'Buzo Negro Winter Rules',3840,6,123,' ',1,3,4),(3,'Buzo Rojo',3840,6,37,' ',1,1,3),(4,'Gorra',1100,6,12,' ',2,4,1),(5,'Malla Floreada',2590,6,140,' ',4,1,2),(6,'Malla con lineas',2590,6,30,' ',4,1,2),(7,'Malla pelicanos',2590,6,40,' ',4,2,2),(8,'Malla ramas',2590,6,33,' ',4,2,2),(9,'Malla rombos',2590,6,78,' ',4,3,2),(10,'Remera Bullcrie',1860,6,85,' ',3,4,1);
 /*!40000 ALTER TABLE `productos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -203,4 +230,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-12-09 21:44:38
+-- Dump completed on 2021-12-12 20:16:32
