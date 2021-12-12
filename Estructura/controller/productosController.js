@@ -3,14 +3,19 @@ const path = require('path');
 
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const db = require('../database/models')
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."); //falta cambiar el numero para cuando se edita
 
 const controller = {
   //crear ejs index
   tienda: (req, res) => {
-    const productos = products
-    res.render('productShop', {productos})
+    db.Productos.findAll()
+      .then(function(productos){
+        res.render('productShop', {productos: productos})
+      })
+    /*const productos = products
+    res.render('productShop', {productos})*/
   },
   categorias: (req, res) => {
     const categoria = req.params.categoria
