@@ -30,11 +30,6 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.TEXT,
             allowNull: false
         },
-        imagen: {
-            type: dataTypes.INTEGER,
-            allowNull: false,
-            unique: true
-        },
         categoria_id: {
             //foreign key
             type: dataTypes.INTEGER,
@@ -59,10 +54,6 @@ module.exports = (sequelize, dataTypes) => {
     const Producto = sequelize.define(alias, cols, config);
 
     Producto.associate = function(modelos) {
-        Producto.hasMany(modelos.Imagenes, {
-            as: 'imagenes',
-            foreignKey: 'producto_id'
-        });
 
         Producto.belongsToMany(modelos.Usuarios, {
             as: 'usuarios',

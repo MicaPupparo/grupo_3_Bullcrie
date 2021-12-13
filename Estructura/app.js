@@ -21,7 +21,7 @@ app.use(session( {secret: "Mensaje secreto",
 
 app.use(cookies())
 
-app.use(usuarioLogueadoMiddleware);
+// app.use(usuarioLogueadoMiddleware);
 
 app.listen(process.env.PORT || 3000, () => {
   console.log("Servidor corriendo en puerto 3000");
