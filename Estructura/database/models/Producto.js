@@ -78,6 +78,14 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: 'color_id'
         });
 
+        Producto.belongsToMany(modelos.Imagenes, {
+            as: 'imagenes',
+            through: 'imagen_producto',
+            foreignKey: 'id_producto',
+            otherKey: 'imagen_id',
+            timestamps: false
+        });
+
 
     }
 
