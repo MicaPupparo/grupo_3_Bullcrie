@@ -16,12 +16,27 @@ const controller = {
       })
     /*const productos = products
     res.render('productShop', {productos})*/
+
+
+
+
+
+
   },
   categorias: (req, res) => {
-    const categoria = req.params.categoria
-    const product = products.filter(elemento => elemento.categoria == categoria)
-    console.log(product)
-    res.render('categorias', {product})
+    // const categoria = req.params.categoria
+    // const product = products.filter(elemento => elemento.categoria == categoria)
+    // console.log(product)
+    // res.render('categorias', {product})
+
+    db.Productos.findAll({
+      where: {
+        categoria_id: req.params.categoria
+      }
+    })
+    .then(productos =>{
+      res.render('categorias', {productos})
+    } )
   },
 
   productCart: (req, res) => {
@@ -31,10 +46,17 @@ const controller = {
     res.send("agregado")
   },
   productDetail: (req, res) => {
-    const id = req.params.id
-    const product = products.find(elemento => elemento.id == id)
-    res.render('productDetail', {product})
+    // const id = req.params.id
+    // const product = products.find(elemento => elemento.id == id)
+    // res.render('productDetail', {product})
+    db.Productos.findByPk(req.params.id, {
+      include: [{association: "asd" }]  // AGREGAR LAS ASOCIACIONES
+    })
+    .then(productos =>{
+      res.render('categorias', {productos})
+    } )
   },
+
   productCreate: (req, res) => {
     res.render("productCreate")
   },
@@ -45,14 +67,36 @@ const controller = {
     } else {
         image = 'default-image.png'
     }
-    let newProduct = {
-        id: products[products.length - 1].id + 1,
-        ...req.body,
-        image: image
-    };
-    products.push(newProduct)
-    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-    res.redirect('detalle/' + newProduct.id);
+    // let newProduct = {
+    //     id: products[products.length - 1].id + 1,
+    //     ...req.body,
+    //     image: image
+    // };
+    // products.push(newProduct)
+    // fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+    // res.redirect('detalle/' + newProduct.id);
+    db.Productos.create({
+      nombre: req.params.nombre,
+      categoria_id: {
+        nombre: req.params.categoria
+      },
+      color_id: {
+        nombre: req.params.color
+      },
+      precio: req.params.price,
+      cuotas: req.params.cuotas,
+      imagen: image,
+      stock: req.params.stock,
+      descripcion: req.params.descripcion,
+      talle: {
+        talles: req.params.talle 
+      }
+      
+    }, {
+      include: ["asd"] // ACA VAN TODAS LAS ASOCIACIONES
+    })
+
+    res.redirect('productShop')
   },
   productEdit: (req, res) => {
     const id = req.params.id -1
