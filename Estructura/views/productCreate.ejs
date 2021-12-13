@@ -14,7 +14,7 @@
     <div class="casillaPc">
       <input
         type="text"
-        nombre="nombre"
+        name="nombre"
         placeholder="Nombre de producto"
         class="nombre-productoPc"
         required
@@ -24,7 +24,7 @@
     <div class="casillaPc">
       <input
         type="text"
-        nombre="categoria"
+        name="categoria"
         placeholder="Categoría del producto"
         class="categoria-productoPc"
         required
@@ -34,7 +34,7 @@
     <div class="casillaPc">
       <input
         type="text"
-        nombre="color"
+        name="color"
         placeholder="Color"
         class="colorPc"
         required
@@ -44,7 +44,7 @@
     <div class="casillaPc">
       <input
         type="number"
-        nombre="price"
+        name="price"
         placeholder="Precio"
         class="precioPc"
         required
@@ -54,7 +54,7 @@
     <div class="casillaPc">
       <input
         type="number"
-        nombre="cuotas"
+        name="cuotas"
         placeholder="Cuotas"
         class="cuotasPc"
         min="1"
@@ -62,11 +62,29 @@
         required
       />
     </div>
+    <div class="casillaPc">
+      <input
+        type="text"
+        name="talle"
+        placeholder="Talle"
+        class="precioPc"
+        required
+      />
+    </div>
+
+    <div class="casillaPc">
+      <input
+        type="text"
+        name="descripcion"
+        placeholder="Descripción del producto"
+        class="cuotasPc"
+      />
+    </div>
  
     <div class="casillaPc">
       <input
         type="file"
-        nombre="imagen"
+        name="imagen"
         placeholder="Imagen"
         class="imagenPc"
         accept=".jpg"
@@ -79,7 +97,7 @@
       <label>
         <input
         type="radio"
-        nombre="envio"
+        name="stock"
         class="envio-siPc"
         value="Disponible"
         required
@@ -90,7 +108,7 @@
       <label>
         <input
        type="radio"
-        nombre="envio"
+        name="envio"
         class="envio-noPc"
         value="No Disponible"
         required

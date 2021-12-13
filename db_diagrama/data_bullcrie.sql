@@ -18,7 +18,6 @@
 --
 -- Table structure for table `categorias`
 --
-CREATE Database bullcrie;
 USE bullcrie;
 
 DROP TABLE IF EXISTS `categorias`;
@@ -30,7 +29,7 @@ CREATE TABLE `categorias` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`),
   UNIQUE KEY `nombre_UNIQUE` (`nombre`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,6 +38,7 @@ CREATE TABLE `categorias` (
 
 LOCK TABLES `categorias` WRITE;
 /*!40000 ALTER TABLE `categorias` DISABLE KEYS */;
+INSERT INTO `categorias` VALUES (1,'Buzos'),(2,'Gorras'),(4,'Mallas'),(3,'Remeras');
 /*!40000 ALTER TABLE `categorias` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -55,7 +55,7 @@ CREATE TABLE `colores` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `nombre_UNIQUE` (`nombre`),
   UNIQUE KEY `id_UNIQUE` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -64,7 +64,35 @@ CREATE TABLE `colores` (
 
 LOCK TABLES `colores` WRITE;
 /*!40000 ALTER TABLE `colores` DISABLE KEYS */;
+INSERT INTO `colores` VALUES (1,'Blanco'),(2,'Estampada'),(5,'Gris'),(4,'Negro'),(3,'Rojo');
 /*!40000 ALTER TABLE `colores` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `imagenes`
+--
+
+DROP TABLE IF EXISTS `imagenes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `imagenes` (
+  `nombre` varchar(100) NOT NULL,
+  `producto_id` int NOT NULL,
+  PRIMARY KEY (`nombre`),
+  UNIQUE KEY `nombre_UNIQUE` (`nombre`),
+  KEY `producto_id_idx` (`producto_id`),
+  CONSTRAINT `producto_id` FOREIGN KEY (`producto_id`) REFERENCES `productos` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `imagenes`
+--
+
+LOCK TABLES `imagenes` WRITE;
+/*!40000 ALTER TABLE `imagenes` DISABLE KEYS */;
+INSERT INTO `imagenes` VALUES ('buzogris.jpeg',1),('buzogris1.jpeg',1),('buzonegrococo.jpeg',2),('buzonegrosnow.jpeg',2),('buzorojo.jpeg',3),('buzoryb.jpeg',3),('gorra.jpg',4),('mallafloreada.jpeg',5),('mallalineas.jpeg',6),('mallapelicanos.jpeg',7),('mallaramas.jpeg',8),('mallarombos.jpeg',9),('remerablanca.jpeg',10);
+/*!40000 ALTER TABLE `imagenes` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -85,7 +113,7 @@ CREATE TABLE `pedidos` (
   KEY `productos_id_idx` (`productos_id`),
   CONSTRAINT `productos_id` FOREIGN KEY (`productos_id`) REFERENCES `productos` (`id`),
   CONSTRAINT `usuarios_id` FOREIGN KEY (`usuarios_id`) REFERENCES `usuarios` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -123,7 +151,7 @@ CREATE TABLE `productos` (
   CONSTRAINT `categoria_id` FOREIGN KEY (`categoria_id`) REFERENCES `categorias` (`id`),
   CONSTRAINT `color_id` FOREIGN KEY (`color_id`) REFERENCES `colores` (`id`),
   CONSTRAINT `talle_id` FOREIGN KEY (`talle_id`) REFERENCES `talles` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -132,6 +160,7 @@ CREATE TABLE `productos` (
 
 LOCK TABLES `productos` WRITE;
 /*!40000 ALTER TABLE `productos` DISABLE KEYS */;
+INSERT INTO `productos` VALUES (1,'Buzo Gris Bullcrie',3840,6,50,' ',1,4,5),(2,'Buzo Negro Winter Rules',3840,6,123,' ',1,3,4),(3,'Buzo Rojo',3840,6,37,' ',1,1,3),(4,'Gorra',1100,6,12,' ',2,4,1),(5,'Malla Floreada',2590,6,140,' ',4,1,2),(6,'Malla con lineas',2590,6,30,' ',4,1,2),(7,'Malla pelicanos',2590,6,40,' ',4,2,2),(8,'Malla ramas',2590,6,33,' ',4,2,2),(9,'Malla rombos',2590,6,78,' ',4,3,2),(10,'Remera Bullcrie',1860,6,85,' ',3,4,1);
 /*!40000 ALTER TABLE `productos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -148,7 +177,7 @@ CREATE TABLE `talles` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`),
   UNIQUE KEY `talles_UNIQUE` (`talles`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -157,6 +186,7 @@ CREATE TABLE `talles` (
 
 LOCK TABLES `talles` WRITE;
 /*!40000 ALTER TABLE `talles` DISABLE KEYS */;
+INSERT INTO `talles` VALUES (4,'L'),(3,'M'),(2,'S'),(5,'XL'),(1,'XS');
 /*!40000 ALTER TABLE `talles` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -178,28 +208,16 @@ CREATE TABLE `usuarios` (
   UNIQUE KEY `id_UNIQUE` (`id`),
   UNIQUE KEY `email_UNIQUE` (`email`),
   UNIQUE KEY `username_UNIQUE` (`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `usuarios`
 --
 
-CREATE TABLE `bullcrie`.`imagenes` (
-  `nombre` VARCHAR(100) NOT NULL,
-  `producto_id` INT NOT NULL,
-  PRIMARY KEY (`nombre`),
-  UNIQUE INDEX `nombre_UNIQUE` (`nombre` ASC) VISIBLE,
-  INDEX `producto_id_idx` (`producto_id` ASC) VISIBLE,
-  CONSTRAINT `producto_id`
-    FOREIGN KEY (`producto_id`)
-    REFERENCES `bullcrie`.`productos` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
-
-
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
+INSERT INTO `usuarios` VALUES (1,'Ignacio Llamas','nacho@gmail.com','nacho1','nacho123',NULL),(2,'Nicolas Livingston','nico@gmail.com','nicoo','nico123',NULL),(3,'Julian Iriberri','juli@gmail.com','juli','juli123',NULL),(4,'Micaela Pupparo','mica@gmail.com','mica','mica123',NULL);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -212,4 +230,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-12-06 21:28:10
+-- Dump completed on 2021-12-12 20:16:32
