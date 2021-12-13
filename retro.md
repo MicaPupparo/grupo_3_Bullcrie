@@ -33,6 +33,11 @@ Sprint 4:
 
 - Nunca faltó la colaboración entre todos.
 
+Sprint 6:
+
+- Fue un sprint que requirió más colaboración dado a que cada tarea estaba enlazada con la otra y se dificultaba la división de ellas. Gracias a eso pudimos trabajar todos juntos y fomentó la comunicación.
+
+- Hubo un buen ambiente de trabajo.
 
 ## Dejar de hacer
 
@@ -43,6 +48,10 @@ Sprint 2 y 3:
 Sprint 4:
 
 - No hubo nada que corregir en esta etapa.
+
+Sprint 6:
+
+- Se volvió a tener algunas fallas en la organización.
 
 ## Empezar a hacer
 
@@ -55,6 +64,10 @@ Sprint 2 y 3:
 Sprint 4:
 
 - Reuniones más seguidas.
+
+Sprint 6:
+
+- Enfocarse más en la organización.
 
 ---
 
