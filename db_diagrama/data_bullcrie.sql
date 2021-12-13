@@ -69,6 +69,36 @@ INSERT INTO `colores` VALUES (1,'Blanco'),(2,'Estampada'),(5,'Gris'),(4,'Negro')
 UNLOCK TABLES;
 
 --
+-- Table structure for table `imagen_producto`
+--
+
+DROP TABLE IF EXISTS `imagen_producto`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `imagen_producto` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `id_producto` int NOT NULL,
+  `imagen_id` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`),
+  KEY `producto_id_idx` (`id_producto`),
+  KEY `imagen_id_idx` (`imagen_id`),
+  CONSTRAINT `id_producto` FOREIGN KEY (`id_producto`) REFERENCES `productos` (`id`),
+  CONSTRAINT `imagen_id` FOREIGN KEY (`imagen_id`) REFERENCES `imagenes` (`nombre`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `imagen_producto`
+--
+
+LOCK TABLES `imagen_producto` WRITE;
+/*!40000 ALTER TABLE `imagen_producto` DISABLE KEYS */;
+INSERT INTO `imagen_producto` VALUES (1,1,'buzogris.jpeg'),(2,1,'buzogris1.jpeg'),(3,2,'buzonegrococo.jpeg'),(4,2,'buzonegrosnow.jpeg'),(5,3,'buzorojo.jpeg'),(6,3,'buzoryb.jpeg'),(7,4,'gorra.jpg'),(8,5,'mallafloreada.jpeg'),(9,6,'mallalineas.jpeg'),(10,7,'mallapelicanos.jpeg'),(11,8,'mallaramas.jpeg'),(12,9,'mallarombos.jpeg'),(13,10,'remerablanca.jpeg');
+/*!40000 ALTER TABLE `imagen_producto` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `imagenes`
 --
 
@@ -77,11 +107,8 @@ DROP TABLE IF EXISTS `imagenes`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `imagenes` (
   `nombre` varchar(100) NOT NULL,
-  `producto_id` int NOT NULL,
   PRIMARY KEY (`nombre`),
-  UNIQUE KEY `nombre_UNIQUE` (`nombre`),
-  KEY `producto_id_idx` (`producto_id`),
-  CONSTRAINT `producto_id` FOREIGN KEY (`producto_id`) REFERENCES `productos` (`id`)
+  UNIQUE KEY `nombre_UNIQUE` (`nombre`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -91,7 +118,7 @@ CREATE TABLE `imagenes` (
 
 LOCK TABLES `imagenes` WRITE;
 /*!40000 ALTER TABLE `imagenes` DISABLE KEYS */;
-INSERT INTO `imagenes` VALUES ('buzogris.jpeg',1),('buzogris1.jpeg',1),('buzonegrococo.jpeg',2),('buzonegrosnow.jpeg',2),('buzorojo.jpeg',3),('buzoryb.jpeg',3),('gorra.jpg',4),('mallafloreada.jpeg',5),('mallalineas.jpeg',6),('mallapelicanos.jpeg',7),('mallaramas.jpeg',8),('mallarombos.jpeg',9),('remerablanca.jpeg',10);
+INSERT INTO `imagenes` VALUES ('buzogris.jpeg'),('buzogris1.jpeg'),('buzonegrococo.jpeg'),('buzonegrosnow.jpeg'),('buzorojo.jpeg'),('buzoryb.jpeg'),('gorra.jpg'),('mallafloreada.jpeg'),('mallalineas.jpeg'),('mallapelicanos.jpeg'),('mallaramas.jpeg'),('mallarombos.jpeg'),('remerablanca.jpeg');
 /*!40000 ALTER TABLE `imagenes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -230,4 +257,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-12-12 20:16:32
+-- Dump completed on 2021-12-13 20:46:20
