@@ -38,5 +38,15 @@ module.exports = (sequelize, dataTypes) => {
 
     const Usuario = sequelize.define(alias, cols, config);
 
+    Usuario.associate = function(modelos) {
+        Usuario.belognsToMany(modelos.Productos, {
+            as: 'productos',
+            through: 'pedidos',
+            foreignKey: 'usuarios_id',
+            otherKey: 'productos_id',
+            timestamps: false
+        });
+    }
+
     return Usuario;
 }
