@@ -12,12 +12,12 @@
     <h2 class="tienda-shop">Tienda | Todos los productos</h2>
     <div class="div-shop">
         <% for(var i = 0; i < productos.length; i++) { %>
-    
+            <% for(var x = 0; x < productos[i].imagenes.length; x++) { %>
             <div class="product-container-shop">
                 <a href="/productos/detalle/<%= productos[i].id %>">
-                    <!-- <div class="img-product">
-                        <img src="/images/" alt="Imagen del producto">
-                    </div> -->
+                    <div class="img-product">
+                        <img src="/images/<%= productos[i].imagenes[x].nombre %>" alt="Imagen del producto">
+                    </div>
                     <article class="product-info">
                         <h2 class="price-shop">
                             $<%= productos[i].precio.toLocaleString() %>
@@ -31,6 +31,7 @@
                     </article>
                 </a>
             </div>
+            <% } %>
         <% } %>
     </div>
 </main>

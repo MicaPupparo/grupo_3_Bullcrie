@@ -6,10 +6,6 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             allowNull: false,
             unique: true
-        },
-        producto_id: {
-            type: dataTypes.INTEGER,
-            allowNull: false,
         }
     };
     let config = {

@@ -9,11 +9,14 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, "."); //fa
 
 const controller = {
   tienda: (req, res) => {
+
+
     db.Productos.findAll({
-      include: [{association:'usuarios'},{association:'categorias'},{association:'talles'},{association:'colores'}]
+      include: [{association:'imagenes'},{association:'usuarios'},{association:'categorias'},{association:'talles'},{association:'colores'}]
     })
       .then(function(productos){
         res.render('productShop', {productos: productos})
+        console.log(productos.imagenes.imagen_id)
       })
     /*const productos = products
     res.render('productShop', {productos})*/
