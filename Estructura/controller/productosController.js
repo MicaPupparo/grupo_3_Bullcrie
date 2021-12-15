@@ -59,8 +59,13 @@ const controller = {
   },
 
   productCreate: (req, res) => {
-    res.render("productCreate")
+        
+    db.Talles.findAll()
+      .then(function(talles) {
+        return res.render("productCreate", {talles:talles})
+      })
   },
+  
   store: (req, res) => {
     let image
     if(req.files[0] != undefined){
