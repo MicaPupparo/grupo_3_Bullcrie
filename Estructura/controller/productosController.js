@@ -54,7 +54,7 @@ const controller = {
       include: [{association:'imagenes'},{association:'usuarios'},{association:'categorias'},{association:'talles'},{association:'colores'}]
     })
     .then(productos =>{
-      res.render('categorias', {productos})
+      res.render('productDetail', {productos})
     } )
   },
 
