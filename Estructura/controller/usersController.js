@@ -5,6 +5,8 @@ const fs = require("fs")
 const { validationResult } = require('express-validator')
 const bcrypt = require("bcryptjs");
 
+let db = require("../database/models");
+
 const controller = {
   login: (req, res) => {
     res.render("login.ejs")
@@ -19,15 +21,28 @@ const controller = {
         old: req.body
       });
     }else{
-      let usuarioALoguearse;
-      for (let i = 0; i < users.length; i++){
+
+
+      db.Usuarios.findOne({
+        where: {
+          email: req.body.email
+        }
+      }).then((resultado) => {
+        if(resultado.email == req.body.email){
+          if(bcrypt.compareSync(req.body.contraseña, resultado.password)){
+            let usuarioALoguearse = resultado.username
+          }
+        }
+      })
+
+      /*for (let i = 0; i < users.length; i++){
         if(users[i].email == req.body.email){
           if(bcrypt.compareSync(req.body.contraseña, users[i].contraseña)){
             usuarioALoguearse = users[i];
             break;
           }
         }
-      };
+      };*/
 
       if(usuarioALoguearse == undefined){
         return res.render("login", { errors: 
@@ -59,8 +74,19 @@ const controller = {
       });
     }
     
+    let psw = bcrypt.hashSync(req.body.contraseña, 10)
+
     let image = req.file.filename
-    let newUser = {
+    
+    db.Usuarios.create({
+      name: req.body.nombre,
+      email: req.body.email,
+      username: req.body.nombreUsuario,
+      password: psw,
+      avatar: image
+    });
+    
+    /*let newUser = {
         id: users[users.length - 1].id + 1,
         ...req.body,
         contraseña: bcrypt.hashSync(req.body.contraseña, 10),
@@ -69,7 +95,7 @@ const controller = {
      
     };
     users.push(newUser)
-    fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
+    fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));*/
     res.redirect('/usuarios/login');
   },
 }
