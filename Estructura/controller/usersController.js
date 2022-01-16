@@ -14,6 +14,7 @@ const controller = {
 
   procesarLogin: (req, res) => {
     const resultValidation = validationResult(req)
+    let usuarioALoguearse;
 
     if(!resultValidation.isEmpty()){
       res.render("login", {
@@ -21,8 +22,6 @@ const controller = {
         old: req.body
       });
     }else{
-
-
       db.Usuarios.findOne({
         where: {
           email: req.body.email
@@ -30,11 +29,22 @@ const controller = {
       }).then((resultado) => {
         if(resultado.email == req.body.email){
           if(bcrypt.compareSync(req.body.contraseña, resultado.password)){
-            let usuarioALoguearse = resultado.username
+            usuarioALoguearse = resultado.username
+            delete usuarioALoguearse.contraseña
+            req.session.usuarioLogueado = usuarioALoguearse;
+            if(req.body.recordame != undefined) {
+              res.cookie("usuarioEmail", req.body.email, {maxAge: 1000 * 23})
+            }
+            res.redirect("/");
           }
-        }
+        }if(usuarioALoguearse == undefined){
+              return res.render("login", { errors: 
+                {msg: "Credenciales invalidas"}
+              });
+            };
+        
       })
-
+      
       /*for (let i = 0; i < users.length; i++){
         if(users[i].email == req.body.email){
           if(bcrypt.compareSync(req.body.contraseña, users[i].contraseña)){
@@ -43,20 +53,6 @@ const controller = {
           }
         }
       };*/
-
-      if(usuarioALoguearse == undefined){
-        return res.render("login", { errors: 
-          {msg: "Credenciales invalidas"}
-        });
-      };
-
-      delete usuarioALoguearse.contraseña
-      req.session.usuarioLogueado = usuarioALoguearse;
-      if(req.body.recordame != undefined) {
-        res.cookie("usuarioEmail", req.body.email, {maxAge: 1000 * 23})
-      }
-      res.redirect("/");
-
     }
   },
   
@@ -74,7 +70,7 @@ const controller = {
       });
     }
     
-    let psw = bcrypt.hashSync(req.body.contraseña, 10)
+    let psw = bcrypt.hashSync(req.body.contraseña, 9)
 
     let image = req.file.filename
     
@@ -84,7 +80,7 @@ const controller = {
       username: req.body.nombreUsuario,
       password: psw,
       avatar: image
-    });
+    })
     
     /*let newUser = {
         id: users[users.length - 1].id + 1,
