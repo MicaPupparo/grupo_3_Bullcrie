@@ -20,30 +20,31 @@ const controller = {
       res.render("login", {
         errors: resultValidation.mapped(),
         old: req.body
-      });
+      }); 
     }else{
       db.Usuarios.findOne({
         where: {
           email: req.body.email
         }
-      }).then((resultado) => {
-        if(resultado.email == req.body.email){
-          if(bcrypt.compareSync(req.body.contraseña, resultado.password)){
-            usuarioALoguearse = resultado.username
-            delete usuarioALoguearse.contraseña
-            req.session.usuarioLogueado = usuarioALoguearse;
-            if(req.body.recordame != undefined) {
-              res.cookie("usuarioEmail", req.body.email, {maxAge: 1000 * 23})
+      }).then(resultado => {
+          let rta = resultado.dataValues
+          if(rta.email == req.body.email){
+            if(bcrypt.compareSync(req.body.contraseña, rta.password)){
+              usuarioALoguearse = rta
+              delete usuarioALoguearse.password
+              req.session.usuarioLogueado = usuarioALoguearse;
+              if(req.body.recordame != undefined) {
+                res.cookie("usuarioEmail", req.body.email, {maxAge: 1000 * 23})
+              }
+              res.redirect("/");
             }
-            res.redirect("/");
-          }
-        }if(usuarioALoguearse == undefined){
-              return res.render("login", { errors: 
-                {msg: "Credenciales invalidas"}
-              });
-            };
+          }if(usuarioALoguearse == undefined){
+                return res.render("login", { errors: 
+                  {msg: "Credenciales invalidas"}
+                });
+              };
         
-      })
+        })
       
       /*for (let i = 0; i < users.length; i++){
         if(users[i].email == req.body.email){
@@ -54,7 +55,7 @@ const controller = {
         }
       };*/
     }
-  },
+  }, // cierre de funcion
   
   register: (req, res) => {
     res.render("register.ejs")
