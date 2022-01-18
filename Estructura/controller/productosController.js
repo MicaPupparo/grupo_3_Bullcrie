@@ -16,7 +16,6 @@ const controller = {
     })
       .then(function(productos){
         res.render('productShop', {productos: productos})
-        console.log(productos.imagenes.imagen_id)
       })
     /*const productos = products
     res.render('productShop', {productos})*/
@@ -28,7 +27,10 @@ const controller = {
     // console.log(product)
     // res.render('categorias', {product})
 
-    db.Productos.findAll({
+    db.Productos.findAll(
+      {include: [{association:'imagenes'},{association:'usuarios'},{association:'categorias'},{association:'talles'},{association:'colores'}]},
+    {
+      
       where: {
         categoria_id: {
           nombre:  req.params.categoria

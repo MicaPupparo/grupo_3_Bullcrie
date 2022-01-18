@@ -6,20 +6,23 @@
 
 <%- include('./partials/header') %>
   <!-- -------------------------------------MAIN-------------------------------------------------------- -->
-  <% for(z in product) { %>
-    <% } %>
-  <h2 class="titulo-pag"><%= product[z].categoria %></h2>
+  <% for(let i = 0; i < productos.length; i++) { %>
+
+
+  <h2 class="titulo-pag"><%= productos[i].categoria %></h2>
 
   <div class="flex-containter">
-<% for(i in product) { %>
+
     <div class="boxs">
-        <a href="/productos/detalle/<%= product[i].id %>">
-        <h3 class="titulo-producto"><%= product[i].nombre %></h3>
-        <img class="product-img" src="/images/<%= product[i].imagen[0] %>">
+        <a href="/productos/detalle/<%= productos[i].id %>">
+        <h3 class="titulo-producto"><%= productos[i].nombre %></h3>
+        <% for(let x = 0; x < productos[i].imagenes.length; x++) { %>
+        <img class="product-img" src="/images/<%= productos[i].imagenes[x].nombre %>">
         </a>
-        <p class="precio">$<%= product[i].precio></p>
-        <p class="cuotas">x<%= product[i].cuotas %> Cuotas de $<%= (product[i].precio / product[i].cuotas).toFixed(0) %> sin interés</p>
+        <p class="precio">$<%= productos[i].precio %></p>
+        <p class="cuotas">x<%= productos[i].cuotas %> Cuotas de $<%= (productos[i].precio / productos[i].cuotas).toFixed(0) %> sin interés</p>
     </div>
+    <% } %>
 <% } %>
 </div>   
 
