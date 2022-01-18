@@ -172,8 +172,8 @@ CREATE TABLE `usuarios` (
   `name` varchar(45) NOT NULL,
   `email` varchar(60) NOT NULL,
   `username` varchar(45) NOT NULL,
-  `password` varchar(45) NOT NULL,
-  `avatar` varchar(100) DEFAULT NULL,
+  `password` varchar(200) NOT NULL,
+  `avatar` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`),
   UNIQUE KEY `email_UNIQUE` (`email`),
@@ -186,7 +186,7 @@ CREATE TABLE `usuarios` (
 --
 
 CREATE TABLE `bullcrie`.`imagenes` (
-  `nombre` VARCHAR(100) NOT NULL,
+  `nombre` VARCHAR(200) NOT NULL,
   `producto_id` INT NOT NULL,
   PRIMARY KEY (`nombre`),
   UNIQUE INDEX `nombre_UNIQUE` (`nombre` ASC) VISIBLE,

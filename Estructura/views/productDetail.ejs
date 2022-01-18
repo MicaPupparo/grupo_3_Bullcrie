@@ -10,20 +10,20 @@
     <main id="gallery">
      
         <div class="images">
-          <% for(i in product.image) { %>
-        <img src="/images\<%= product.imagen[i] %>" class="img">
+          <% for(i in productos.imagenes) { %>
+        <img src="/images\<%= productos.imagenes[i].nombre %>" class="img">
         <% } %>
             </div>
          
             <div class="main-img">
 
-                <img src="/images\<%= product.imagen[i] %>" id="current">    
+                <img src="/images\<%= productos.imagenes[i].nombre %>" id="current">    
             </div>
 
         <div class="product-details">
-            <h3><%= product.nombre%></h3>
-            <h2>$<%= parseInt(product.precio) %></h2>
-            <p class="cuotas">x<%= parseInt(product.cuotas) %> Cuotas de $<%= (parseInt(product.precio) / parseInt(product.cuotas)).toFixed(0) %> sin interés</p>
+            <h3><%= productos.nombre %></h3>
+            <h2>$<%= parseInt(productos.precio) %></h2>
+            <p class="cuotas">x<%= parseInt(productos.cuotas) %> Cuotas de $<%= (parseInt(productos.precio) / parseInt(productos.cuotas)).toFixed(0) %> sin interés</p>
             <p class="mediosPago">Ver los medios de pago</p>
             <p class="enviosGratis"><i class="fas fa-truck"></i></i>Envios gratis a todo el país</p>
             <p class="formasEnvio">Conocé los tiempos y formas de envio</p>
@@ -47,9 +47,9 @@
                     <label for="check_4">XL</label>
                   </li>
             </ul>
-            <p class="color">Color: <%= product.color %></p>
-            <p class="stock">Stock <%= product.stock %></p>
-            <a href="/productos/editar/<%= product.id %>"><button class="comprar" type="button">Editar</button></a>
+            <p class="color">Color: <%= productos.color %></p>
+            <p class="stock">Stock <%= productos.stock %></p>
+            <a href="/productos/editar/<%= productos.id %>"><button class="comprar" type="button">Editar</button></a>
             <button class="comprar" type="button">Comprar Ahora</button>
             <button class="carrito" type="button">Agregar al carrito</button>
         </div>

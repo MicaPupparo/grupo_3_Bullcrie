@@ -56,13 +56,18 @@ const controller = {
       include: [{association:'imagenes'},{association:'usuarios'},{association:'categorias'},{association:'talles'},{association:'colores'}]
     })
     .then(productos =>{
-      res.render('categorias', {productos})
+      res.render('productDetail', {productos})
     } )
   },
 
   productCreate: (req, res) => {
-    res.render("productCreate")
+        
+    db.Talles.findAll()
+      .then(function(talles) {
+        return res.render("productCreate", {talles:talles})
+      })
   },
+  
   store: (req, res) => {
     let image
     if(req.files[0] != undefined){

@@ -53,4 +53,4 @@ Para que el proyecto de crear una página virtual se cumpla, cuatro alumnos de D
 
 ## Tablero de Trabajo
 
-- Trello: https://trello.com/b/N2TqYaRQ/grupo-3-proyecto-integrador
+- Trello: https://trello.com/b/rJa6XEVh/bullcrie
