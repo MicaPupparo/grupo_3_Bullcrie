@@ -6,10 +6,7 @@ const { validationResult } = require('express-validator')
 const bcrypt = require("bcryptjs");
 const db = require('../database/models')
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 173f5229ea0f28c2241af898d25d3e5064bb768f
 
 const controller = {
   login: (req, res) => {

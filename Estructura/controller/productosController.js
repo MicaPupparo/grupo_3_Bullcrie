@@ -28,17 +28,14 @@ const controller = {
     // res.render('categorias', {product})
 
     db.Productos.findAll(
-      {include: [{association:'imagenes'},{association:'usuarios'},{association:'categorias'},{association:'talles'},{association:'colores'}]},
     {
-      
       where: {
-        categoria_id: {
-          nombre:  req.params.categoria
-        }
-      }
+        "$Categorias.nombre$": req.params.categoria
+      },
+      include: [{association:'imagenes'},{association:'usuarios'},{association:'categorias'},{association:'talles'},{association:'colores'}],
     })
     .then(productos =>{
-      res.render('categorias', {productos})
+            res.render('categorias', {productos})
     } )
   },
 
