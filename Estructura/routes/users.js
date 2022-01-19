@@ -52,7 +52,7 @@ return true;
 const validacionesLogin = [
     body("email").notEmpty().withMessage("Tienes que escribir tu email").bail()
     .isEmail().withMessage("Tiene que ser un email valido"),
-    body("contraseña").notEmpty().withMessage("Tienes que escribir tu contraseña")
+    body('contraseña').notEmpty().withMessage('Tienes que escribir una contraseña').isLength({min:8}).withMessage('Tienes que escribir al menos 8 caracteres').isNumeric().isUppercase().withMessage('Tienes que escribir una mayuscula, una minuscula, un caracter especial y un numero'),
 ]
 const uploadFile = multer({ storage })
 
