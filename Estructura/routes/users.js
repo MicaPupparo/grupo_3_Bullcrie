@@ -19,11 +19,11 @@ const storage = multer.diskStorage({
 })
 
 const validaciones  = [
-    body('nombre').notEmpty().withMessage('Tienes que escribir tu nombre y apellido'),
+    body('nombre').notEmpty().withMessage('Tienes que escribir tu nombre y apellido').isLength({min:2}),
     body('nombreUsuario').notEmpty().withMessage('Tienes que escribir un nombre de usuario'),
     body('email').notEmpty().withMessage('Debes ingresar un email').bail()
     .isEmail().withMessage('Debes ingresar un email válido'),
-    body('contraseña').notEmpty().withMessage('Tienes que escribir una contraseña'),
+    body('contraseña').notEmpty().withMessage('Tienes que escribir una contraseña').isLength({min:8}).withMessage('Tienes que escribir al menos 8 caracteres').isNumeric().isUppercase().withMessage('Tienes que escribir una mayuscula, una minuscula, un caracter especial y un numero'),
     body('repetir').custom(async (confirmarContraseña, {req}) => {
         const contraseña = req.body.contraseña
         if(contraseña !== confirmarContraseña){
@@ -32,7 +32,7 @@ const validaciones  = [
       }),
     body('avatar').custom((value, { req }) => {
         let file = req.file;
-        let acceptedExtensions = ['.jpg', '.png'];
+        let acceptedExtensions = ['.jpg', '.png', '.jpeg', '.gif'];
         
          
         if (!file) {
@@ -52,7 +52,7 @@ return true;
 const validacionesLogin = [
     body("email").notEmpty().withMessage("Tienes que escribir tu email").bail()
     .isEmail().withMessage("Tiene que ser un email valido"),
-    body("contraseña").notEmpty().withMessage("Tienes que escribir tu contraseña")
+    body('contraseña').notEmpty().withMessage('Tienes que escribir una contraseña').isLength({min:8}).withMessage('Tienes que escribir al menos 8 caracteres').isNumeric().isUppercase().withMessage('Tienes que escribir una mayuscula, una minuscula, un caracter especial y un numero'),
 ]
 const uploadFile = multer({ storage })
 
