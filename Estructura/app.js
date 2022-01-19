@@ -7,6 +7,7 @@ const session = require("express-session");
 const rutasMain = require("./routes/main");
 const rutasProductos = require("./routes/productos");
 const rutasUsers = require("./routes/users");
+const rutasApi = require("./routes/api");
 const usuarioLogueadoMiddleware = require("./middlewares/usuarioLogueadoMiddleware");
 const db = require('./database/models'); //por ahi esta al pedo
 
@@ -35,6 +36,8 @@ app.use("/", rutasMain);
 app.use("/productos", rutasProductos);
 
 app.use("/usuarios", rutasUsers);
+
+app.use("/api", rutasApi)
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "./views"));
