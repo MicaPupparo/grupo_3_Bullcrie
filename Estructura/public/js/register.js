@@ -1,10 +1,21 @@
-const path = require("path");
-
 window.addEventListener("load", function(){
-  let  form = document.querySelector(".registro");
+  let form = document.querySelector(".registro");
 
   form.addEventListener("submit", function(event){
-    event.preventDefault();
+
+    function validarEmail(valor) {
+      let expReg = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+      return expReg.test(valor);
+    };
+
+    function validarExtension(valor){
+      var allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
+      if(!allowedExtensions.exec(valor)){
+          return true;
+      }else{
+          return false;
+      }
+    };
 
     let nombre = document.querySelector(".nombre-apellido");
     let email = document.querySelector(".email");
@@ -15,38 +26,51 @@ window.addEventListener("load", function(){
 
     let errores = [];
 
-    let acceptedExtensions = ['.jpg', '.png', '.jpeg', '.gif'];
-
     if(nombre.value == ""){
-      console.log("El campo nombre es obligatorio")
+      errores.push("El campo nombre es obligatorio")
     }else if(nombre.value.length <= 1){
-      alert("El campo nombre debe tener al menos dos caracteres")
-    }
-    if(email.value == ""){
-      alert("El campo email es obligatorio")
-    }
-    if(user.value == ""){
-      alert("El campo usuario es obligatorio")
-    }
-    if(contraseña.value == ""){
-      alert("El campo contraseña es obligatorio")
-    }else if(contraseña.value < 8){
-      alert("El campo de contrseña debe tener al menos 8 caracteres")
-    }
-    if(repContraseña.value == ""){
-      alert("El campo repetir contraseña es obligatorio")
-    }else if(repContraseña.value != contraseña.value){
-      alert("Las contraseñas deben coincidir")
-    }
-    if(avatar.value == ""){
-      alert("El campo avatar es obligatorio")
-    }else{
-      let fileExtension = path.extname(avatar.value.originalname);
-      if(!acceptedExtensions.includes(fileExtension)){
-        alert("Las exteniones de archivo permitidas son '.jpg' '.png' '.jpeg' '.gif'")
-      }
+      errores.push("El campo nombre debe tener al menos dos caracteres")
     }
 
+    if(email.value == ""){
+      errores.push("El campo email es obligatorio")
+    }else if(!validarEmail(email.value)){
+      errores.push("El campo email es invalido")
+    }
+
+    if(user.value == ""){
+      errores.push("El campo usuario es obligatorio")
+    }
+
+    if(contraseña.value == ""){
+      errores.push("El campo contraseña es obligatorio")
+    }else if(contraseña.value < 8){
+      errores.push("El campo contraseña debe tener al menos 8 caracteres")
+    }
+
+    if(repContraseña.value == ""){
+      errores.push("El campo repetir contraseña es obligatorio")
+    }else if(repContraseña.value != contraseña.value){
+      errores.push("Las contraseñas deben coincidir")
+    }
+
+    if(avatar.value == ""){
+      errores.push("El campo avatar es obligatorio")
+    }else if(validarExtension(avatar.value)){
+      errores.push("El campo avatar tiene un formato invalido")
+    }
+
+
+    if(errores.length > 0){
+      event.preventDefault();
+
+      let ulErrores = document.querySelector("div.errores ul");
+      
+      for (let i = 0; i < errores.length; i++) {
+        ulErrores.innerHTML += "<li>"+ "<i class='fas fa-exclamation-triangle'></i>" + errores[i] + "</li>"
+      }
+
+    }
 
   })
 })

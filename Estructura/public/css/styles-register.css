@@ -124,9 +124,22 @@ color: #184e77;
 }
 
 .text-danger{
-  color: red;
+  color: #f84343;
 }
 
+div.errores {
+  margin: 0px 0px 20px 20px;
+  font-size: 0.5em;
+}
+
+div.errores ul li{
+  list-style: none;
+  color: #f84343;
+}
+
+i.fa-exclamation-triangle{
+  margin-right: 5px;
+}
 
 @media (min-width: 769px) {
   form .redirigir {
@@ -152,5 +165,9 @@ color: #184e77;
 
   form .buttons .boton {
     font-size: 17px;
+  }
+
+  div.errores {
+    font-size: 0.9em;
   }
 }
