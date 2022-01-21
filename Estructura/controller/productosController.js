@@ -24,7 +24,6 @@ const controller = {
   categorias: (req, res) => {
     // const categoria = req.params.categoria
     // const product = products.filter(elemento => elemento.categoria == categoria)
-    // console.log(product)
     // res.render('categorias', {product})
 
     db.Productos.findAll(
