@@ -10,12 +10,16 @@
     <form class="log" method="POST" action="/usuarios/login">
       <h3>Iniciar sesión</h3>
 
+      <div class="errores">
+        <ul></ul>
+      </div>
+
       <div class="casilla">
         <input
           type="text"
           name="email"
           placeholder="Email"
-          class="nombre-email"
+          class="email"
           value="<% locals.old && old.email ? old.email : '' %>"
         />
 
@@ -82,5 +86,6 @@
 
 
     <script type="text/javascript" src="/css\header.js"></script>
+    <script src="/js\login.js"></script>
 </body>
 </html>
