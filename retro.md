@@ -39,6 +39,16 @@ Sprint 6:
 
 - Hubo un buen ambiente de trabajo.
 
+Sprint 7:
+
+- Logramos estar comunicados y a disposicion siempre que uno del grupo lo necesitaba.
+
+Sprint 8:
+
+- Siendo que fue el último sprint y algunos estaban de vacaciones, pudimos realizar todo lo que se nos pedía.
+
+- La organización y comunicación nunca faltó.
+
 ## Dejar de hacer
 
 Sprint 2 y 3:
@@ -52,6 +62,14 @@ Sprint 4:
 Sprint 6:
 
 - Se volvió a tener algunas fallas en la organización.
+
+Sprint 7:
+
+- No hubo nada que corregir en esta etapa.
+
+Sprint 8:
+
+- No hubo nada que corregir en esta etapa.
 
 ## Empezar a hacer
 
@@ -68,6 +86,14 @@ Sprint 4:
 Sprint 6:
 
 - Enfocarse más en la organización.
+
+Sprint 7:
+
+-Todo lo que creíamos que debíamos implementar lo hicimos.
+
+Sprint 8:
+
+-Todo lo que creíamos que debíamos implementar lo hicimos.
 
 ---
 
