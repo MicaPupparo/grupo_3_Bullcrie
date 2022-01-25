@@ -5,6 +5,7 @@ const methodOverride =  require('method-override');
 const cookies = require("cookie-parser");
 const session = require("express-session");
 const rutasMain = require("./routes/main");
+const rutaContacto = require("./routes/contacto");
 const rutasProductos = require("./routes/productos");
 const rutasUsers = require("./routes/users");
 const rutasApi = require("./routes/api");
@@ -30,6 +31,7 @@ db.sequelize.sync().then(() => { //sacar si es al pedo junto con db
 });
 })
 
+app.use("/contacto", rutaContacto);
 
 app.use("/", rutasMain);
 
