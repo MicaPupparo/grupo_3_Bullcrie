@@ -9,11 +9,11 @@ function App() {
 
   return (
     <div className="App">
-<Container>
-  <Row>
+<Container fluid className="p-0">
+  <Row className='g-0 p-0'>
   <Col><Header></Header></Col>
   </Row>
-  <Row>
+  <Row className='g-0 p-0'>
     <Col xs={4} md={3}><SidePanel /></Col>
     <Col><Body /></Col>
   </Row>

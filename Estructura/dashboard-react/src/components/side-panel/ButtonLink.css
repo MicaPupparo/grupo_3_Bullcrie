@@ -1,6 +1,7 @@
-.side-panel {
+.button-link {
     display: flex;
     border: 1px solid black;
-    flex-wrap: wrap;
     width: 100%;
+    margin: 10px;
+    
 }

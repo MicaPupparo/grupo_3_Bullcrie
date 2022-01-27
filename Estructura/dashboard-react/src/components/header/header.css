@@ -1,0 +1,10 @@
+.header{
+    display: flex;
+}
+.title{
+width: 50%;
+}
+.admin {
+    width: 50%;
+    text-align: end;
+}
