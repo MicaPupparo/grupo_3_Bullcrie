@@ -9,12 +9,12 @@ function Header(){
 
     return (
 <Navbar>
-  <Container>
-    <Navbar.Brand href="#home">Dashboard Bullcrie</Navbar.Brand>
+  <Container className="block-example border border-dark">
+    <Navbar.Brand>Dashboard Bullcrie</Navbar.Brand>
     <Navbar.Toggle />
     <Navbar.Collapse className="justify-content-end">
       <Navbar.Text>
-        Signed in as: <a href="#login">Admin</a>
+        Signed in as: <p>Admin</p>
       </Navbar.Text>
     </Navbar.Collapse>
   </Container>
