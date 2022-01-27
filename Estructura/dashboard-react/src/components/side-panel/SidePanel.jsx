@@ -7,8 +7,6 @@ function SidePanel(){
     return (
         <div className='side-panel'>
             <ButtonLink />
-            <ButtonLink />
-            <ButtonLink />
         </div>
     )
 }
