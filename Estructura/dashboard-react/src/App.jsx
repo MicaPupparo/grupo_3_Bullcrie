@@ -8,6 +8,7 @@ import Productos from './components/secciones/Productos'
 import Categorias from './components/secciones/Categorias'
 import Usuarios from './components/secciones/Usuarios'
 import { Route } from 'react-router-dom';
+import CatBox from './components/category-box/categoryBox';
 
 function App() {
   

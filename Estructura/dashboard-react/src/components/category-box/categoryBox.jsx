@@ -1,17 +1,25 @@
 import React from "react";
 import {Link} from "react-router-dom";
+import './categoryBox.css'
+import PropTypes from 'prop-types';
 
-function catBox(){
+function CatBox(props){
 
   return(
     <div className="box">
-      <Link to="/{categoria}" className="catLink"> {categoria} </Link>
 
-      <p className="catCant"> Cantidad: {cantidad} </p>
+      <p>{props.cat}</p>
+
+      <p className="catCant"> Cantidad: {props.cantidad} </p>
       
     </div>
   )
+
+  CatBox.PropTypes = {
+    cat: PropTypes.string,
+    cantidad: PropTypes.number
+  }
 };
 
-/*este componente deberia estar dentro del body de categorias en el que se deberia obtener las categorias de los productos con sus respectivas cantidades para pasarlo a este componente*/
-export default catBox;
+
+export default CatBox;

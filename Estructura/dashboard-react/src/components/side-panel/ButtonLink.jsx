@@ -4,7 +4,7 @@ import {Route, Link} from 'react-router-dom'
 import {Button} from 'react-bootstrap'
 
 function ButtonLink(){
-const buttons = ['Productos', 'Categorias', 'Usuarios']
+const buttons = ['productos', 'categorias', 'usuarios']
 
     return (
         <>
