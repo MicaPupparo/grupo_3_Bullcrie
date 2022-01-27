@@ -1,8 +1,11 @@
 import React from 'react'
+import './body.css'
 
 function Body(){
     return (
-        <div></div>
+        <div className='body'>
+            <p>test body</p>
+        </div>
     )
 }
 

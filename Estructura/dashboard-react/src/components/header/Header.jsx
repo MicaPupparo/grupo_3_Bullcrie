@@ -8,17 +8,10 @@ import Container from 'react-bootstrap/Container'
 function Header(){
 
     return (
-<Navbar>
-  <Container>
-    <Navbar.Brand href="#home">Dashboard Bullcrie</Navbar.Brand>
-    <Navbar.Toggle />
-    <Navbar.Collapse className="justify-content-end">
-      <Navbar.Text>
-        Signed in as: <a href="#login">Admin</a>
-      </Navbar.Text>
-    </Navbar.Collapse>
-  </Container>
-</Navbar>
+      <div className='header'>
+        <p className='title'>Dashboard Bullcrie</p>
+        <p className='admin'><FontAwesomeIcon icon={faUser}/>Admin</p>
+      </div>
     )
 
 }

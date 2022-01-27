@@ -3,22 +3,19 @@ import Header from './components/header/Header'
 import Body from './components/body/Body'
 import SidePanel from './components/side-panel/SidePanel'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-
+import {Container, Row, Col, Card, Form, Button } from "react-bootstrap";
 function App() {
   
 
   return (
     <div className="App">
-<Container>
-  <Row>
+<Container fluid className="p-0">
+  <Row className='g-0 p-0'>
   <Col><Header></Header></Col>
   </Row>
-  <Row>
-    <Col xs={2} md={4}>1 of 2</Col>
-    <Col>2 of 2</Col>
+  <Row className='g-0 p-0'>
+    <Col xs={4} md={3}><SidePanel /></Col>
+    <Col><Body /></Col>
   </Row>
 </Container>
     </div>
