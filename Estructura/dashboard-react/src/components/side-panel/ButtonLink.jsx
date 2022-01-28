@@ -7,9 +7,9 @@ function ButtonLink(){
 const buttons = ['productos', 'categorias', 'usuarios']
 
     return (
-        <>
-        {buttons.map(button => <Link key={[button]} to={"/" + button}><Button variant="outline-secondary button-link">{button}</Button></Link>)} 
-        </>
+        <div className='bt'>
+        {buttons.map(button => <Link  key={[button]} to={"/" + button}><Button variant="outline-secondary button-link">{button}</Button></Link>)} 
+        </div>
     )
 }
 
