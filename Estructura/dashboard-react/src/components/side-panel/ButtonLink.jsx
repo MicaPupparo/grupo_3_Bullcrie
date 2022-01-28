@@ -8,7 +8,7 @@ const buttons = ['productos', 'categorias', 'usuarios']
 
     return (
         <>
-        {buttons.map(button => <Link key={[button]} to={"/"+button}><Button variant="outline-secondary button-link">{button}</Button></Link>)} 
+        {buttons.map(button => <Link key={[button]} to={"/" + button}><Button variant="outline-secondary button-link">{button}</Button></Link>)} 
         </>
     )
 }

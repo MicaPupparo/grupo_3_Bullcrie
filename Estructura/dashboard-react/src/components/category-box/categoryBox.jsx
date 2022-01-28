@@ -4,7 +4,10 @@ import './categoryBox.css'
 import PropTypes from 'prop-types';
 
 function CatBox(props){
-
+  CatBox.PropTypes = {
+    cat: PropTypes.string,
+    cantidad: PropTypes.number
+  }
   return(
     <div className="box">
 
@@ -15,10 +18,7 @@ function CatBox(props){
     </div>
   )
 
-  CatBox.PropTypes = {
-    cat: PropTypes.string,
-    cantidad: PropTypes.number
-  }
+
 };
 
 
