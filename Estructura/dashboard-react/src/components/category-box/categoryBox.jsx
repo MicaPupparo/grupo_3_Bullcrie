@@ -10,10 +10,12 @@ function CatBox(props){
   }
   return(
     <div className="box">
+      <div href="">
 
-      <p>{props.cat}</p>
+        <h5 className="catSubtitle">{props.cat}</h5>
 
-      <p className="catCant"> Cantidad: {props.cantidad} </p>
+        <p className="catCant"> Cantidad: {props.cantidad} </p>
+      </div>
       
     </div>
   )
