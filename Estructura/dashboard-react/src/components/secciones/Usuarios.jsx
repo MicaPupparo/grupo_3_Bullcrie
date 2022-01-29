@@ -8,7 +8,7 @@ import { DataGrid } from '@mui/x-data-grid';
 
    useEffect(() => {
      console.log('%cse monto el componente', 'color: green');
-     fetch('http://localhost:8000/api/users')
+     fetch('http://localhost:3000/api/users')
         .then(response => response.json())
         .then( data => {
           setUsuarios(data)
