@@ -1,17 +1,47 @@
 import React from "react";
+import { useState, useEffect } from 'react'
 import CatBox from "../category-box/categoryBox";
+import './Categorias.css'
 
 function Categorias(){
 
+  let total = 10;
+
+  const [categorias, setCategorias] = useState([]);
+
+  useEffect(() => {
+    console.log('%cse monto el componente', 'color: green');
+     fetch('http://localhost:3000/api/products')
+        .then(response => response.json())
+        .then( data => {
+          setCategorias(data)
+        })
+        .catch(error => console.error(error))
+  }, []);
+
+  useEffect(() => {
+    console.log('%cse actualizó el componente', 'color: orange');
+    }, [categorias])
+
+
+  useEffect(() => {
+    return () => console.log('%cse desmontó el componente', 'color: red');
+    }, [])
+
   return(
     <div>
-      <p>test de categorias</p>
+      <div className="titulos">
+        <h1 className="catTitulo">Categorias</h1>
+        <div className="contenedorTotal">
+          <h4 className="totalTitulo">Total de productos: {categorias.count}</h4>
+        </div>
+      </div>
 
       <div className="catBoxContainer">
-        <CatBox cat="Buzos" cantidad={10}/>
-        <CatBox cat="Remeras" cantidad={22}/>
-        <CatBox cat="Gorras" cantidad={31}/>
-        <CatBox cat="Mallas" cantidad={39}/>
+        <CatBox cat="Buzos" cantidad={categorias.Buzos}/>
+        <CatBox cat="Remeras" cantidad={categorias.Remeras}/>
+        <CatBox cat="Gorras" cantidad={categorias.Gorras}/>
+        <CatBox cat="Mallas" cantidad={categorias.Mallas}/>
       </div>
     </div>
   )
