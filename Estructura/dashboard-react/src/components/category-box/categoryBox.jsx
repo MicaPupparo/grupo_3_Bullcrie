@@ -1,5 +1,4 @@
 import React from "react";
-import {Link} from "react-router-dom";
 import './categoryBox.css'
 import PropTypes from 'prop-types';
 
@@ -10,12 +9,13 @@ function CatBox(props){
   }
   return(
     <div className="box">
-      <div href="">
+      <a href="/productos" className="catLink">
+        <div>
+          <h5 className="catSubtitle">{props.cat}</h5>
 
-        <h5 className="catSubtitle">{props.cat}</h5>
-
-        <p className="catCant"> Cantidad: {props.cantidad} </p>
-      </div>
+          <p className="catCant"> Cantidad: {props.cantidad} </p>
+        </div>
+      </a>
       
     </div>
   )
