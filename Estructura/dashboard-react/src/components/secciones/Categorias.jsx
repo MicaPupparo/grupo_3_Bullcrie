@@ -1,11 +1,10 @@
 import React from "react";
 import { useState, useEffect } from 'react'
-import CatBox from "../category-box/categoryBox";
+import CatBox from "../boxes/categoryBox";
+import TotalBox from "../boxes/totalProdBox";
 import './Categorias.css'
 
 function Categorias(){
-
-  let total = 10;
 
   const [categorias, setCategorias] = useState([]);
 
@@ -32,9 +31,7 @@ function Categorias(){
     <div>
       <div className="titulos">
         <h1 className="catTitulo">Categorias</h1>
-        <div className="contenedorTotal">
-          <h4 className="totalTitulo">Total de productos: {categorias.count}</h4>
-        </div>
+        <TotalBox cantidad={categorias.count}/>
       </div>
 
       <div className="catBoxContainer">
