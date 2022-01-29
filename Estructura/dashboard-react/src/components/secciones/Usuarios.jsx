@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react'
 import "./usuarios.css";
-import PropTypes from 'prop-types';
+
 
 
  export default function Usuarios() {
@@ -9,10 +9,11 @@ import PropTypes from 'prop-types';
 
    useEffect(() => {
      console.log('%cse monto el componente', 'color: green');
-     fetch('http://localhost:3000/api/users')
+     fetch('http://localhost:8000/api/users')
         .then(response => response.json())
         .then( data => {
           setUsuarios(data)
+          console.log(usuarios.users)
         })
         .catch(error => console.error(error))
    }, [])
@@ -25,6 +26,17 @@ import PropTypes from 'prop-types';
       return () => console.log('%cse desmontó el componente', 'color: red');
       }, [])
 
+      usuarios.users === undefined ? <p>Cargando...</p> : usuarios.users.filter(usuario => usuario.id === usuarios.count + 1).map(usuarioFiltrado => (
+        
+          console.log(usuarioFiltrado.id))
+        
+      )
+    // 
+    // usuarios.users === undefined ? <p>Cargando...</p> : usuarios.users.filter(usuario => {
+    //   return (
+    //     console.log(ultimoUsuario = array.push(usuario[usuarios.count - 1]))
+    //   )
+    // }) 
    return (
      <div className="usuariosContainer">
         <h2>Data Usuarios</h2>
@@ -32,20 +44,23 @@ import PropTypes from 'prop-types';
          <p>TOTAL USUARIOS: {usuarios.count}</p>
        </div>
        <div className="todosLosUsuarios">
-         <ul>
-           { usuarios.length === 0 && <p>Cargando...</p> }
-           {
-             usuarios.users.map((usuario, i) => {
-               return (
-                 <li key={i}>
-                   <h3>{usuario.name}</h3>
-                   <img src={usuario.avatar} alt="avatar" width="150" />
-                 </li>
-               )
-             })
-           }
-         </ul>
-       </div> 
+           <ul>
+             { usuarios.users === undefined ? <p>Cargando...</p> : usuarios.users.map((usuario, i) => {
+                                                                        return (
+                                                                            <li key={i}>
+                                                                              <h3>{usuario.name}</h3>
+                                                                            </li>
+                                                                          )
+                                                                        })     
+           } 
+         </ul>  
+       </div>
+       <div className="ultimoUsuario">
+           <p>ULTIMO USUARIO CREADO:</p>
+            { usuarios.users === undefined ? <p>Cargando...</p> : usuarios.users.filter(usuario => usuario.id === usuarios.count + 1).map(usuarioFiltrado => (
+              <p>{usuarioFiltrado.name}</p>     
+            )) }
+      </div>
      </div>
    )
  }
