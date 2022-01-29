@@ -1,7 +1,7 @@
 
 import "./productos.css"
 import { useState, useEffect } from 'react'
-
+import { DataGrid } from '@mui/x-data-grid';
 
 
 import React from 'react';
@@ -27,28 +27,44 @@ export default function Productos() {
     useEffect(() => {
       return () => console.log('%cse desmontó el componente', 'color: red');
       }, [])
+      
+      const columns = [
+        { field: 'id', headerName: 'ID', width: 70 },
+        { field: 'nombre', headerName: 'nombre', width: 130 },
+        { field: 'detalle', headerName: 'detalle', width: 130 }
+      ];
+      const rows = [];
 
+      if (productos.products === undefined) {
+        return ' '
+      } else {
+          productos.products.map(producto => {
+              return rows.push({ id: producto.id, nombre: producto.nombre, detalle: producto.detalle })
+          })
+      }
 
   return (
     <div className="productosContainer">
-      <div className="totalProductos">
-         <p>TOTAL PRODUCTOS: {productos.count}</p>
-       </div>
+      <h2>Productos</h2>
       <div className="listadoProductos">
-        { productos.products === undefined ? <p>Cargando...</p> : productos.products.map((producto, i) => {
-                                                                          return (
-                                                                              <li key={i}>
-                                                                                <h3>{producto.nombre}</h3>
-                                                                              </li>
-                                                                            )
-                                                                          })     
-            } 
+         <div style={{ height: 400, width: '100%' }}>
+          <DataGrid
+            rows={rows}
+            columns={columns}
+            pageSize={5}
+            rowsPerPageOptions={[5]}
+            checkboxSelection
+          />
+        </div>
       </div>
       <div className="ultimoProducto">
            <p>ULTIMO PRODUCTO CREADO:</p>
             { productos.products === undefined ? <p>Cargando...</p> : productos.products.filter(producto => producto.id === productos.count - 1).map((productoFiltrado, i) => (
               <p key={i}>{productoFiltrado.nombre}</p>     
             )) } 
+      </div>
+      <div className="totalProductos">
+         <p>TOTAL PRODUCTOS: {productos.count}</p>
       </div>
     </div>
   );
