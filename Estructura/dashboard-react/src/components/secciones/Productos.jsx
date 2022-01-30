@@ -2,7 +2,7 @@
 import "./productos.css"
 import { useState, useEffect } from 'react'
 import { DataGrid } from '@mui/x-data-grid';
-
+import TotalBox from "../boxes/totalProdBox";
 
 import React from 'react';
 
@@ -58,14 +58,12 @@ export default function Productos() {
         </div>
       </div>
       <div className="ultimoProducto">
-           <p>ULTIMO PRODUCTO CREADO:</p>
+           <h6>ULTIMO PRODUCTO CREADO:</h6>
             { productos.products === undefined ? <p>Cargando...</p> : productos.products.filter(producto => producto.id === productos.count - 1).map((productoFiltrado, i) => (
               <p key={i}>{productoFiltrado.nombre}</p>     
             )) } 
       </div>
-      <div className="totalProductos">
-         <p>TOTAL PRODUCTOS: {productos.count}</p>
-      </div>
+      <TotalBox cantidad={productos.count}/>
     </div>
   );
 }
