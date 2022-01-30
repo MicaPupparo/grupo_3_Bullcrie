@@ -3,7 +3,7 @@ window.addEventListener("load", function(){
 
   form.addEventListener("submit", function(event){
 
-    event.preventDefault();
+    //event.preventDefault();
 
     function validarEmail(valor) {
       let expReg = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;

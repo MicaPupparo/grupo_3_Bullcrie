@@ -23,7 +23,7 @@ const validaciones  = [
     body('nombreUsuario').notEmpty().withMessage('Tienes que escribir un nombre de usuario'),
     body('email').notEmpty().withMessage('Debes ingresar un email').bail()
     .isEmail().withMessage('Debes ingresar un email válido'),
-    body('contraseña').notEmpty().withMessage('Tienes que escribir una contraseña').isLength({min:8}).withMessage('Tienes que escribir al menos 8 caracteres').isNumeric().isUppercase().withMessage('Tienes que escribir una mayuscula, una minuscula, un caracter especial y un numero'),
+    body('contraseña').notEmpty().withMessage('Tienes que escribir una contraseña').bail().isLength({min:8}).withMessage('Tienes que escribir al menos 8 caracteres').bail().isNumeric().isUppercase().withMessage('Tienes que escribir una mayuscula, una minuscula, un caracter especial y un numero'),
     body('repetir').custom(async (confirmarContraseña, {req}) => {
         const contraseña = req.body.contraseña
         if(contraseña !== confirmarContraseña){
@@ -53,7 +53,7 @@ return true;
 const validacionesLogin = [
     body("email").notEmpty().withMessage("Tienes que escribir tu email").bail()
     .isEmail().withMessage("Tiene que ser un email valido"),
-    body('contraseña').notEmpty().withMessage('Tienes que escribir una contraseña').isLength({min:8}).withMessage('Tienes que escribir al menos 8 caracteres').isNumeric().isUppercase().withMessage('Tienes que escribir una mayuscula, una minuscula, un caracter especial y un numero'),
+    body('contraseña').notEmpty().withMessage('Tienes que escribir una contraseña')
 ]
 const uploadFile = multer({ storage })
 
