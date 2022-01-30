@@ -9,11 +9,11 @@
 
     <form method="POST" action="/usuarios/registro" enctype='multipart/form-data' class="registro">
       <h3>Crea tu cuenta</h3>
-<!--<% if (locals.errors) { %>  
+<% if (locals.errors) { %>  
 <% for( let oneError in errors) { %>
 
 <% } %>
-<% } %> -->
+<% } %>
 
       <div class="errores">
         <ul></ul>
@@ -28,12 +28,12 @@
           value="<%=locals.oldData ? oldData.nombre : null %>"
           
         />
-        <!--<% if (locals.errors && errors.nombre) { %> 
+        <% if (locals.errors && errors.nombre) { %> 
        <div class="text-danger">
          <%= errors.nombre.msg  %> 
       </div>
       <% } %>
--->   </div>
+      </div>
 
       <div class="casilla">
         <input 
@@ -43,12 +43,12 @@
           class="email"
           value= "<%=locals.oldData ? oldData.email : null %>" />
 
-<!--      <% if (locals.errors && errors.email) { %> 
+          <% if (locals.errors && errors.email) { %> 
         <div class="text-danger">
           <%= errors.email.msg  %> 
        </div>
        <% } %>
--->   </div>
+       </div>
 
       <div class="casilla">
         <input
@@ -58,12 +58,12 @@
           class="user"
           value= "<%=  locals.oldData ? oldData.nombreUsuario :null %>"
           />
-<!--          <% if (locals.errors && errors.nombreUsuario) { %> 
+              <% if (locals.errors && errors.nombreUsuario) { %> 
             <div class="text-danger">
               <%= errors.nombreUsuario.msg  %> 
            </div>
            <% } %>
--->   </div>
+      </div>
       <div class="casilla">
         <input
           type="password"
@@ -74,12 +74,12 @@
           
          
         />
-<!--         <% if (locals.errors && errors.contraseña) { %> 
+             <% if (locals.errors && errors.contraseña) { %> 
        <div class="text-danger">
          <%= errors.contraseña.msg  %> 
       </div>
       <% } %>
--->   </div>
+      </div>
 
       <div class="casilla">
         <input
@@ -89,12 +89,12 @@
           class="rep-contraseña"
           value="<%=  locals.oldData ? oldData.repetir :null %>"
          />
-<!--         <% if (locals.errors && errors.repetir) { %> 
+             <% if (locals.errors && errors.repetir) { %> 
           <div class="text-danger">
             <%= errors.repetir.msg  %> 
          </div>
          <% } %>
--->   </div>
+      </div>
 
       <div class="casilla">
         <input
@@ -103,12 +103,12 @@
           class="avatar"
          />
          
-<!--         <% if (locals.errors && errors.avatar) { %> 
+             <% if (locals.errors && errors.avatar) { %> 
           <div class="text-danger">
             <%= errors.avatar.msg  %> 
          </div>
          <% } %>
--->   </div>
+      </div>
          
 
       <div class="redirigir">
