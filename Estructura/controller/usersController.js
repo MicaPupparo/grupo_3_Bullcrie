@@ -96,6 +96,48 @@ const controller = {
     fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));*/
     res.redirect('/usuarios/login');
   },
+  detalle: (req, res) =>{
+    if (req.params.id !== null) {
+      db.Usuarios.findOne({
+        where: {
+          id: req.params.id
+        }
+      })
+      .then(usuario =>{
+        res.render('userDetail', {usuario})
+        console.log(usuario)
+      } )
+    } else {
+      res.redirect("/usuarios/login")
+    }
+  },
+  editar: (req, res) =>{
+    db.Usuarios.findOne({
+      where: {
+        id: req.params.id
+      }
+    })
+    .then(usuarioAEditar => {
+      res.render('userEdit', { usuarioAEditar })
+    })
+  },
+  procesarEdicion: (req, res) => {
+    db.Usuarios.update({
+      name: req.params.name,
+      email: req.params.email,
+      username: req.params.username,
+      avatar: req.params.avatar, 
+    },
+    {
+      where: {
+        id: req.params.id
+      }
+    })
+      // .then(data => {
+      //   return console.log(data)
+      // })
+    res.redirect('/usuarios/detalle/'+req.params.id)
+  }
 }
 
 module.exports = controller;

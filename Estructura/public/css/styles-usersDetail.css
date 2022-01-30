@@ -1,0 +1,41 @@
+.usuarioContainer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+    margin: 20px auto;
+    text-align: center;
+    background-color: rgba(228, 216, 216, 0.527);
+}
+
+.imagenUsuario, .usuarioContainer h2, .usuarioContainer p{
+    width: 100%;
+}
+
+.imagenUsuario{
+    width: 300px;
+    max-height: 300px;
+    margin: auto;
+    border-bottom: 1px solid rgba(202, 190, 190, 0.568);
+}
+
+.imagenUsuario img{
+    width: 300px;
+    padding: 20px;
+    height: 300px;
+}
+
+.usuarioContainer h2{
+    margin-top: 20px;
+}
+
+.usuarioContainer p{
+    font-size: 12px;
+}
+
+#emailUsuario{
+    color: #184E77;
+}
+
+#usuarioNombre{
+    margin-bottom: 20px;
+}

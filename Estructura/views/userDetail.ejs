@@ -1,0 +1,30 @@
+<!-- -------------------------------------HEAD & TAGS-------------------------------------------------------- -->
+<%- include('./partials/head') %>
+
+<body class="wrapper">
+  <!-- -------------------------------------HEADER-------------------------------------------------------- -->
+
+<%- include('./partials/header') %>
+
+<main>
+    <% if(usuario != undefined) { %> 
+        <div class="usuarioContainer">
+            <div class="imagenUsuario">
+                <img src="/images\avatars/<%= usuario.avatar %>" alt="avatar">
+            </div>
+            <h2>@<%= usuario.username %></h2>
+            <p id="emailUsuario"><%= usuario.email %></p>
+            <p id="usuarioNombre"><%= usuario.name %></p>
+        </div>
+        <div class="editarUsuario">
+            <a href="/usuarios/editar/<%= usuario.id %>"><button class="" type="button">Editar</button></a>
+        </div>
+    <% } %> 
+</main>
+
+<%- include('./partials/footer') %>
+    
+    <script type="text/javascript" src="/css\header.js"></script>
+
+</body>
+</html>

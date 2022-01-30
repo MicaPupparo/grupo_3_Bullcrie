@@ -1,0 +1,69 @@
+<!-- -------------------------------------HEAD & TAGS-------------------------------------------------------- -->
+<%- include('./partials/head') %>
+
+<body class="wrapper">
+  <!-- -------------------------------------HEADER-------------------------------------------------------- -->
+
+<%- include('./partials/header') %>
+
+<main>
+    <% if( usuarioAEditar != undefined) { %> 
+        <form class="creacion" action="/usuarios/editar/<%= usuarioAEditar.id %>?_method=PUT" method="POST">
+
+            <h3 class="tituloPc">Editar usuario: <%= usuarioAEditar.name %></h3>
+        
+            <div class="casillaPc">
+            <input
+                type="text"
+                name="name"
+                placeholder="Nombre"
+                class="nombre-productoPc"
+            />
+            </div>
+        
+            <div class="casillaPc">
+            <input
+                type="email"
+                name="email"
+                placeholder="Email del usuario"
+                class="categoria-productoPc"
+            />
+            </div>
+            
+            <div class="casillaPc">
+            <input
+                type="text"
+                name="username"
+                placeholder="Username"
+                class="colorPc"
+            />
+            </div>
+        
+        
+            <div class="casillaPc">
+            <input
+                type="file"
+                name="avatar"
+                placeholder="Avatar"
+                class="imagenPc"
+                accept=".jpg, .png, .jpeg, .gif, .JPG, .PNG, JPEG, .GIF"
+            />
+            </div>
+        
+        
+            <div class="buttonsPc">
+        
+            <button type="reset" class="boton" >Resetear</button>
+            <button type="submit" class="boton">Enviar</button>
+            </div>
+        </form>
+      <% } %> 
+</main>
+
+
+<%- include('./partials/footer') %>
+    
+    <script type="text/javascript" src="/css\header.js"></script>
+
+</body>
+</html>

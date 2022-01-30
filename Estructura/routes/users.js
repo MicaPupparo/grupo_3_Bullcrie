@@ -63,6 +63,11 @@ router.get("/login", usersController.login);
 router.post("/login", validacionesLogin,usersController.procesarLogin);
 
 router.get("/registro", usersController.register);
-router.post("/registro",  uploadFile.single("avatar"), validaciones, usersController.procesarRegister)
+router.post("/registro",  uploadFile.single("avatar"), validaciones, usersController.procesarRegister);
+
+router.get("/detalle/:id", usersController.detalle);
+
+router.get("/editar/:id", usersController.editar)
+router.put("/editar/:id", usersController.procesarEdicion)
 
 module.exports = router;
