@@ -2,7 +2,7 @@
  <header>
      <div id="ul-responsive">
        <a href="/">INICIO</a>
-       <a href="#tienda">TIENDA</a>
+       <a href="/productos">TIENDA</a>
        <a href="#contacto">CONTACTO</a>
      </div>
      <a href="javascript:void(0);" class="icon" onclick="toggleBurger()">
@@ -18,8 +18,9 @@
 
      <ul class="ul-header_icons"> 
             <li><a href="#search"><i class="fas fa-search"></i></a></li>        
-            <li>
-                <a href="<%= locals.estaLogueado ? '' : '/usuarios/login' %>"><i class="far fa-user"></i><%= locals.estaLogueado ? ' ' + locals.usuarioLogin.name : ' Hola usuario' %></a></li>
+            <li class="iconContainer">
+                <a href="<%= locals.estaLogueado ? '' : '/usuarios/login' %>" class="usuarioIcon"><i class="far fa-user"></i><p><%= locals.estaLogueado ? ' ' + locals.usuarioLogin.name : ' Hola usuario' %></p></a>
+            </li>
             <li><a href="/productos/carrito"><i class="fas fa-shopping-cart"></i></a></li>        
      </ul>
  </header>
