@@ -3,8 +3,9 @@ a {
 }
 
 .titulo-pag {
+    width: 100%;
     color: #666666;
-    margin-bottom: 20px;
+    margin: 20px 0px;
     text-align: center;
     border-bottom: 0.6px solid #666666;
     box-shadow: 0px 6px 10px rgb(100 100 100);
@@ -22,18 +23,27 @@ a {
 }
 
 .boxs {
+    display: flex;
+    flex-wrap: wrap;
     width: 30%;
     border: 2px solid #666666;
     box-shadow: 0px 10px 10px rgb(100 100 100);
     margin: 10px;
     background-color: white;
 }
+
+.a{
+    display: block;
+    width: 100%;
+}
+
 .titulo-producto {
     text-align: center;
     margin: 5px;
     font-size: 16px;
  
 }
+
 .boxs:hover {
     box-shadow: 0px 0px 20px rgb(100, 100, 100);
     transition: ease-in-out 0.2s;
@@ -44,4 +54,25 @@ a {
     border-bottom: 1px solid black;
     border-top: 1px solid black;
 
+}
+
+@media (max-width: 769px){
+    .titulo-pag {
+        font-size: 20px;
+    }
+    .boxs {
+        width: 40%;
+    }
+    }
+
+@media (max-width: 480px){
+    .boxs {
+        width: 90%;
+    }
+    .precio, .cuotas {
+        display: block;
+        width: 100%;
+        font: 12px;
+        text-align: center;
+    }
 }

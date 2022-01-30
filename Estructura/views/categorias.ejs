@@ -6,23 +6,18 @@
 
 <%- include('./partials/header') %>
   <!-- -------------------------------------MAIN-------------------------------------------------------- -->
-  <% for(let i = 0; i < productos.length; i++) { %>
-
-
-  <h2 class="titulo-pag"><%= productos[i].categoria %></h2>
-
   <div class="flex-containter">
-
+  <h2 class="titulo-pag"><%= productos[0].dataValues.categorias.dataValues.nombre %></h2>
+    <% for(let i = 0; i < productos.length; i++) { %>
+    
     <div class="boxs">
-        <a href="/productos/detalle/<%= productos[i].id %>">
+        <a href="/productos/detalle/<%= productos[i].id %>" class="a">
         <h3 class="titulo-producto"><%= productos[i].nombre %></h3>
-        <% for(let x = 0; x < productos[i].imagenes.length; x++) { %>
-        <img class="product-img" src="/images/<%= productos[i].imagenes[x].nombre %>">
+        <img class="product-img" src="/images/<%= productos[i].imagenes[0].nombre %>">
         </a>
         <p class="precio">$<%= productos[i].precio %></p>
         <p class="cuotas">x<%= productos[i].cuotas %> Cuotas de $<%= (productos[i].precio / productos[i].cuotas).toFixed(0) %> sin interés</p>
     </div>
-    <% } %>
 <% } %>
 </div>   
 
