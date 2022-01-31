@@ -12,10 +12,11 @@
     justify-content: space-around;
 }
 
-.productosContainer h2{
+.productosContainer h1{
     width: 100%;
     text-align: left;
     margin-left: 30px;
+    font-size: 4rem;
 }
 
 .listadoProductos {
@@ -39,4 +40,8 @@
 
 .ultimoProducto {
     padding-top: 25px;
+}
+
+.MuiDataGrid-row {
+    margin: 5px;
 }

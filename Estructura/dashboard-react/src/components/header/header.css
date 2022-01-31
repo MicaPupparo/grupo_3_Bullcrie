@@ -1,5 +1,6 @@
 .header{
     display: flex;
+    margin: 10px;
 }
 .title{
 width: 50%;
@@ -7,4 +8,8 @@ width: 50%;
 .admin {
     width: 50%;
     text-align: end;
+}
+
+.fa-user {
+    margin-right: 5px;
 }
