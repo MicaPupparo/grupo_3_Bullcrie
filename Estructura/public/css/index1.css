@@ -70,6 +70,8 @@ body{
     margin: 100px 0px;
     background-color: #A0A0A0;
     width: 100%;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.3) ;
 }
 
 
@@ -93,6 +95,7 @@ body{
     justify-content: center;
     margin: auto;
     padding: 15px;
+    
     
 }
 
@@ -190,18 +193,29 @@ footer{
     width: 100%;
     bottom: 0;
     margin-top: 50px;
+    padding: 4px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.3) ;
+}
+
+.bullcrie-logo {
+    text-align: center;
 }
 
 .logoConNombre img{
     width: 85px;
 }
 
-
+.footerSociales {
+    border-right: 1px solid rgba(0, 0, 0, 0.3) ;
+    border-left: 1px solid rgba(0, 0, 0, 0.3) ;
+}
 
 .footerSociales a{
     color: #000000;
     margin: 25px;
     transition: 0.3s;
+    
 }
 .footerSociales a:hover{
     text-decoration: none;
@@ -211,6 +225,7 @@ footer{
 .categoriasFooter a{
    text-decoration: none;
    color: #000000;
+   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 
 }
 
