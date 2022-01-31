@@ -229,7 +229,7 @@ CREATE TABLE `usuarios` (
   `name` varchar(45) NOT NULL,
   `email` varchar(60) NOT NULL,
   `username` varchar(45) NOT NULL,
-  `password` varchar(45) NOT NULL,
+  `password` varchar(200) NOT NULL,
   `avatar` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`),
