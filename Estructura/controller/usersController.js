@@ -34,7 +34,7 @@ const controller = {
               usuarioALoguearse = rta
               delete usuarioALoguearse.password
               req.session.usuarioLogueado = usuarioALoguearse;
-              if(req.body.recordame != undefined) {
+              if(req.body.recordame == undefined) {
                 res.cookie("usuarioEmail", req.body.email, {maxAge: 1000 * 23})
               }
               res.redirect("/");

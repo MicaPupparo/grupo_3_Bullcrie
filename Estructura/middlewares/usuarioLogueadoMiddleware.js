@@ -1,4 +1,5 @@
    const db = require("../database/models")
+   var session = require('express-session')
 
    function usuarioLogueadoMiddleware(req, res, next) {
        res.locals.estaLogueado = false;
