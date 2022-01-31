@@ -29,7 +29,7 @@ const controller = {
         }
       }).then(resultado => {
           let rta = resultado.dataValues
-          if(rta.email == req.body.email){
+            if(rta.email == req.body.email){
             if(bcrypt.compareSync(req.body.contraseña, rta.password)){
               usuarioALoguearse = rta
               delete usuarioALoguearse.password
@@ -56,14 +56,18 @@ const controller = {
         }
       };*/
     }
+
+   
   }, // cierre de funcion
   
   register: (req, res) => {
     res.render("register.ejs")
   },
 
-  procesarRegister: (req, res) => {
+  procesarRegister: async (req, res) => {
     const resultValidation = validationResult(req)
+    const psw = bcrypt.hashSync(req.body.contraseña, 1)
+    const image = req.file.filename
    
     if(resultValidation.errors.length > 0){
       return res.render('register', {
@@ -71,18 +75,22 @@ const controller = {
         oldData: req.body
       });
     }
-    
-    let psw = bcrypt.hashSync(req.body.contraseña, 9)
+   
 
-    let image = req.file.filename
+    try {
+      await db.Usuarios.create({
+        name: req.body.nombre,
+        email: req.body.email,
+        username: req.body.nombreUsuario,
+        password: psw,
+        avatar: image
+        
+      });
+    } catch (error) {
+      console.error(error);
+    }
     
-    db.Usuarios.create({
-      name: req.body.nombre,
-      email: req.body.email,
-      username: req.body.nombreUsuario,
-      password: psw,
-      avatar: image
-    })
+    
     
     /*let newUser = {
         id: users[users.length - 1].id + 1,
@@ -96,6 +104,7 @@ const controller = {
     fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));*/
     res.redirect('/usuarios/login');
   },
+
   detalle: (req, res) =>{
     if (req.params.id !== null) {
       db.Usuarios.findOne({

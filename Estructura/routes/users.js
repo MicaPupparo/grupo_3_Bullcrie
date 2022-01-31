@@ -23,7 +23,7 @@ const validaciones  = [
     body('nombreUsuario').notEmpty().withMessage('Tienes que escribir un nombre de usuario'),
     body('email').notEmpty().withMessage('Debes ingresar un email').bail()
     .isEmail().withMessage('Debes ingresar un email válido'),
-    body('contraseña').notEmpty().withMessage('Tienes que escribir una contraseña').bail().isLength({min:8}).withMessage('Tienes que escribir al menos 8 caracteres').bail().isNumeric().isUppercase().withMessage('Tienes que escribir una mayuscula, una minuscula, un caracter especial y un numero'),
+    body('contraseña').notEmpty().withMessage('Tienes que escribir una contraseña').bail().isLength({min:8}).withMessage('Tienes que escribir al menos 8 caracteres'),
     body('repetir').custom(async (confirmarContraseña, {req}) => {
         const contraseña = req.body.contraseña
         if(contraseña !== confirmarContraseña){
