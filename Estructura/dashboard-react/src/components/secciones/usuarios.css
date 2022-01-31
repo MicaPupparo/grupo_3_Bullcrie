@@ -15,12 +15,13 @@
 .usuariosContainer h2 {
     width: 100%;
     text-align: left;
+    margin-left: 30px;
 }
 
 .todosLosUsuarios {
-    width: 100%;
+    width: 70%;
     align-items: center;
-    margin: 20px 0px;
+    margin: 100px 0px 150px;
 }
 
 .totalUsuarios, .ultimoUsuario{

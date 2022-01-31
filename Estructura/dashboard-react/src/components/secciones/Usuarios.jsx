@@ -55,15 +55,18 @@ import { DataGrid } from '@mui/x-data-grid';
           />
           </div>   
        </div>
-       <div className="totalUsuarios">
-         <p>TOTAL USUARIOS: {usuarios.count}</p>
-       </div>
+
        <div className="ultimoUsuario">
-           <p>ULTIMO USUARIO CREADO:</p>
-           { usuarios.users === undefined ? <p>Cargando...</p> : usuarios.users.filter(usuario => usuario.id === usuarios.count + 1).map((usuarioFiltrado, i) => (
+           <h6>ULTIMO USUARIO CREADO:</h6>
+           { usuarios.users === undefined ? <p>Cargando...</p> : usuarios.users.filter(usuario => usuario.id === usuarios.count).map((usuarioFiltrado, i) => (
               <p key={i}>{usuarioFiltrado.name}</p>     
             )) } 
-      </div>
+       </div>
+
+       <div className="totalUsuarios">
+         <h5>TOTAL USUARIOS: {usuarios.count}</h5>
+       </div>
+
       
       
     

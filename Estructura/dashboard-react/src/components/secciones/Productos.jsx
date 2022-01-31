@@ -48,7 +48,7 @@ export default function Productos() {
       <h2>Productos</h2>
       <div className="listadoProductos">
          <div style={{ height: 400, width: '100%' }}>
-          <DataGrid
+          <DataGrid className="datagrid"
             rows={rows}
             columns={columns}
             pageSize={5}
@@ -59,7 +59,7 @@ export default function Productos() {
       </div>
       <div className="ultimoProducto">
            <h6>ULTIMO PRODUCTO CREADO:</h6>
-            { productos.products === undefined ? <p>Cargando...</p> : productos.products.filter(producto => producto.id === productos.count - 1).map((productoFiltrado, i) => (
+            { productos.products === undefined ? <p>Cargando...</p> : productos.products.filter(producto => producto.id === productos.count).map((productoFiltrado, i) => (
               <p key={i}>{productoFiltrado.nombre}</p>     
             )) } 
       </div>
