@@ -9,7 +9,7 @@ function Header(){
 
     return (
       <div className='header'>
-        <p className='title'>Dashboard Bullcrie</p>
+        <h4 className='title'>Dashboard Bullcrie</h4>
         <p className='admin'><FontAwesomeIcon icon={faUser}/>Admin</p>
       </div>
     )

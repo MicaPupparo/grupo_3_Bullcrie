@@ -12,10 +12,11 @@
     justify-content: space-around;
 }
 
-.usuariosContainer h2 {
+.usuariosContainer h1 {
     width: 100%;
     text-align: left;
     margin-left: 30px;
+    font-size: 4rem;
 }
 
 .todosLosUsuarios {

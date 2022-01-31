@@ -1,8 +1,8 @@
 div.catBoxContainer {
-  width: 70%;
+  width: 90%;
   display: flex;
   justify-content: space-between;
-  margin: 20px auto;
+  margin: 400px auto;
 }
 
 div.titulos {

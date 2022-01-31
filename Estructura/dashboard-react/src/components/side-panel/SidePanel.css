@@ -1,6 +1,6 @@
 .side-panel {
     display: flex;
-    border: 1px solid black;
     flex-wrap: wrap;
     width: 100%;
+    padding-bottom: 100%;
 }

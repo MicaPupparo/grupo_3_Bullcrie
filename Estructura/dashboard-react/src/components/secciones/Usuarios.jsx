@@ -43,7 +43,7 @@ import { DataGrid } from '@mui/x-data-grid';
   }
    return (
      <div className="usuariosContainer">
-      <h2>Usuarios</h2>
+      <h1>Usuarios</h1>
        <div className="todosLosUsuarios">
          <div style={{ height: 400, width: '100%' }}> 
           <DataGrid

@@ -45,7 +45,7 @@ export default function Productos() {
 
   return (
     <div className="productosContainer">
-      <h2>Productos</h2>
+      <h1>Productos</h1>
       <div className="listadoProductos">
          <div style={{ height: 400, width: '100%' }}>
           <DataGrid className="datagrid"
