@@ -9,29 +9,46 @@
 
 
  <main>
-  
-    <section class="newsletter">
-      <div class="texto">
-        <h4>BESAME EL TRASERO.</h4>
-    
-        <p>Recibí nuestras novedades y promociones</p>
+
+
+    <section class="">
+
+      <div class="container">
+        <form id="contact" action="" method="post">
+          <h3>Contacto </h3>
+          <h4>Contactanos en menos de 24 horas te respondemos!</h4>
+          <fieldset>
+            <input placeholder="Nombre y apellido" type="text" tabindex="1" required autofocus>
+          </fieldset>
+          <fieldset>
+            <input placeholder="Email" type="email" tabindex="2" required>
+          </fieldset>
+          <fieldset>
+            <input placeholder="Telefono o Celular" type="tel" tabindex="3" required>
+          </fieldset>
+
+          <fieldset>
+            <textarea placeholder="Deja tu mensaje o consula aca...." tabindex="5" required></textarea>
+          </fieldset>
+          <fieldset>
+            <button name="submit" type="submit" id="contact-submit" data-submit="...Enviando">Enviar</button>
+          </fieldset>
+        </form>
+
+
       </div>
-    
-      <div class="datos">
-        <input type="text" placeholder="NOMBRE" class="newsletter-nombre" />
-        <input type="email" placeholder="E-MAIL" class="newsletter-email" />
-      </div>
-        
-      <button type="submit" class="enviar">ENVIAR</button>
-    </section>
+
+
+    </section> 
+
      </main>
-    
+
     <!-- -------------------------------------FOOTER-------------------------------------------------------- -->
     <%- include('./partials/footer') %>
-    
-    
+
+
       <script type="text/javascript" src="/css\productDetail.js"></script>
-        
+
       <script type="text/javascript" src="/css/header.js"></script>
     </body>
     </html>
